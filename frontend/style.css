@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* LIGHT MODE */
+.light {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.light .sidebar,
+.light .card,
+.light .bot {
+  background: rgba(0,0,0,0.05);
+}
+
+/* BACKGROUND */
+.bg-animation {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #1e293b 10%, transparent 10%);
+  background-size: 40px 40px;
+  animation: moveBg 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  from { transform: translate(0,0); }
+  to { transform: translate(-200px,-200px); }
+}
+
+/* LAYOUT */
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 280px;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.05);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.logo {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+.card button, select {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #334155;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card button:hover {
+  background: #3b82f6;
+}
+
+.collapse-btn {
+  margin-top: 20px;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* CHAT */
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* MESSAGES */
+.message {
+  max-width: 70%;
+  padding: 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.user {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  align-self: flex-end;
+}
+
+.bot {
+  background: rgba(255,255,255,0.05);
+}
+
+/* INPUT */
+.input-area {
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.input-area input {
+  flex: 1;
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+  font-size: 15px;
+}
+
+.input-area button {
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.input-area button:hover {
+  transform: scale(1.05);
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1;}
+}

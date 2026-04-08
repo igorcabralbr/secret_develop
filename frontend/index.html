@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Financial Brain</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="bg-animation"></div>
+
+<div class="app">
+
+  <aside class="sidebar" id="sidebar">
+
+    <div class="logo">🧠 Financial Brain</div>
+
+    <div class="card">
+      <label>Perfil</label>
+
+      <select id="age">
+        <option value="teen">Teen</option>
+        <option value="adult">Adulto</option>
+        <option value="elderly">Idoso</option>
+      </select>
+
+      <select id="level">
+        <option value="iniciante">Iniciante</option>
+        <option value="intermediario">Intermediário</option>
+        <option value="avancado">Avançado</option>
+      </select>
+
+      <p id="xp-display">XP: 0</p>
+    </div>
+
+    <div class="card">
+      <button onclick="getQuiz()">🎯 Quiz</button>
+      <button onclick="showDashboard()">📊 Dashboard</button>
+      <button onclick="runMentor()">🧠 Mentor</button>
+    </div>
+
+    <div class="card">
+      <button onclick="toggleMode()">🌙 Tema</button>
+      <button onclick="toggleAccessibility()">♿ Acessibilidade</button>
+    </div>
+
+    <button class="collapse-btn" onclick="toggleSidebar()">☰</button>
+
+  </aside>
+
+  <main class="main">
+
+    <header class="header">
+      <h2>Financial Assistant</h2>
+    </header>
+
+    <section id="chat-view" class="chat">
+
+      <div id="messages" class="messages"></div>
+
+      <div class="input-area">
+        <input id="question" placeholder="Digite sua dúvida financeira...">
+        <button onclick="sendQuestion()">Enviar</button>
+        <button onclick="startVoice()">🎤</button>
+      </div>
+
+    </section>
+
+    <section id="dashboard-view" class="hidden">
+      <canvas id="chart"></canvas>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="utils.js"></script>
+<script src="chart.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
