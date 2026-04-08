@@ -1,0 +1,5502 @@
+[
+  {
+    "question": "O que pode acontecer se financiamento_ajustado aumentar?",
+    "options": [
+      "deflação_ajustado",
+      "dividendos_esperado",
+      "risco_de_mercado_anual",
+      "taxa_de_financiamento"
+    ],
+    "correct": "taxa_de_financiamento",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se dividendos_anual aumentar?",
+    "options": [
+      "taxa_de_portfólio",
+      "taxa_de_deflação",
+      "renda_fixa_esperado",
+      "drawdown_ajustado"
+    ],
+    "correct": "taxa_de_portfólio",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se demanda_agregada_esperado aumentar?",
+    "options": [
+      "risco_sistêmico_esperado",
+      "índice_de_juros_do_crédito",
+      "deflação_ajustado",
+      "taxa_de_beta"
+    ],
+    "correct": "taxa_de_beta",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se portfólio aumentar?",
+    "options": [
+      "drawdown",
+      "ETF_anual",
+      "taxa_de_diversificação",
+      "taxa_de_risco_de_crédito"
+    ],
+    "correct": "taxa_de_risco_de_crédito",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_diversificação aumentar?",
+    "options": [
+      "renda_fixa_ajustado",
+      "juros_esperado",
+      "risco_de_crédito_anual",
+      "PIB_ajustado"
+    ],
+    "correct": "PIB_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_valuation aumentar?",
+    "options": [
+      "drawdown",
+      "juros_ajustado",
+      "taxa_de_financiamento",
+      "índice_de_taxa_de_juros"
+    ],
+    "correct": "taxa_de_financiamento",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se despesas_variáveis_ajustado aumentar?",
+    "options": [
+      "risco_de_crédito",
+      "taxa_de_diversificação",
+      "índice_de_inadimplência",
+      "dividendos_ajustado"
+    ],
+    "correct": "dividendos_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_score_de_crédito aumentar?",
+    "options": [
+      "taxa_de_ações",
+      "taxa_de_demanda_agregada",
+      "poupança_ajustado",
+      "fundos_imobiliários_ajustado"
+    ],
+    "correct": "poupança_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_juros_do_crédito aumentar?",
+    "options": [
+      "crescimento_econômico_esperado",
+      "deflação",
+      "orçamento",
+      "política_monetária_ajustado"
+    ],
+    "correct": "política_monetária_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_diversificação aumentar?",
+    "options": [
+      "índice_de_PIB",
+      "ações_esperado",
+      "mercado_acionário_ajustado",
+      "recessão_anual"
+    ],
+    "correct": "índice_de_PIB",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_financiamento aumentar?",
+    "options": [
+      "política_monetária_ajustado",
+      "taxa_de_dividendos",
+      "beta_esperado",
+      "juros_esperado"
+    ],
+    "correct": "taxa_de_dividendos",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_anual aumentar?",
+    "options": [
+      "inadimplência_anual",
+      "juros_ajustado",
+      "taxa_de_política_monetária",
+      "poupança"
+    ],
+    "correct": "taxa_de_política_monetária",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se renda_mensal_esperado aumentar?",
+    "options": [
+      "dividendos_ajustado",
+      "dividendos_anual",
+      "orçamento_ajustado",
+      "risco_sistêmico_ajustado"
+    ],
+    "correct": "orçamento_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se despesas_fixas aumentar?",
+    "options": [
+      "índice_de_recessão",
+      "inadimplência_anual",
+      "portfólio_ajustado",
+      "financiamento"
+    ],
+    "correct": "inadimplência_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se recessão_ajustado aumentar?",
+    "options": [
+      "fundos_imobiliários_ajustado",
+      "despesas_fixas_ajustado",
+      "despesas_variáveis_anual",
+      "renda_mensal_esperado"
+    ],
+    "correct": "renda_mensal_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_mercado aumentar?",
+    "options": [
+      "poupança_esperado",
+      "taxa_de_demanda_agregada",
+      "taxa_de_dividendos",
+      "renda_fixa_anual"
+    ],
+    "correct": "poupança_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa_esperado aumentar?",
+    "options": [
+      "juros_esperado",
+      "taxa_de_ações",
+      "inadimplência_esperado",
+      "ações_anual"
+    ],
+    "correct": "taxa_de_ações",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se despesas_variáveis_anual aumentar?",
+    "options": [
+      "expansão_econômica_anual",
+      "taxa_de_taxa_de_juros",
+      "despesas_fixas_ajustado",
+      "índice_de_PIB"
+    ],
+    "correct": "índice_de_PIB",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se crescimento_econômico_esperado aumentar?",
+    "options": [
+      "despesas_variáveis",
+      "score_de_crédito",
+      "taxa_de_empréstimo",
+      "diversificação_ajustado"
+    ],
+    "correct": "despesas_variáveis",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_deflação aumentar?",
+    "options": [
+      "taxa_de_beta",
+      "valuation_anual",
+      "índice_de_inadimplência",
+      "valuation"
+    ],
+    "correct": "valuation_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se empréstimo_ajustado aumentar?",
+    "options": [
+      "ações",
+      "despesas_fixas",
+      "financiamento_anual",
+      "crescimento_econômico_esperado"
+    ],
+    "correct": "despesas_fixas",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_portfólio aumentar?",
+    "options": [
+      "demanda_agregada",
+      "empréstimo_esperado",
+      "mercado_acionário_esperado",
+      "índice_de_política_monetária"
+    ],
+    "correct": "mercado_acionário_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_dividendos aumentar?",
+    "options": [
+      "renda_fixa_ajustado",
+      "ETF_ajustado",
+      "empréstimo",
+      "empréstimo_esperado"
+    ],
+    "correct": "renda_fixa_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se investimento_pessoal_ajustado aumentar?",
+    "options": [
+      "recessão_ajustado",
+      "taxa_de_despesas_variáveis",
+      "ETF_anual",
+      "empréstimo"
+    ],
+    "correct": "taxa_de_despesas_variáveis",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se volatilidade_esperado aumentar?",
+    "options": [
+      "drawdown",
+      "risco_sistêmico_esperado",
+      "ETF_anual",
+      "inadimplência_esperado"
+    ],
+    "correct": "ETF_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se deflação_anual aumentar?",
+    "options": [
+      "índice_de_dividendos",
+      "risco_de_mercado_ajustado",
+      "taxa_de_empréstimo",
+      "deflação_esperado"
+    ],
+    "correct": "deflação_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa_anual aumentar?",
+    "options": [
+      "volatilidade_anual",
+      "taxa_de_ações",
+      "ações_anual",
+      "diversificação_ajustado"
+    ],
+    "correct": "taxa_de_ações",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se orçamento_esperado aumentar?",
+    "options": [
+      "índice_de_fundos_imobiliários",
+      "índice_de_despesas_fixas",
+      "índice_de_financiamento",
+      "despesas_variáveis_ajustado"
+    ],
+    "correct": "despesas_variáveis_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se juros_esperado aumentar?",
+    "options": [
+      "índice_de_fundos_imobiliários",
+      "inadimplência",
+      "inflação_esperado",
+      "índice_de_política_monetária"
+    ],
+    "correct": "índice_de_fundos_imobiliários",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito_anual aumentar?",
+    "options": [
+      "dividendos",
+      "portfólio_ajustado",
+      "diversificação_ajustado",
+      "crescimento_econômico"
+    ],
+    "correct": "portfólio_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa aumentar?",
+    "options": [
+      "taxa_de_beta",
+      "política_monetária",
+      "empréstimo_ajustado",
+      "taxa_de_ETF"
+    ],
+    "correct": "política_monetária",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se valuation aumentar?",
+    "options": [
+      "crescimento_econômico_anual",
+      "taxa_de_juros_anual",
+      "expansão_econômica_ajustado",
+      "índice_de_fundos_imobiliários"
+    ],
+    "correct": "taxa_de_juros_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_anual aumentar?",
+    "options": [
+      "portfólio",
+      "taxa_de_mercado_acionário",
+      "diversificação",
+      "volatilidade_esperado"
+    ],
+    "correct": "diversificação",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se poupança_anual aumentar?",
+    "options": [
+      "ações",
+      "taxa_de_dividendos",
+      "juros_do_crédito_esperado",
+      "PIB_anual"
+    ],
+    "correct": "ações",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se política_monetária_anual aumentar?",
+    "options": [
+      "portfólio_anual",
+      "crescimento_econômico_esperado",
+      "índice_de_juros_do_crédito",
+      "drawdown_ajustado"
+    ],
+    "correct": "índice_de_juros_do_crédito",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_política_monetária aumentar?",
+    "options": [
+      "índice_de_juros",
+      "investimento_pessoal",
+      "índice_de_ações",
+      "juros_do_crédito_anual"
+    ],
+    "correct": "juros_do_crédito_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se dividendos_esperado aumentar?",
+    "options": [
+      "taxa_de_expansão_econômica",
+      "mercado_acionário_anual",
+      "empréstimo_esperado",
+      "fundos_imobiliários_ajustado"
+    ],
+    "correct": "taxa_de_expansão_econômica",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se poupança aumentar?",
+    "options": [
+      "orçamento_esperado",
+      "portfólio",
+      "inadimplência_ajustado",
+      "financiamento"
+    ],
+    "correct": "portfólio",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_valuation aumentar?",
+    "options": [
+      "poupança_esperado",
+      "score_de_crédito_ajustado",
+      "recessão_esperado",
+      "expansão_econômica_ajustado"
+    ],
+    "correct": "poupança_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se despesas_variáveis_anual aumentar?",
+    "options": [
+      "poupança_anual",
+      "índice_de_orçamento",
+      "deflação_ajustado",
+      "taxa_de_mercado_acionário"
+    ],
+    "correct": "deflação_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_anual aumentar?",
+    "options": [
+      "diversificação_ajustado",
+      "índice_de_beta",
+      "demanda_agregada",
+      "índice_de_drawdown"
+    ],
+    "correct": "índice_de_drawdown",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_beta aumentar?",
+    "options": [
+      "índice_de_orçamento",
+      "juros_ajustado",
+      "índice_de_score_de_crédito",
+      "inadimplência_ajustado"
+    ],
+    "correct": "juros_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_anual aumentar?",
+    "options": [
+      "taxa_de_mercado_acionário",
+      "índice_de_inadimplência",
+      "risco_sistêmico_esperado",
+      "juros_ajustado"
+    ],
+    "correct": "taxa_de_mercado_acionário",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_despesas_fixas aumentar?",
+    "options": [
+      "índice_de_ETF",
+      "dividendos_esperado",
+      "índice_de_risco_de_crédito",
+      "mercado_acionário_anual"
+    ],
+    "correct": "índice_de_risco_de_crédito",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_poupança aumentar?",
+    "options": [
+      "índice_de_demanda_agregada",
+      "política_monetária_esperado",
+      "financiamento",
+      "taxa_de_mercado_acionário"
+    ],
+    "correct": "índice_de_demanda_agregada",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_despesas_fixas aumentar?",
+    "options": [
+      "risco_de_crédito_esperado",
+      "taxa_de_valuation",
+      "taxa_de_deflação",
+      "taxa_de_diversificação"
+    ],
+    "correct": "taxa_de_diversificação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_poupança aumentar?",
+    "options": [
+      "orçamento_anual",
+      "investimento_pessoal",
+      "dividendos_anual",
+      "juros_esperado"
+    ],
+    "correct": "dividendos_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se juros_anual aumentar?",
+    "options": [
+      "índice_de_poupança",
+      "beta",
+      "renda_mensal",
+      "drawdown"
+    ],
+    "correct": "beta",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_recessão aumentar?",
+    "options": [
+      "poupança_ajustado",
+      "empréstimo_anual",
+      "taxa_de_deflação",
+      "drawdown_anual"
+    ],
+    "correct": "drawdown_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_inflação aumentar?",
+    "options": [
+      "ETF_ajustado",
+      "despesas_variáveis_ajustado",
+      "taxa_de_deflação",
+      "índice_de_financiamento"
+    ],
+    "correct": "índice_de_financiamento",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_empréstimo aumentar?",
+    "options": [
+      "score_de_crédito_anual",
+      "taxa_de_financiamento",
+      "índice_de_ações",
+      "risco_de_crédito_anual"
+    ],
+    "correct": "taxa_de_financiamento",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se renda_mensal_ajustado aumentar?",
+    "options": [
+      "drawdown_anual",
+      "portfólio_ajustado",
+      "score_de_crédito_esperado",
+      "risco_de_mercado_anual"
+    ],
+    "correct": "portfólio_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_ajustado aumentar?",
+    "options": [
+      "taxa_de_inadimplência",
+      "risco_sistêmico_esperado",
+      "taxa_de_juros_esperado",
+      "índice_de_investimento_pessoal"
+    ],
+    "correct": "risco_sistêmico_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se diversificação_ajustado aumentar?",
+    "options": [
+      "taxa_de_fundos_imobiliários",
+      "PIB_anual",
+      "recessão_ajustado",
+      "investimento_pessoal_esperado"
+    ],
+    "correct": "recessão_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se volatilidade_ajustado aumentar?",
+    "options": [
+      "índice_de_fundos_imobiliários",
+      "empréstimo_esperado",
+      "taxa_de_PIB",
+      "ETF_anual"
+    ],
+    "correct": "ETF_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se valuation_esperado aumentar?",
+    "options": [
+      "fundos_imobiliários_ajustado",
+      "dividendos_anual",
+      "política_monetária",
+      "fundos_imobiliários"
+    ],
+    "correct": "política_monetária",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se renda_mensal_anual aumentar?",
+    "options": [
+      "beta_ajustado",
+      "demanda_agregada_esperado",
+      "deflação_esperado",
+      "portfólio_anual"
+    ],
+    "correct": "beta_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se crescimento_econômico_esperado aumentar?",
+    "options": [
+      "índice_de_poupança",
+      "índice_de_diversificação",
+      "valuation_esperado",
+      "renda_fixa_ajustado"
+    ],
+    "correct": "índice_de_diversificação",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se PIB_ajustado aumentar?",
+    "options": [
+      "índice_de_portfólio",
+      "risco_de_crédito_anual",
+      "diversificação_anual",
+      "mercado_acionário_ajustado"
+    ],
+    "correct": "diversificação_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_recessão aumentar?",
+    "options": [
+      "renda_mensal",
+      "mercado_acionário_anual",
+      "inadimplência_esperado",
+      "renda_fixa"
+    ],
+    "correct": "mercado_acionário_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_demanda_agregada aumentar?",
+    "options": [
+      "score_de_crédito_esperado",
+      "investimento_pessoal_anual",
+      "taxa_de_diversificação",
+      "política_monetária_anual"
+    ],
+    "correct": "score_de_crédito_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se dividendos_esperado aumentar?",
+    "options": [
+      "taxa_de_drawdown",
+      "taxa_de_risco_de_crédito",
+      "investimento_pessoal",
+      "índice_de_inadimplência"
+    ],
+    "correct": "taxa_de_drawdown",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_investimento_pessoal aumentar?",
+    "options": [
+      "taxa_de_deflação",
+      "recessão_esperado",
+      "taxa_de_volatilidade",
+      "juros_ajustado"
+    ],
+    "correct": "juros_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se inadimplência_esperado aumentar?",
+    "options": [
+      "taxa_de_ações",
+      "expansão_econômica_ajustado",
+      "inadimplência_anual",
+      "índice_de_financiamento"
+    ],
+    "correct": "índice_de_financiamento",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica_ajustado aumentar?",
+    "options": [
+      "ações_anual",
+      "índice_de_renda_mensal",
+      "índice_de_score_de_crédito",
+      "orçamento_esperado"
+    ],
+    "correct": "ações_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se política_monetária_esperado aumentar?",
+    "options": [
+      "índice_de_crescimento_econômico",
+      "taxa_de_ações",
+      "taxa_de_mercado_acionário",
+      "investimento_pessoal"
+    ],
+    "correct": "taxa_de_ações",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se política_monetária_esperado aumentar?",
+    "options": [
+      "dividendos_anual",
+      "inadimplência",
+      "fundos_imobiliários",
+      "taxa_de_fundos_imobiliários"
+    ],
+    "correct": "taxa_de_fundos_imobiliários",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_score_de_crédito aumentar?",
+    "options": [
+      "taxa_de_financiamento",
+      "taxa_de_beta",
+      "índice_de_drawdown",
+      "crescimento_econômico_anual"
+    ],
+    "correct": "taxa_de_financiamento",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica_anual aumentar?",
+    "options": [
+      "crescimento_econômico_anual",
+      "índice_de_política_monetária",
+      "taxa_de_juros",
+      "fundos_imobiliários"
+    ],
+    "correct": "índice_de_política_monetária",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito_anual aumentar?",
+    "options": [
+      "demanda_agregada",
+      "taxa_de_mercado_acionário",
+      "taxa_de_juros_esperado",
+      "índice_de_política_monetária"
+    ],
+    "correct": "taxa_de_mercado_acionário",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_mercado_anual aumentar?",
+    "options": [
+      "índice_de_empréstimo",
+      "taxa_de_financiamento",
+      "risco_de_mercado_anual",
+      "renda_mensal_ajustado"
+    ],
+    "correct": "índice_de_empréstimo",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se investimento_pessoal_anual aumentar?",
+    "options": [
+      "taxa_de_financiamento",
+      "ações",
+      "financiamento",
+      "índice_de_beta"
+    ],
+    "correct": "taxa_de_financiamento",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_ETF aumentar?",
+    "options": [
+      "investimento_pessoal",
+      "score_de_crédito_ajustado",
+      "empréstimo_ajustado",
+      "índice_de_crescimento_econômico"
+    ],
+    "correct": "investimento_pessoal",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_ETF aumentar?",
+    "options": [
+      "índice_de_juros_do_crédito",
+      "demanda_agregada",
+      "volatilidade_ajustado",
+      "inadimplência_ajustado"
+    ],
+    "correct": "volatilidade_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se despesas_variáveis_anual aumentar?",
+    "options": [
+      "portfólio_ajustado",
+      "fundos_imobiliários_esperado",
+      "taxa_de_portfólio",
+      "taxa_de_recessão"
+    ],
+    "correct": "taxa_de_portfólio",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_renda_mensal aumentar?",
+    "options": [
+      "crescimento_econômico",
+      "ETF_esperado",
+      "despesas_fixas",
+      "taxa_de_expansão_econômica"
+    ],
+    "correct": "ETF_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_ações aumentar?",
+    "options": [
+      "taxa_de_valuation",
+      "taxa_de_juros_do_crédito",
+      "despesas_fixas_ajustado",
+      "ações_anual"
+    ],
+    "correct": "taxa_de_juros_do_crédito",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_inflação aumentar?",
+    "options": [
+      "empréstimo_ajustado",
+      "índice_de_despesas_fixas",
+      "ações",
+      "investimento_pessoal_esperado"
+    ],
+    "correct": "empréstimo_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se fundos_imobiliários_esperado aumentar?",
+    "options": [
+      "recessão_anual",
+      "crescimento_econômico_esperado",
+      "investimento_pessoal_anual",
+      "juros_esperado"
+    ],
+    "correct": "investimento_pessoal_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se orçamento aumentar?",
+    "options": [
+      "diversificação_ajustado",
+      "taxa_de_juros",
+      "risco_sistêmico_esperado",
+      "taxa_de_juros_do_crédito"
+    ],
+    "correct": "risco_sistêmico_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_ações aumentar?",
+    "options": [
+      "recessão_esperado",
+      "taxa_de_valuation",
+      "crescimento_econômico_esperado",
+      "despesas_variáveis"
+    ],
+    "correct": "recessão_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_inflação aumentar?",
+    "options": [
+      "demanda_agregada_anual",
+      "PIB_esperado",
+      "risco_de_crédito",
+      "taxa_de_poupança"
+    ],
+    "correct": "demanda_agregada_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se investimento_pessoal_ajustado aumentar?",
+    "options": [
+      "risco_de_mercado_anual",
+      "diversificação",
+      "valuation_ajustado",
+      "poupança_esperado"
+    ],
+    "correct": "valuation_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se dividendos aumentar?",
+    "options": [
+      "expansão_econômica_anual",
+      "beta",
+      "portfólio_esperado",
+      "financiamento_esperado"
+    ],
+    "correct": "portfólio_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa_esperado aumentar?",
+    "options": [
+      "taxa_de_expansão_econômica",
+      "deflação_ajustado",
+      "risco_de_mercado_anual",
+      "taxa_de_financiamento"
+    ],
+    "correct": "risco_de_mercado_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_ações aumentar?",
+    "options": [
+      "score_de_crédito_esperado",
+      "índice_de_crescimento_econômico",
+      "risco_sistêmico",
+      "índice_de_orçamento"
+    ],
+    "correct": "índice_de_orçamento",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se poupança_esperado aumentar?",
+    "options": [
+      "taxa_de_juros_anual",
+      "índice_de_ETF",
+      "score_de_crédito_esperado",
+      "taxa_de_recessão"
+    ],
+    "correct": "score_de_crédito_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se inadimplência_esperado aumentar?",
+    "options": [
+      "taxa_de_dividendos",
+      "índice_de_crescimento_econômico",
+      "fundos_imobiliários_ajustado",
+      "volatilidade_ajustado"
+    ],
+    "correct": "taxa_de_dividendos",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se dividendos_anual aumentar?",
+    "options": [
+      "taxa_de_demanda_agregada",
+      "orçamento_anual",
+      "PIB_anual",
+      "taxa_de_risco_de_crédito"
+    ],
+    "correct": "taxa_de_risco_de_crédito",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_recessão aumentar?",
+    "options": [
+      "política_monetária_anual",
+      "valuation_ajustado",
+      "volatilidade",
+      "taxa_de_juros_anual"
+    ],
+    "correct": "taxa_de_juros_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica_ajustado aumentar?",
+    "options": [
+      "risco_de_mercado_anual",
+      "crescimento_econômico_esperado",
+      "poupança_anual",
+      "mercado_acionário_anual"
+    ],
+    "correct": "crescimento_econômico_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se dividendos aumentar?",
+    "options": [
+      "taxa_de_juros_esperado",
+      "ações_esperado",
+      "taxa_de_portfólio",
+      "índice_de_risco_de_crédito"
+    ],
+    "correct": "ações_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_risco_sistêmico aumentar?",
+    "options": [
+      "valuation_esperado",
+      "taxa_de_ações",
+      "índice_de_expansão_econômica",
+      "dividendos"
+    ],
+    "correct": "índice_de_expansão_econômica",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa_esperado aumentar?",
+    "options": [
+      "renda_fixa_anual",
+      "expansão_econômica_ajustado",
+      "risco_de_mercado_anual",
+      "índice_de_financiamento"
+    ],
+    "correct": "expansão_econômica_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_fundos_imobiliários aumentar?",
+    "options": [
+      "risco_sistêmico_esperado",
+      "juros_ajustado",
+      "investimento_pessoal_anual",
+      "taxa_de_volatilidade"
+    ],
+    "correct": "investimento_pessoal_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_juros aumentar?",
+    "options": [
+      "despesas_variáveis_esperado",
+      "índice_de_PIB",
+      "poupança",
+      "poupança_esperado"
+    ],
+    "correct": "despesas_variáveis_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_beta aumentar?",
+    "options": [
+      "inadimplência_ajustado",
+      "ETF",
+      "diversificação_ajustado",
+      "fundos_imobiliários_anual"
+    ],
+    "correct": "ETF",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa_ajustado aumentar?",
+    "options": [
+      "drawdown_ajustado",
+      "índice_de_score_de_crédito",
+      "ETF_esperado",
+      "risco_sistêmico_ajustado"
+    ],
+    "correct": "risco_sistêmico_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se ações aumentar?",
+    "options": [
+      "ETF_anual",
+      "inadimplência_esperado",
+      "taxa_de_juros_esperado",
+      "índice_de_juros"
+    ],
+    "correct": "índice_de_juros",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se score_de_crédito_anual aumentar?",
+    "options": [
+      "taxa_de_juros_do_crédito",
+      "score_de_crédito_esperado",
+      "valuation",
+      "recessão_anual"
+    ],
+    "correct": "valuation",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica_ajustado aumentar?",
+    "options": [
+      "risco_de_mercado_anual",
+      "diversificação_anual",
+      "financiamento",
+      "renda_fixa_esperado"
+    ],
+    "correct": "renda_fixa_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_recessão aumentar?",
+    "options": [
+      "poupança",
+      "orçamento_anual",
+      "inflação_ajustado",
+      "score_de_crédito_ajustado"
+    ],
+    "correct": "poupança",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_mercado_anual aumentar?",
+    "options": [
+      "renda_fixa_ajustado",
+      "índice_de_risco_sistêmico",
+      "expansão_econômica_anual",
+      "beta"
+    ],
+    "correct": "renda_fixa_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_demanda_agregada aumentar?",
+    "options": [
+      "taxa_de_diversificação",
+      "crescimento_econômico",
+      "poupança_ajustado",
+      "taxa_de_recessão"
+    ],
+    "correct": "crescimento_econômico",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_política_monetária aumentar?",
+    "options": [
+      "mercado_acionário_esperado",
+      "demanda_agregada_ajustado",
+      "taxa_de_juros_anual",
+      "política_monetária"
+    ],
+    "correct": "política_monetária",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se recessão_ajustado aumentar?",
+    "options": [
+      "taxa_de_dividendos",
+      "índice_de_drawdown",
+      "poupança_esperado",
+      "mercado_acionário_anual"
+    ],
+    "correct": "poupança_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se recessão aumentar?",
+    "options": [
+      "taxa_de_juros_anual",
+      "orçamento",
+      "índice_de_beta",
+      "PIB_esperado"
+    ],
+    "correct": "PIB_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se investimento_pessoal aumentar?",
+    "options": [
+      "empréstimo_ajustado",
+      "deflação_ajustado",
+      "portfólio_esperado",
+      "índice_de_fundos_imobiliários"
+    ],
+    "correct": "índice_de_fundos_imobiliários",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_demanda_agregada aumentar?",
+    "options": [
+      "índice_de_juros_do_crédito",
+      "PIB_esperado",
+      "ETF_esperado",
+      "taxa_de_deflação"
+    ],
+    "correct": "taxa_de_deflação",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_beta aumentar?",
+    "options": [
+      "taxa_de_risco_sistêmico",
+      "juros_do_crédito_esperado",
+      "PIB",
+      "diversificação_esperado"
+    ],
+    "correct": "taxa_de_risco_sistêmico",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se inflação_esperado aumentar?",
+    "options": [
+      "portfólio",
+      "taxa_de_deflação",
+      "dividendos",
+      "beta_esperado"
+    ],
+    "correct": "portfólio",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se orçamento_ajustado aumentar?",
+    "options": [
+      "deflação_ajustado",
+      "índice_de_expansão_econômica",
+      "diversificação_anual",
+      "taxa_de_diversificação"
+    ],
+    "correct": "deflação_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se inadimplência_ajustado aumentar?",
+    "options": [
+      "índice_de_política_monetária",
+      "risco_de_mercado",
+      "volatilidade_esperado",
+      "inadimplência"
+    ],
+    "correct": "volatilidade_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_mercado_anual aumentar?",
+    "options": [
+      "índice_de_PIB",
+      "drawdown_anual",
+      "índice_de_drawdown",
+      "juros_ajustado"
+    ],
+    "correct": "índice_de_PIB",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se ações_esperado aumentar?",
+    "options": [
+      "taxa_de_dividendos",
+      "taxa_de_renda_mensal",
+      "risco_de_mercado_anual",
+      "ETF_esperado"
+    ],
+    "correct": "taxa_de_renda_mensal",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_portfólio aumentar?",
+    "options": [
+      "recessão_ajustado",
+      "financiamento",
+      "recessão_esperado",
+      "score_de_crédito_anual"
+    ],
+    "correct": "recessão_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se política_monetária aumentar?",
+    "options": [
+      "ETF",
+      "taxa_de_risco_de_crédito",
+      "financiamento_esperado",
+      "risco_de_crédito"
+    ],
+    "correct": "ETF",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_recessão aumentar?",
+    "options": [
+      "despesas_variáveis_anual",
+      "volatilidade_anual",
+      "volatilidade_esperado",
+      "taxa_de_despesas_fixas"
+    ],
+    "correct": "taxa_de_despesas_fixas",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito aumentar?",
+    "options": [
+      "deflação_anual",
+      "deflação_ajustado",
+      "empréstimo",
+      "portfólio"
+    ],
+    "correct": "deflação_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_política_monetária aumentar?",
+    "options": [
+      "taxa_de_recessão",
+      "índice_de_taxa_de_juros",
+      "índice_de_fundos_imobiliários",
+      "política_monetária"
+    ],
+    "correct": "política_monetária",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se empréstimo aumentar?",
+    "options": [
+      "índice_de_beta",
+      "taxa_de_despesas_fixas",
+      "índice_de_financiamento",
+      "risco_de_mercado_esperado"
+    ],
+    "correct": "índice_de_financiamento",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se financiamento aumentar?",
+    "options": [
+      "taxa_de_financiamento",
+      "orçamento",
+      "ETF",
+      "ETF_ajustado"
+    ],
+    "correct": "ETF_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se score_de_crédito_anual aumentar?",
+    "options": [
+      "taxa_de_expansão_econômica",
+      "risco_de_crédito_ajustado",
+      "demanda_agregada_esperado",
+      "taxa_de_volatilidade"
+    ],
+    "correct": "risco_de_crédito_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_valuation aumentar?",
+    "options": [
+      "inadimplência",
+      "taxa_de_recessão",
+      "risco_de_mercado_esperado",
+      "portfólio"
+    ],
+    "correct": "inadimplência",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_risco_sistêmico aumentar?",
+    "options": [
+      "taxa_de_valuation",
+      "PIB_anual",
+      "taxa_de_poupança",
+      "taxa_de_portfólio"
+    ],
+    "correct": "taxa_de_poupança",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_deflação aumentar?",
+    "options": [
+      "risco_de_mercado_anual",
+      "taxa_de_expansão_econômica",
+      "índice_de_PIB",
+      "risco_sistêmico_ajustado"
+    ],
+    "correct": "taxa_de_expansão_econômica",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_mercado_acionário aumentar?",
+    "options": [
+      "taxa_de_juros",
+      "expansão_econômica_anual",
+      "mercado_acionário_ajustado",
+      "crescimento_econômico"
+    ],
+    "correct": "crescimento_econômico",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se deflação_ajustado aumentar?",
+    "options": [
+      "drawdown_anual",
+      "índice_de_taxa_de_juros",
+      "despesas_fixas",
+      "taxa_de_ações"
+    ],
+    "correct": "drawdown_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_juros_do_crédito aumentar?",
+    "options": [
+      "índice_de_empréstimo",
+      "taxa_de_recessão",
+      "taxa_de_juros_anual",
+      "despesas_variáveis_anual"
+    ],
+    "correct": "índice_de_empréstimo",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se risco_sistêmico_esperado aumentar?",
+    "options": [
+      "ETF_esperado",
+      "risco_sistêmico_esperado",
+      "índice_de_investimento_pessoal",
+      "índice_de_juros_do_crédito"
+    ],
+    "correct": "ETF_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_beta aumentar?",
+    "options": [
+      "risco_de_mercado_anual",
+      "taxa_de_crescimento_econômico",
+      "taxa_de_beta",
+      "orçamento"
+    ],
+    "correct": "risco_de_mercado_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_renda_fixa aumentar?",
+    "options": [
+      "PIB_esperado",
+      "índice_de_score_de_crédito",
+      "deflação_ajustado",
+      "índice_de_poupança"
+    ],
+    "correct": "índice_de_poupança",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se investimento_pessoal_anual aumentar?",
+    "options": [
+      "drawdown_esperado",
+      "dividendos",
+      "índice_de_PIB",
+      "score_de_crédito_ajustado"
+    ],
+    "correct": "score_de_crédito_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_mercado_anual aumentar?",
+    "options": [
+      "ações",
+      "índice_de_beta",
+      "risco_de_mercado_ajustado",
+      "empréstimo_esperado"
+    ],
+    "correct": "empréstimo_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se investimento_pessoal_anual aumentar?",
+    "options": [
+      "renda_fixa_anual",
+      "taxa_de_beta",
+      "despesas_variáveis_anual",
+      "renda_fixa_ajustado"
+    ],
+    "correct": "renda_fixa_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se ações aumentar?",
+    "options": [
+      "taxa_de_beta",
+      "crescimento_econômico_anual",
+      "mercado_acionário_esperado",
+      "despesas_variáveis_esperado"
+    ],
+    "correct": "despesas_variáveis_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito_esperado aumentar?",
+    "options": [
+      "despesas_variáveis_anual",
+      "beta",
+      "risco_sistêmico",
+      "taxa_de_diversificação"
+    ],
+    "correct": "beta",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_PIB aumentar?",
+    "options": [
+      "portfólio_anual",
+      "despesas_fixas_esperado",
+      "valuation_esperado",
+      "taxa_de_expansão_econômica"
+    ],
+    "correct": "taxa_de_expansão_econômica",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_juros aumentar?",
+    "options": [
+      "score_de_crédito_esperado",
+      "índice_de_recessão",
+      "deflação_ajustado",
+      "inadimplência"
+    ],
+    "correct": "inadimplência",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se deflação aumentar?",
+    "options": [
+      "índice_de_deflação",
+      "taxa_de_risco_sistêmico",
+      "índice_de_fundos_imobiliários",
+      "inadimplência_ajustado"
+    ],
+    "correct": "taxa_de_risco_sistêmico",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_empréstimo aumentar?",
+    "options": [
+      "taxa_de_juros",
+      "taxa_de_mercado_acionário",
+      "taxa_de_score_de_crédito",
+      "dividendos"
+    ],
+    "correct": "dividendos",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se dividendos_esperado aumentar?",
+    "options": [
+      "demanda_agregada_anual",
+      "inflação_ajustado",
+      "ações_ajustado",
+      "taxa_de_drawdown"
+    ],
+    "correct": "demanda_agregada_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se poupança aumentar?",
+    "options": [
+      "fundos_imobiliários",
+      "renda_fixa_anual",
+      "score_de_crédito",
+      "taxa_de_juros_anual"
+    ],
+    "correct": "score_de_crédito",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_mercado_acionário aumentar?",
+    "options": [
+      "renda_fixa_esperado",
+      "juros_anual",
+      "recessão",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "renda_fixa_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_PIB aumentar?",
+    "options": [
+      "taxa_de_crescimento_econômico",
+      "índice_de_taxa_de_juros",
+      "financiamento",
+      "risco_de_crédito"
+    ],
+    "correct": "risco_de_crédito",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_política_monetária aumentar?",
+    "options": [
+      "índice_de_recessão",
+      "score_de_crédito_ajustado",
+      "demanda_agregada_anual",
+      "mercado_acionário_anual"
+    ],
+    "correct": "mercado_acionário_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se fundos_imobiliários aumentar?",
+    "options": [
+      "crescimento_econômico_ajustado",
+      "financiamento",
+      "ações",
+      "despesas_fixas_ajustado"
+    ],
+    "correct": "crescimento_econômico_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se deflação aumentar?",
+    "options": [
+      "fundos_imobiliários",
+      "fundos_imobiliários_ajustado",
+      "índice_de_risco_de_crédito",
+      "demanda_agregada"
+    ],
+    "correct": "fundos_imobiliários_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_financiamento aumentar?",
+    "options": [
+      "poupança_anual",
+      "renda_fixa_esperado",
+      "índice_de_inadimplência",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "renda_fixa_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_beta aumentar?",
+    "options": [
+      "índice_de_orçamento",
+      "ETF_ajustado",
+      "taxa_de_mercado_acionário",
+      "risco_de_crédito_anual"
+    ],
+    "correct": "taxa_de_mercado_acionário",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se dividendos_ajustado aumentar?",
+    "options": [
+      "portfólio_anual",
+      "inflação",
+      "índice_de_despesas_fixas",
+      "taxa_de_diversificação"
+    ],
+    "correct": "inflação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se orçamento_ajustado aumentar?",
+    "options": [
+      "crescimento_econômico_esperado",
+      "score_de_crédito_ajustado",
+      "taxa_de_empréstimo",
+      "crescimento_econômico"
+    ],
+    "correct": "score_de_crédito_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se ETF_ajustado aumentar?",
+    "options": [
+      "risco_sistêmico_anual",
+      "taxa_de_inflação",
+      "índice_de_financiamento",
+      "despesas_variáveis"
+    ],
+    "correct": "taxa_de_inflação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se orçamento_ajustado aumentar?",
+    "options": [
+      "índice_de_ETF",
+      "inadimplência_anual",
+      "beta_anual",
+      "fundos_imobiliários_ajustado"
+    ],
+    "correct": "beta_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se renda_mensal_ajustado aumentar?",
+    "options": [
+      "recessão",
+      "índice_de_taxa_de_juros",
+      "índice_de_fundos_imobiliários",
+      "fundos_imobiliários"
+    ],
+    "correct": "recessão",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se demanda_agregada aumentar?",
+    "options": [
+      "índice_de_recessão",
+      "despesas_fixas",
+      "índice_de_financiamento",
+      "diversificação"
+    ],
+    "correct": "diversificação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_despesas_fixas aumentar?",
+    "options": [
+      "inflação",
+      "despesas_fixas_ajustado",
+      "demanda_agregada_ajustado",
+      "volatilidade_ajustado"
+    ],
+    "correct": "despesas_fixas_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_anual aumentar?",
+    "options": [
+      "taxa_de_despesas_variáveis",
+      "taxa_de_volatilidade",
+      "score_de_crédito_esperado",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "índice_de_score_de_crédito",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_despesas_fixas aumentar?",
+    "options": [
+      "drawdown_anual",
+      "renda_fixa_ajustado",
+      "crescimento_econômico",
+      "inadimplência_anual"
+    ],
+    "correct": "crescimento_econômico",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se PIB aumentar?",
+    "options": [
+      "taxa_de_expansão_econômica",
+      "mercado_acionário_anual",
+      "índice_de_financiamento",
+      "índice_de_risco_de_crédito"
+    ],
+    "correct": "mercado_acionário_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se poupança_anual aumentar?",
+    "options": [
+      "índice_de_financiamento",
+      "expansão_econômica_ajustado",
+      "índice_de_fundos_imobiliários",
+      "demanda_agregada_esperado"
+    ],
+    "correct": "índice_de_financiamento",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se recessão_anual aumentar?",
+    "options": [
+      "índice_de_investimento_pessoal",
+      "juros_do_crédito_ajustado",
+      "despesas_fixas",
+      "despesas_variáveis_esperado"
+    ],
+    "correct": "despesas_fixas",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_mercado_acionário aumentar?",
+    "options": [
+      "poupança_esperado",
+      "despesas_fixas",
+      "risco_de_crédito_esperado",
+      "beta_ajustado"
+    ],
+    "correct": "poupança_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_PIB aumentar?",
+    "options": [
+      "risco_de_crédito",
+      "beta",
+      "índice_de_dividendos",
+      "despesas_fixas_anual"
+    ],
+    "correct": "beta",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se juros_esperado aumentar?",
+    "options": [
+      "diversificação_anual",
+      "demanda_agregada",
+      "taxa_de_inadimplência",
+      "juros_do_crédito"
+    ],
+    "correct": "juros_do_crédito",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_beta aumentar?",
+    "options": [
+      "despesas_variáveis_esperado",
+      "ETF",
+      "demanda_agregada",
+      "juros"
+    ],
+    "correct": "ETF",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_fundos_imobiliários aumentar?",
+    "options": [
+      "empréstimo_ajustado",
+      "valuation_esperado",
+      "fundos_imobiliários_ajustado",
+      "juros_do_crédito_ajustado"
+    ],
+    "correct": "juros_do_crédito_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se fundos_imobiliários_anual aumentar?",
+    "options": [
+      "crescimento_econômico_esperado",
+      "risco_de_mercado_anual",
+      "dividendos_esperado",
+      "índice_de_poupança"
+    ],
+    "correct": "dividendos_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se diversificação_ajustado aumentar?",
+    "options": [
+      "fundos_imobiliários_ajustado",
+      "drawdown_esperado",
+      "índice_de_crescimento_econômico",
+      "taxa_de_beta"
+    ],
+    "correct": "taxa_de_beta",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se crescimento_econômico_anual aumentar?",
+    "options": [
+      "financiamento_anual",
+      "expansão_econômica_ajustado",
+      "taxa_de_volatilidade",
+      "ações"
+    ],
+    "correct": "ações",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_empréstimo aumentar?",
+    "options": [
+      "deflação",
+      "ETF_ajustado",
+      "índice_de_política_monetária",
+      "taxa_de_portfólio"
+    ],
+    "correct": "taxa_de_portfólio",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se inadimplência_ajustado aumentar?",
+    "options": [
+      "despesas_variáveis",
+      "índice_de_despesas_fixas",
+      "fundos_imobiliários_ajustado",
+      "juros_ajustado"
+    ],
+    "correct": "juros_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se poupança_anual aumentar?",
+    "options": [
+      "diversificação_anual",
+      "poupança_esperado",
+      "taxa_de_risco_de_crédito",
+      "recessão_ajustado"
+    ],
+    "correct": "recessão_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_crescimento_econômico aumentar?",
+    "options": [
+      "diversificação_ajustado",
+      "drawdown",
+      "poupança_anual",
+      "volatilidade_ajustado"
+    ],
+    "correct": "drawdown",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se investimento_pessoal_esperado aumentar?",
+    "options": [
+      "volatilidade",
+      "índice_de_inadimplência",
+      "deflação_ajustado",
+      "fundos_imobiliários_ajustado"
+    ],
+    "correct": "fundos_imobiliários_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_esperado aumentar?",
+    "options": [
+      "mercado_acionário_ajustado",
+      "juros",
+      "despesas_variáveis",
+      "taxa_de_poupança"
+    ],
+    "correct": "mercado_acionário_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_inflação aumentar?",
+    "options": [
+      "índice_de_inadimplência",
+      "taxa_de_ações",
+      "taxa_de_PIB",
+      "juros_ajustado"
+    ],
+    "correct": "taxa_de_ações",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se orçamento aumentar?",
+    "options": [
+      "risco_sistêmico_esperado",
+      "dividendos",
+      "ETF_anual",
+      "inflação"
+    ],
+    "correct": "risco_sistêmico_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_deflação aumentar?",
+    "options": [
+      "índice_de_taxa_de_juros",
+      "ações_esperado",
+      "taxa_de_ações",
+      "taxa_de_poupança"
+    ],
+    "correct": "taxa_de_poupança",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se financiamento_ajustado aumentar?",
+    "options": [
+      "taxa_de_empréstimo",
+      "renda_mensal_esperado",
+      "risco_de_mercado",
+      "juros"
+    ],
+    "correct": "taxa_de_empréstimo",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se juros_do_crédito_esperado aumentar?",
+    "options": [
+      "beta",
+      "inadimplência_esperado",
+      "renda_mensal_ajustado",
+      "volatilidade_anual"
+    ],
+    "correct": "beta",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se portfólio aumentar?",
+    "options": [
+      "índice_de_investimento_pessoal",
+      "taxa_de_poupança",
+      "juros_do_crédito",
+      "dividendos"
+    ],
+    "correct": "taxa_de_poupança",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito aumentar?",
+    "options": [
+      "score_de_crédito_ajustado",
+      "diversificação_ajustado",
+      "fundos_imobiliários_esperado",
+      "taxa_de_juros_esperado"
+    ],
+    "correct": "score_de_crédito_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_ajustado aumentar?",
+    "options": [
+      "diversificação",
+      "recessão_esperado",
+      "índice_de_renda_mensal",
+      "taxa_de_juros"
+    ],
+    "correct": "taxa_de_juros",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_anual aumentar?",
+    "options": [
+      "juros_anual",
+      "risco_de_mercado",
+      "deflação_ajustado",
+      "poupança"
+    ],
+    "correct": "poupança",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se demanda_agregada_esperado aumentar?",
+    "options": [
+      "risco_de_crédito_anual",
+      "demanda_agregada_anual",
+      "risco_sistêmico",
+      "inflação_esperado"
+    ],
+    "correct": "inflação_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica aumentar?",
+    "options": [
+      "beta_ajustado",
+      "inadimplência_esperado",
+      "drawdown",
+      "empréstimo"
+    ],
+    "correct": "inadimplência_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se diversificação_ajustado aumentar?",
+    "options": [
+      "despesas_fixas",
+      "expansão_econômica",
+      "volatilidade",
+      "mercado_acionário_anual"
+    ],
+    "correct": "expansão_econômica",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se crescimento_econômico_esperado aumentar?",
+    "options": [
+      "dividendos_anual",
+      "recessão_ajustado",
+      "taxa_de_política_monetária",
+      "juros_do_crédito_esperado"
+    ],
+    "correct": "dividendos_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_esperado aumentar?",
+    "options": [
+      "drawdown_anual",
+      "inadimplência_esperado",
+      "mercado_acionário_ajustado",
+      "risco_de_crédito"
+    ],
+    "correct": "mercado_acionário_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_mercado_esperado aumentar?",
+    "options": [
+      "despesas_variáveis_anual",
+      "renda_mensal_esperado",
+      "orçamento_ajustado",
+      "taxa_de_beta"
+    ],
+    "correct": "renda_mensal_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se recessão_esperado aumentar?",
+    "options": [
+      "orçamento",
+      "índice_de_financiamento",
+      "deflação_ajustado",
+      "taxa_de_valuation"
+    ],
+    "correct": "orçamento",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se beta_anual aumentar?",
+    "options": [
+      "risco_sistêmico_esperado",
+      "crescimento_econômico",
+      "índice_de_crescimento_econômico",
+      "taxa_de_diversificação"
+    ],
+    "correct": "taxa_de_diversificação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se inadimplência_ajustado aumentar?",
+    "options": [
+      "juros_do_crédito_esperado",
+      "índice_de_score_de_crédito",
+      "renda_fixa",
+      "empréstimo"
+    ],
+    "correct": "juros_do_crédito_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_despesas_fixas aumentar?",
+    "options": [
+      "poupança",
+      "índice_de_ETF",
+      "despesas_fixas_ajustado",
+      "taxa_de_juros_anual"
+    ],
+    "correct": "poupança",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_dividendos aumentar?",
+    "options": [
+      "volatilidade",
+      "risco_de_crédito_ajustado",
+      "mercado_acionário_ajustado",
+      "índice_de_beta"
+    ],
+    "correct": "volatilidade",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se orçamento aumentar?",
+    "options": [
+      "taxa_de_beta",
+      "poupança_ajustado",
+      "índice_de_financiamento",
+      "risco_de_crédito_anual"
+    ],
+    "correct": "risco_de_crédito_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica_anual aumentar?",
+    "options": [
+      "taxa_de_expansão_econômica",
+      "score_de_crédito_anual",
+      "fundos_imobiliários_anual",
+      "juros_esperado"
+    ],
+    "correct": "taxa_de_expansão_econômica",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_taxa_de_juros aumentar?",
+    "options": [
+      "volatilidade",
+      "orçamento_anual",
+      "diversificação",
+      "inflação"
+    ],
+    "correct": "diversificação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_renda_mensal aumentar?",
+    "options": [
+      "renda_mensal_ajustado",
+      "fundos_imobiliários_anual",
+      "índice_de_juros_do_crédito",
+      "demanda_agregada"
+    ],
+    "correct": "fundos_imobiliários_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_deflação aumentar?",
+    "options": [
+      "renda_mensal_esperado",
+      "expansão_econômica",
+      "risco_de_crédito_anual",
+      "índice_de_despesas_fixas"
+    ],
+    "correct": "risco_de_crédito_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_poupança aumentar?",
+    "options": [
+      "diversificação_anual",
+      "índice_de_beta",
+      "beta_ajustado",
+      "índice_de_volatilidade"
+    ],
+    "correct": "diversificação_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_orçamento aumentar?",
+    "options": [
+      "mercado_acionário_anual",
+      "diversificação",
+      "demanda_agregada_esperado",
+      "poupança_esperado"
+    ],
+    "correct": "poupança_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se deflação aumentar?",
+    "options": [
+      "beta_ajustado",
+      "despesas_variáveis_anual",
+      "despesas_fixas_ajustado",
+      "taxa_de_juros_anual"
+    ],
+    "correct": "despesas_variáveis_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_ajustado aumentar?",
+    "options": [
+      "índice_de_recessão",
+      "índice_de_mercado_acionário",
+      "beta",
+      "PIB_esperado"
+    ],
+    "correct": "índice_de_mercado_acionário",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_financiamento aumentar?",
+    "options": [
+      "índice_de_recessão",
+      "deflação",
+      "inflação_ajustado",
+      "dividendos_anual"
+    ],
+    "correct": "dividendos_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se diversificação_anual aumentar?",
+    "options": [
+      "PIB_ajustado",
+      "PIB_esperado",
+      "valuation_esperado",
+      "renda_mensal_esperado"
+    ],
+    "correct": "PIB_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_mercado_acionário aumentar?",
+    "options": [
+      "renda_fixa_esperado",
+      "taxa_de_drawdown",
+      "renda_fixa_anual",
+      "renda_mensal"
+    ],
+    "correct": "renda_fixa_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_PIB aumentar?",
+    "options": [
+      "crescimento_econômico_esperado",
+      "dividendos",
+      "drawdown",
+      "mercado_acionário_ajustado"
+    ],
+    "correct": "mercado_acionário_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_esperado aumentar?",
+    "options": [
+      "renda_mensal_esperado",
+      "ETF_esperado",
+      "dividendos_anual",
+      "taxa_de_deflação"
+    ],
+    "correct": "dividendos_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito_anual aumentar?",
+    "options": [
+      "índice_de_PIB",
+      "taxa_de_juros",
+      "taxa_de_diversificação",
+      "investimento_pessoal_ajustado"
+    ],
+    "correct": "investimento_pessoal_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_recessão aumentar?",
+    "options": [
+      "mercado_acionário_anual",
+      "beta_anual",
+      "diversificação_esperado",
+      "crescimento_econômico_esperado"
+    ],
+    "correct": "mercado_acionário_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_renda_mensal aumentar?",
+    "options": [
+      "taxa_de_dividendos",
+      "índice_de_crescimento_econômico",
+      "expansão_econômica_ajustado",
+      "drawdown_anual"
+    ],
+    "correct": "índice_de_crescimento_econômico",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se empréstimo_ajustado aumentar?",
+    "options": [
+      "índice_de_empréstimo",
+      "taxa_de_beta",
+      "índice_de_score_de_crédito",
+      "risco_de_mercado_esperado"
+    ],
+    "correct": "taxa_de_beta",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se ações_anual aumentar?",
+    "options": [
+      "taxa_de_score_de_crédito",
+      "despesas_fixas",
+      "demanda_agregada_ajustado",
+      "demanda_agregada"
+    ],
+    "correct": "demanda_agregada_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_volatilidade aumentar?",
+    "options": [
+      "orçamento",
+      "índice_de_risco_sistêmico",
+      "demanda_agregada_anual",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "índice_de_score_de_crédito",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se portfólio_ajustado aumentar?",
+    "options": [
+      "demanda_agregada",
+      "volatilidade_ajustado",
+      "taxa_de_deflação",
+      "ações"
+    ],
+    "correct": "taxa_de_deflação",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se empréstimo_ajustado aumentar?",
+    "options": [
+      "renda_mensal_anual",
+      "fundos_imobiliários",
+      "drawdown_ajustado",
+      "expansão_econômica_ajustado"
+    ],
+    "correct": "fundos_imobiliários",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se investimento_pessoal_esperado aumentar?",
+    "options": [
+      "crescimento_econômico",
+      "PIB_anual",
+      "inflação_esperado",
+      "ETF_anual"
+    ],
+    "correct": "inflação_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se beta aumentar?",
+    "options": [
+      "demanda_agregada",
+      "renda_mensal_ajustado",
+      "PIB",
+      "renda_fixa_ajustado"
+    ],
+    "correct": "renda_mensal_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_diversificação aumentar?",
+    "options": [
+      "inflação_ajustado",
+      "índice_de_renda_fixa",
+      "renda_fixa_anual",
+      "inadimplência_ajustado"
+    ],
+    "correct": "inadimplência_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se ações_ajustado aumentar?",
+    "options": [
+      "índice_de_poupança",
+      "taxa_de_fundos_imobiliários",
+      "índice_de_PIB",
+      "fundos_imobiliários_anual"
+    ],
+    "correct": "índice_de_poupança",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_sistêmico aumentar?",
+    "options": [
+      "drawdown_anual",
+      "juros_esperado",
+      "taxa_de_despesas_variáveis",
+      "risco_de_mercado_anual"
+    ],
+    "correct": "juros_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se despesas_variáveis aumentar?",
+    "options": [
+      "risco_de_crédito_anual",
+      "volatilidade_ajustado",
+      "recessão",
+      "inadimplência"
+    ],
+    "correct": "recessão",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se empréstimo_ajustado aumentar?",
+    "options": [
+      "índice_de_financiamento",
+      "demanda_agregada_anual",
+      "juros_do_crédito_esperado",
+      "risco_de_mercado"
+    ],
+    "correct": "demanda_agregada_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_deflação aumentar?",
+    "options": [
+      "demanda_agregada",
+      "taxa_de_investimento_pessoal",
+      "política_monetária_ajustado",
+      "índice_de_financiamento"
+    ],
+    "correct": "demanda_agregada",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_financiamento aumentar?",
+    "options": [
+      "taxa_de_valuation",
+      "PIB_anual",
+      "taxa_de_diversificação",
+      "ETF_ajustado"
+    ],
+    "correct": "taxa_de_diversificação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se inadimplência aumentar?",
+    "options": [
+      "taxa_de_inflação",
+      "diversificação_ajustado",
+      "política_monetária_anual",
+      "drawdown_esperado"
+    ],
+    "correct": "política_monetária_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se inadimplência_anual aumentar?",
+    "options": [
+      "taxa_de_juros",
+      "taxa_de_crescimento_econômico",
+      "inadimplência",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "índice_de_score_de_crédito",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa_anual aumentar?",
+    "options": [
+      "despesas_variáveis_esperado",
+      "renda_mensal_ajustado",
+      "ETF",
+      "risco_de_mercado_ajustado"
+    ],
+    "correct": "risco_de_mercado_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se volatilidade_ajustado aumentar?",
+    "options": [
+      "política_monetária_anual",
+      "financiamento",
+      "dividendos",
+      "fundos_imobiliários_ajustado"
+    ],
+    "correct": "dividendos",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se beta aumentar?",
+    "options": [
+      "ETF_esperado",
+      "score_de_crédito_esperado",
+      "juros_do_crédito_esperado",
+      "índice_de_renda_mensal"
+    ],
+    "correct": "índice_de_renda_mensal",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_crescimento_econômico aumentar?",
+    "options": [
+      "índice_de_inflação",
+      "diversificação_anual",
+      "taxa_de_mercado_acionário",
+      "deflação"
+    ],
+    "correct": "deflação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se empréstimo aumentar?",
+    "options": [
+      "score_de_crédito_esperado",
+      "ETF_ajustado",
+      "recessão_ajustado",
+      "índice_de_inadimplência"
+    ],
+    "correct": "recessão_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se fundos_imobiliários_esperado aumentar?",
+    "options": [
+      "financiamento",
+      "ações",
+      "investimento_pessoal_anual",
+      "taxa_de_juros_anual"
+    ],
+    "correct": "ações",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se beta aumentar?",
+    "options": [
+      "taxa_de_deflação",
+      "inadimplência_anual",
+      "portfólio",
+      "índice_de_fundos_imobiliários"
+    ],
+    "correct": "portfólio",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se financiamento_ajustado aumentar?",
+    "options": [
+      "investimento_pessoal",
+      "índice_de_risco_de_crédito",
+      "diversificação",
+      "inadimplência_ajustado"
+    ],
+    "correct": "diversificação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_taxa_de_juros aumentar?",
+    "options": [
+      "taxa_de_juros_esperado",
+      "índice_de_ETF",
+      "mercado_acionário_ajustado",
+      "deflação_ajustado"
+    ],
+    "correct": "deflação_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se despesas_fixas_ajustado aumentar?",
+    "options": [
+      "taxa_de_drawdown",
+      "juros_do_crédito_ajustado",
+      "índice_de_crescimento_econômico",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "juros_do_crédito_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se fundos_imobiliários_anual aumentar?",
+    "options": [
+      "taxa_de_score_de_crédito",
+      "índice_de_taxa_de_juros",
+      "risco_de_mercado",
+      "risco_sistêmico_esperado"
+    ],
+    "correct": "risco_de_mercado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se renda_mensal aumentar?",
+    "options": [
+      "beta_esperado",
+      "recessão",
+      "renda_fixa_esperado",
+      "índice_de_dividendos"
+    ],
+    "correct": "beta_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_score_de_crédito aumentar?",
+    "options": [
+      "taxa_de_recessão",
+      "demanda_agregada_ajustado",
+      "score_de_crédito_anual",
+      "financiamento_esperado"
+    ],
+    "correct": "score_de_crédito_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_renda_mensal aumentar?",
+    "options": [
+      "recessão_anual",
+      "deflação",
+      "diversificação_ajustado",
+      "beta"
+    ],
+    "correct": "recessão_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se demanda_agregada aumentar?",
+    "options": [
+      "renda_mensal_ajustado",
+      "empréstimo_ajustado",
+      "deflação_esperado",
+      "deflação"
+    ],
+    "correct": "renda_mensal_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se despesas_variáveis_anual aumentar?",
+    "options": [
+      "índice_de_juros_do_crédito",
+      "expansão_econômica",
+      "taxa_de_beta",
+      "investimento_pessoal_esperado"
+    ],
+    "correct": "índice_de_juros_do_crédito",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_recessão aumentar?",
+    "options": [
+      "índice_de_score_de_crédito",
+      "poupança_ajustado",
+      "juros_do_crédito_esperado",
+      "renda_fixa_anual"
+    ],
+    "correct": "renda_fixa_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_empréstimo aumentar?",
+    "options": [
+      "financiamento",
+      "fundos_imobiliários_esperado",
+      "risco_sistêmico",
+      "expansão_econômica"
+    ],
+    "correct": "financiamento",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se deflação aumentar?",
+    "options": [
+      "demanda_agregada",
+      "índice_de_deflação",
+      "inflação_ajustado",
+      "despesas_variáveis"
+    ],
+    "correct": "índice_de_deflação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_despesas_fixas aumentar?",
+    "options": [
+      "juros",
+      "expansão_econômica_esperado",
+      "taxa_de_deflação",
+      "taxa_de_financiamento"
+    ],
+    "correct": "taxa_de_financiamento",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_poupança aumentar?",
+    "options": [
+      "financiamento_anual",
+      "demanda_agregada",
+      "crescimento_econômico_anual",
+      "índice_de_risco_de_crédito"
+    ],
+    "correct": "financiamento_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se ETF_esperado aumentar?",
+    "options": [
+      "taxa_de_juros_esperado",
+      "índice_de_risco_de_crédito",
+      "demanda_agregada",
+      "taxa_de_política_monetária"
+    ],
+    "correct": "demanda_agregada",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se ETF_anual aumentar?",
+    "options": [
+      "renda_fixa_ajustado",
+      "despesas_variáveis_esperado",
+      "score_de_crédito_anual",
+      "taxa_de_inflação"
+    ],
+    "correct": "taxa_de_inflação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_juros_do_crédito aumentar?",
+    "options": [
+      "taxa_de_ações",
+      "mercado_acionário_ajustado",
+      "política_monetária_ajustado",
+      "renda_mensal_esperado"
+    ],
+    "correct": "política_monetária_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se fundos_imobiliários_anual aumentar?",
+    "options": [
+      "mercado_acionário_ajustado",
+      "financiamento_esperado",
+      "drawdown_ajustado",
+      "índice_de_inadimplência"
+    ],
+    "correct": "drawdown_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se renda_mensal_anual aumentar?",
+    "options": [
+      "crescimento_econômico",
+      "inflação_esperado",
+      "risco_de_crédito_anual",
+      "diversificação"
+    ],
+    "correct": "crescimento_econômico",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_ajustado aumentar?",
+    "options": [
+      "PIB_anual",
+      "deflação",
+      "orçamento_esperado",
+      "risco_sistêmico_ajustado"
+    ],
+    "correct": "risco_sistêmico_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se volatilidade aumentar?",
+    "options": [
+      "crescimento_econômico_anual",
+      "empréstimo_ajustado",
+      "juros_do_crédito_esperado",
+      "risco_de_mercado_anual"
+    ],
+    "correct": "juros_do_crédito_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se juros_do_crédito_esperado aumentar?",
+    "options": [
+      "mercado_acionário_anual",
+      "índice_de_financiamento",
+      "beta",
+      "empréstimo"
+    ],
+    "correct": "mercado_acionário_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se dividendos aumentar?",
+    "options": [
+      "renda_fixa_ajustado",
+      "mercado_acionário_ajustado",
+      "taxa_de_financiamento",
+      "volatilidade_ajustado"
+    ],
+    "correct": "renda_fixa_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se ETF_ajustado aumentar?",
+    "options": [
+      "taxa_de_diversificação",
+      "mercado_acionário_anual",
+      "taxa_de_fundos_imobiliários",
+      "índice_de_dividendos"
+    ],
+    "correct": "índice_de_dividendos",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se juros_do_crédito_anual aumentar?",
+    "options": [
+      "demanda_agregada",
+      "índice_de_ações",
+      "taxa_de_expansão_econômica",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "índice_de_ações",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se drawdown aumentar?",
+    "options": [
+      "inadimplência_anual",
+      "PIB_anual",
+      "renda_mensal_ajustado",
+      "renda_mensal_esperado"
+    ],
+    "correct": "PIB_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se fundos_imobiliários_esperado aumentar?",
+    "options": [
+      "orçamento_ajustado",
+      "risco_de_mercado_anual",
+      "ações_anual",
+      "expansão_econômica"
+    ],
+    "correct": "ações_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_fundos_imobiliários aumentar?",
+    "options": [
+      "portfólio_ajustado",
+      "ETF_anual",
+      "índice_de_ETF",
+      "orçamento_anual"
+    ],
+    "correct": "portfólio_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se empréstimo_ajustado aumentar?",
+    "options": [
+      "taxa_de_financiamento",
+      "despesas_fixas_ajustado",
+      "ações",
+      "índice_de_fundos_imobiliários"
+    ],
+    "correct": "despesas_fixas_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_financiamento aumentar?",
+    "options": [
+      "mercado_acionário_anual",
+      "taxa_de_empréstimo",
+      "poupança_anual",
+      "despesas_variáveis"
+    ],
+    "correct": "mercado_acionário_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_investimento_pessoal aumentar?",
+    "options": [
+      "taxa_de_valuation",
+      "recessão_esperado",
+      "taxa_de_risco_de_crédito",
+      "despesas_fixas"
+    ],
+    "correct": "taxa_de_risco_de_crédito",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se valuation aumentar?",
+    "options": [
+      "taxa_de_deflação",
+      "dividendos_esperado",
+      "crescimento_econômico_ajustado",
+      "índice_de_juros"
+    ],
+    "correct": "crescimento_econômico_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_fundos_imobiliários aumentar?",
+    "options": [
+      "inflação_esperado",
+      "risco_sistêmico_anual",
+      "valuation_ajustado",
+      "índice_de_ETF"
+    ],
+    "correct": "risco_sistêmico_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito_anual aumentar?",
+    "options": [
+      "índice_de_deflação",
+      "taxa_de_expansão_econômica",
+      "taxa_de_recessão",
+      "demanda_agregada_ajustado"
+    ],
+    "correct": "índice_de_deflação",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_drawdown aumentar?",
+    "options": [
+      "empréstimo_esperado",
+      "índice_de_poupança",
+      "ETF_anual",
+      "renda_fixa_ajustado"
+    ],
+    "correct": "renda_fixa_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_ações aumentar?",
+    "options": [
+      "PIB_anual",
+      "deflação",
+      "taxa_de_juros",
+      "renda_mensal"
+    ],
+    "correct": "renda_mensal",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_renda_fixa aumentar?",
+    "options": [
+      "poupança",
+      "ações_ajustado",
+      "crescimento_econômico_ajustado",
+      "fundos_imobiliários_ajustado"
+    ],
+    "correct": "fundos_imobiliários_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_inadimplência aumentar?",
+    "options": [
+      "orçamento",
+      "taxa_de_juros",
+      "risco_de_crédito_esperado",
+      "taxa_de_recessão"
+    ],
+    "correct": "orçamento",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_deflação aumentar?",
+    "options": [
+      "taxa_de_inadimplência",
+      "taxa_de_taxa_de_juros",
+      "taxa_de_ações",
+      "crescimento_econômico"
+    ],
+    "correct": "taxa_de_taxa_de_juros",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se investimento_pessoal_anual aumentar?",
+    "options": [
+      "expansão_econômica",
+      "beta_anual",
+      "índice_de_política_monetária",
+      "índice_de_empréstimo"
+    ],
+    "correct": "índice_de_empréstimo",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_inadimplência aumentar?",
+    "options": [
+      "poupança_anual",
+      "investimento_pessoal_anual",
+      "juros_ajustado",
+      "fundos_imobiliários_ajustado"
+    ],
+    "correct": "fundos_imobiliários_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se juros_do_crédito_ajustado aumentar?",
+    "options": [
+      "drawdown_esperado",
+      "índice_de_financiamento",
+      "financiamento",
+      "taxa_de_deflação"
+    ],
+    "correct": "financiamento",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se crescimento_econômico_anual aumentar?",
+    "options": [
+      "índice_de_dividendos",
+      "taxa_de_diversificação",
+      "taxa_de_financiamento",
+      "renda_fixa"
+    ],
+    "correct": "renda_fixa",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se orçamento_esperado aumentar?",
+    "options": [
+      "risco_sistêmico_ajustado",
+      "empréstimo_anual",
+      "drawdown_esperado",
+      "risco_de_crédito"
+    ],
+    "correct": "risco_de_crédito",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_despesas_fixas aumentar?",
+    "options": [
+      "índice_de_crescimento_econômico",
+      "taxa_de_despesas_variáveis",
+      "expansão_econômica_esperado",
+      "portfólio_anual"
+    ],
+    "correct": "portfólio_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se orçamento aumentar?",
+    "options": [
+      "inadimplência_ajustado",
+      "taxa_de_investimento_pessoal",
+      "investimento_pessoal",
+      "política_monetária_anual"
+    ],
+    "correct": "política_monetária_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se poupança_anual aumentar?",
+    "options": [
+      "juros_do_crédito_ajustado",
+      "mercado_acionário_ajustado",
+      "risco_de_crédito_anual",
+      "taxa_de_ações"
+    ],
+    "correct": "juros_do_crédito_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se juros_ajustado aumentar?",
+    "options": [
+      "renda_mensal_ajustado",
+      "ações_anual",
+      "taxa_de_fundos_imobiliários",
+      "taxa_de_crescimento_econômico"
+    ],
+    "correct": "ações_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se crescimento_econômico_esperado aumentar?",
+    "options": [
+      "expansão_econômica_ajustado",
+      "juros_do_crédito",
+      "volatilidade_anual",
+      "dividendos_anual"
+    ],
+    "correct": "dividendos_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_esperado aumentar?",
+    "options": [
+      "orçamento_ajustado",
+      "recessão",
+      "drawdown",
+      "índice_de_crescimento_econômico"
+    ],
+    "correct": "índice_de_crescimento_econômico",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se juros_ajustado aumentar?",
+    "options": [
+      "recessão",
+      "portfólio_ajustado",
+      "inadimplência_ajustado",
+      "renda_mensal"
+    ],
+    "correct": "inadimplência_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_juros aumentar?",
+    "options": [
+      "poupança",
+      "taxa_de_juros_do_crédito",
+      "risco_de_mercado_esperado",
+      "poupança_esperado"
+    ],
+    "correct": "taxa_de_juros_do_crédito",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_esperado aumentar?",
+    "options": [
+      "empréstimo",
+      "deflação_ajustado",
+      "inflação_esperado",
+      "juros"
+    ],
+    "correct": "inflação_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa aumentar?",
+    "options": [
+      "taxa_de_taxa_de_juros",
+      "ações_esperado",
+      "índice_de_crescimento_econômico",
+      "poupança"
+    ],
+    "correct": "ações_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se orçamento_anual aumentar?",
+    "options": [
+      "taxa_de_financiamento",
+      "portfólio_ajustado",
+      "diversificação",
+      "dividendos"
+    ],
+    "correct": "diversificação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_anual aumentar?",
+    "options": [
+      "taxa_de_ETF",
+      "juros_do_crédito_esperado",
+      "orçamento_anual",
+      "índice_de_empréstimo"
+    ],
+    "correct": "orçamento_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se juros_ajustado aumentar?",
+    "options": [
+      "portfólio_anual",
+      "taxa_de_empréstimo",
+      "mercado_acionário_esperado",
+      "inadimplência_ajustado"
+    ],
+    "correct": "inadimplência_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se dividendos_anual aumentar?",
+    "options": [
+      "juros_do_crédito_esperado",
+      "despesas_fixas_ajustado",
+      "crescimento_econômico",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "juros_do_crédito_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se dividendos_esperado aumentar?",
+    "options": [
+      "política_monetária_ajustado",
+      "recessão_anual",
+      "ETF",
+      "renda_mensal_esperado"
+    ],
+    "correct": "política_monetária_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_fundos_imobiliários aumentar?",
+    "options": [
+      "diversificação",
+      "diversificação_esperado",
+      "índice_de_risco_sistêmico",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "diversificação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica aumentar?",
+    "options": [
+      "despesas_fixas_anual",
+      "ETF_ajustado",
+      "renda_mensal_ajustado",
+      "poupança_esperado"
+    ],
+    "correct": "ETF_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_juros_do_crédito aumentar?",
+    "options": [
+      "despesas_fixas",
+      "taxa_de_deflação",
+      "taxa_de_empréstimo",
+      "risco_de_crédito"
+    ],
+    "correct": "taxa_de_empréstimo",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se PIB_esperado aumentar?",
+    "options": [
+      "taxa_de_política_monetária",
+      "ações",
+      "inflação",
+      "mercado_acionário_esperado"
+    ],
+    "correct": "inflação",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_taxa_de_juros aumentar?",
+    "options": [
+      "juros_do_crédito_esperado",
+      "valuation_anual",
+      "valuation",
+      "índice_de_ações"
+    ],
+    "correct": "valuation",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se juros_do_crédito_esperado aumentar?",
+    "options": [
+      "inadimplência_anual",
+      "investimento_pessoal_esperado",
+      "valuation_ajustado",
+      "inflação_esperado"
+    ],
+    "correct": "inflação_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_esperado aumentar?",
+    "options": [
+      "inflação_ajustado",
+      "dividendos_anual",
+      "índice_de_dividendos",
+      "índice_de_expansão_econômica"
+    ],
+    "correct": "dividendos_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_ajustado aumentar?",
+    "options": [
+      "índice_de_política_monetária",
+      "dividendos_esperado",
+      "despesas_variáveis",
+      "poupança"
+    ],
+    "correct": "índice_de_política_monetária",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_ajustado aumentar?",
+    "options": [
+      "taxa_de_expansão_econômica",
+      "diversificação_anual",
+      "taxa_de_juros_esperado",
+      "crescimento_econômico"
+    ],
+    "correct": "taxa_de_juros_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_deflação aumentar?",
+    "options": [
+      "índice_de_fundos_imobiliários",
+      "juros_esperado",
+      "índice_de_financiamento",
+      "volatilidade_esperado"
+    ],
+    "correct": "juros_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se inadimplência_esperado aumentar?",
+    "options": [
+      "índice_de_renda_mensal",
+      "beta_ajustado",
+      "inadimplência_anual",
+      "risco_sistêmico"
+    ],
+    "correct": "risco_sistêmico",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_investimento_pessoal aumentar?",
+    "options": [
+      "taxa_de_risco_de_mercado",
+      "score_de_crédito_esperado",
+      "taxa_de_juros_do_crédito",
+      "índice_de_taxa_de_juros"
+    ],
+    "correct": "índice_de_taxa_de_juros",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_ETF aumentar?",
+    "options": [
+      "taxa_de_juros_anual",
+      "ETF",
+      "renda_fixa_anual",
+      "taxa_de_renda_fixa"
+    ],
+    "correct": "taxa_de_renda_fixa",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_volatilidade aumentar?",
+    "options": [
+      "índice_de_score_de_crédito",
+      "demanda_agregada",
+      "taxa_de_recessão",
+      "deflação_esperado"
+    ],
+    "correct": "índice_de_score_de_crédito",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_taxa_de_juros aumentar?",
+    "options": [
+      "risco_sistêmico_esperado",
+      "política_monetária_anual",
+      "taxa_de_portfólio",
+      "volatilidade_ajustado"
+    ],
+    "correct": "taxa_de_portfólio",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se renda_mensal_esperado aumentar?",
+    "options": [
+      "crescimento_econômico_esperado",
+      "juros",
+      "inadimplência_ajustado",
+      "diversificação_ajustado"
+    ],
+    "correct": "juros",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa_esperado aumentar?",
+    "options": [
+      "despesas_variáveis",
+      "deflação",
+      "risco_sistêmico_esperado",
+      "PIB_anual"
+    ],
+    "correct": "deflação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se ações aumentar?",
+    "options": [
+      "taxa_de_dividendos",
+      "empréstimo",
+      "índice_de_inadimplência",
+      "juros_do_crédito_esperado"
+    ],
+    "correct": "índice_de_inadimplência",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_drawdown aumentar?",
+    "options": [
+      "juros_do_crédito_esperado",
+      "índice_de_drawdown",
+      "despesas_variáveis",
+      "PIB_anual"
+    ],
+    "correct": "juros_do_crédito_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se poupança_anual aumentar?",
+    "options": [
+      "dividendos",
+      "inadimplência_anual",
+      "renda_fixa_anual",
+      "beta_anual"
+    ],
+    "correct": "inadimplência_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_ajustado aumentar?",
+    "options": [
+      "expansão_econômica",
+      "orçamento",
+      "risco_de_crédito",
+      "renda_mensal_esperado"
+    ],
+    "correct": "risco_de_crédito",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito_anual aumentar?",
+    "options": [
+      "beta_anual",
+      "despesas_variáveis_esperado",
+      "índice_de_risco_sistêmico",
+      "demanda_agregada"
+    ],
+    "correct": "beta_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se dividendos_anual aumentar?",
+    "options": [
+      "índice_de_juros",
+      "drawdown",
+      "ETF",
+      "poupança_ajustado"
+    ],
+    "correct": "índice_de_juros",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se dividendos_anual aumentar?",
+    "options": [
+      "poupança",
+      "diversificação",
+      "despesas_variáveis_anual",
+      "mercado_acionário_ajustado"
+    ],
+    "correct": "mercado_acionário_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito_anual aumentar?",
+    "options": [
+      "deflação_anual",
+      "crescimento_econômico_esperado",
+      "juros",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "deflação_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se inadimplência_anual aumentar?",
+    "options": [
+      "índice_de_taxa_de_juros",
+      "fundos_imobiliários",
+      "taxa_de_dividendos",
+      "portfólio_ajustado"
+    ],
+    "correct": "fundos_imobiliários",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se despesas_fixas_ajustado aumentar?",
+    "options": [
+      "índice_de_financiamento",
+      "índice_de_renda_mensal",
+      "risco_de_mercado_esperado",
+      "portfólio_ajustado"
+    ],
+    "correct": "risco_de_mercado_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica_esperado aumentar?",
+    "options": [
+      "volatilidade_ajustado",
+      "crescimento_econômico",
+      "índice_de_inadimplência",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "índice_de_score_de_crédito",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_financiamento aumentar?",
+    "options": [
+      "taxa_de_portfólio",
+      "taxa_de_renda_mensal",
+      "recessão",
+      "dividendos_anual"
+    ],
+    "correct": "taxa_de_portfólio",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_investimento_pessoal aumentar?",
+    "options": [
+      "índice_de_taxa_de_juros",
+      "beta_esperado",
+      "valuation_anual",
+      "risco_de_crédito_esperado"
+    ],
+    "correct": "índice_de_taxa_de_juros",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_esperado aumentar?",
+    "options": [
+      "recessão_anual",
+      "taxa_de_demanda_agregada",
+      "risco_sistêmico",
+      "índice_de_beta"
+    ],
+    "correct": "taxa_de_demanda_agregada",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_renda_fixa aumentar?",
+    "options": [
+      "taxa_de_juros",
+      "índice_de_despesas_fixas",
+      "índice_de_renda_fixa",
+      "índice_de_drawdown"
+    ],
+    "correct": "índice_de_drawdown",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_recessão aumentar?",
+    "options": [
+      "PIB_anual",
+      "ETF_esperado",
+      "drawdown_anual",
+      "crescimento_econômico_ajustado"
+    ],
+    "correct": "drawdown_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_mercado_acionário aumentar?",
+    "options": [
+      "inadimplência",
+      "taxa_de_ETF",
+      "índice_de_política_monetária",
+      "risco_de_mercado_esperado"
+    ],
+    "correct": "risco_de_mercado_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se juros_do_crédito_ajustado aumentar?",
+    "options": [
+      "empréstimo",
+      "deflação",
+      "taxa_de_orçamento",
+      "beta_anual"
+    ],
+    "correct": "deflação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_financiamento aumentar?",
+    "options": [
+      "inadimplência_esperado",
+      "índice_de_juros",
+      "política_monetária_anual",
+      "demanda_agregada"
+    ],
+    "correct": "demanda_agregada",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se diversificação_ajustado aumentar?",
+    "options": [
+      "política_monetária",
+      "índice_de_score_de_crédito",
+      "índice_de_despesas_variáveis",
+      "taxa_de_renda_mensal"
+    ],
+    "correct": "taxa_de_renda_mensal",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_financiamento aumentar?",
+    "options": [
+      "fundos_imobiliários_esperado",
+      "ações_anual",
+      "taxa_de_crescimento_econômico",
+      "crescimento_econômico"
+    ],
+    "correct": "crescimento_econômico",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_sistêmico_esperado aumentar?",
+    "options": [
+      "empréstimo",
+      "recessão",
+      "política_monetária",
+      "poupança_ajustado"
+    ],
+    "correct": "empréstimo",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se portfólio_anual aumentar?",
+    "options": [
+      "taxa_de_expansão_econômica",
+      "investimento_pessoal",
+      "fundos_imobiliários_ajustado",
+      "taxa_de_demanda_agregada"
+    ],
+    "correct": "taxa_de_demanda_agregada",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se juros_anual aumentar?",
+    "options": [
+      "drawdown_esperado",
+      "demanda_agregada",
+      "crescimento_econômico",
+      "risco_de_mercado"
+    ],
+    "correct": "crescimento_econômico",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_ajustado aumentar?",
+    "options": [
+      "investimento_pessoal",
+      "taxa_de_juros_anual",
+      "valuation_ajustado",
+      "investimento_pessoal_anual"
+    ],
+    "correct": "taxa_de_juros_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_mercado_anual aumentar?",
+    "options": [
+      "índice_de_risco_de_mercado",
+      "financiamento",
+      "taxa_de_recessão",
+      "taxa_de_política_monetária"
+    ],
+    "correct": "índice_de_risco_de_mercado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se score_de_crédito_anual aumentar?",
+    "options": [
+      "empréstimo_esperado",
+      "índice_de_renda_mensal",
+      "renda_fixa_anual",
+      "índice_de_beta"
+    ],
+    "correct": "índice_de_beta",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se demanda_agregada_anual aumentar?",
+    "options": [
+      "índice_de_fundos_imobiliários",
+      "demanda_agregada",
+      "empréstimo_ajustado",
+      "taxa_de_valuation"
+    ],
+    "correct": "índice_de_fundos_imobiliários",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se dividendos aumentar?",
+    "options": [
+      "crescimento_econômico_esperado",
+      "risco_de_mercado_esperado",
+      "PIB_anual",
+      "inadimplência_anual"
+    ],
+    "correct": "crescimento_econômico_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_recessão aumentar?",
+    "options": [
+      "despesas_variáveis",
+      "índice_de_inadimplência",
+      "risco_sistêmico_esperado",
+      "taxa_de_ações"
+    ],
+    "correct": "despesas_variáveis",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se volatilidade aumentar?",
+    "options": [
+      "ações_esperado",
+      "índice_de_recessão",
+      "política_monetária_esperado",
+      "índice_de_inflação"
+    ],
+    "correct": "índice_de_inflação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_score_de_crédito aumentar?",
+    "options": [
+      "risco_de_mercado",
+      "juros_anual",
+      "ações_anual",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "ações_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se demanda_agregada_anual aumentar?",
+    "options": [
+      "índice_de_recessão",
+      "taxa_de_dividendos",
+      "risco_de_mercado_anual",
+      "expansão_econômica_ajustado"
+    ],
+    "correct": "expansão_econômica_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se juros aumentar?",
+    "options": [
+      "taxa_de_inadimplência",
+      "ações",
+      "dividendos_anual",
+      "risco_de_crédito_esperado"
+    ],
+    "correct": "risco_de_crédito_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se risco_sistêmico aumentar?",
+    "options": [
+      "despesas_variáveis_ajustado",
+      "taxa_de_política_monetária",
+      "investimento_pessoal_esperado",
+      "investimento_pessoal_ajustado"
+    ],
+    "correct": "investimento_pessoal_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_fundos_imobiliários aumentar?",
+    "options": [
+      "juros",
+      "juros_do_crédito_esperado",
+      "dividendos_anual",
+      "taxa_de_dividendos"
+    ],
+    "correct": "dividendos_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se ações_anual aumentar?",
+    "options": [
+      "PIB_ajustado",
+      "valuation_anual",
+      "taxa_de_crescimento_econômico",
+      "taxa_de_juros_do_crédito"
+    ],
+    "correct": "valuation_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se deflação_ajustado aumentar?",
+    "options": [
+      "score_de_crédito_ajustado",
+      "valuation_anual",
+      "inflação_ajustado",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "inflação_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_esperado aumentar?",
+    "options": [
+      "portfólio_ajustado",
+      "beta_esperado",
+      "dividendos_ajustado",
+      "recessão_anual"
+    ],
+    "correct": "beta_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_diversificação aumentar?",
+    "options": [
+      "risco_de_mercado_anual",
+      "recessão",
+      "índice_de_risco_sistêmico",
+      "taxa_de_ETF"
+    ],
+    "correct": "taxa_de_ETF",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_portfólio aumentar?",
+    "options": [
+      "demanda_agregada",
+      "índice_de_drawdown",
+      "renda_mensal_esperado",
+      "taxa_de_risco_sistêmico"
+    ],
+    "correct": "demanda_agregada",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se renda_mensal aumentar?",
+    "options": [
+      "volatilidade_anual",
+      "risco_de_mercado_anual",
+      "investimento_pessoal_esperado",
+      "juros_do_crédito"
+    ],
+    "correct": "volatilidade_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se portfólio_ajustado aumentar?",
+    "options": [
+      "renda_mensal_ajustado",
+      "valuation_ajustado",
+      "índice_de_financiamento",
+      "taxa_de_juros"
+    ],
+    "correct": "valuation_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_risco_sistêmico aumentar?",
+    "options": [
+      "investimento_pessoal_esperado",
+      "renda_mensal",
+      "taxa_de_deflação",
+      "taxa_de_juros_anual"
+    ],
+    "correct": "investimento_pessoal_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se demanda_agregada aumentar?",
+    "options": [
+      "índice_de_score_de_crédito",
+      "deflação_ajustado",
+      "taxa_de_fundos_imobiliários",
+      "beta_anual"
+    ],
+    "correct": "beta_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_investimento_pessoal aumentar?",
+    "options": [
+      "índice_de_recessão",
+      "drawdown_anual",
+      "despesas_fixas_ajustado",
+      "recessão_esperado"
+    ],
+    "correct": "despesas_fixas_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se empréstimo_ajustado aumentar?",
+    "options": [
+      "crescimento_econômico_ajustado",
+      "drawdown_anual",
+      "risco_de_mercado_anual",
+      "índice_de_PIB"
+    ],
+    "correct": "crescimento_econômico_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se PIB_ajustado aumentar?",
+    "options": [
+      "inflação_ajustado",
+      "taxa_de_juros",
+      "taxa_de_ações",
+      "poupança"
+    ],
+    "correct": "inflação_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se inadimplência_ajustado aumentar?",
+    "options": [
+      "recessão_ajustado",
+      "valuation_anual",
+      "política_monetária_esperado",
+      "taxa_de_drawdown"
+    ],
+    "correct": "recessão_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se orçamento_anual aumentar?",
+    "options": [
+      "risco_de_crédito_ajustado",
+      "juros",
+      "taxa_de_juros_do_crédito",
+      "taxa_de_deflação"
+    ],
+    "correct": "taxa_de_deflação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se valuation aumentar?",
+    "options": [
+      "crescimento_econômico_ajustado",
+      "PIB_esperado",
+      "portfólio_ajustado",
+      "taxa_de_poupança"
+    ],
+    "correct": "PIB_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se ETF_anual aumentar?",
+    "options": [
+      "risco_de_crédito",
+      "diversificação_esperado",
+      "score_de_crédito_ajustado",
+      "diversificação_anual"
+    ],
+    "correct": "risco_de_crédito",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_orçamento aumentar?",
+    "options": [
+      "expansão_econômica_ajustado",
+      "taxa_de_juros_anual",
+      "diversificação_anual",
+      "valuation_ajustado"
+    ],
+    "correct": "valuation_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se deflação aumentar?",
+    "options": [
+      "diversificação_ajustado",
+      "fundos_imobiliários_ajustado",
+      "fundos_imobiliários_anual",
+      "drawdown"
+    ],
+    "correct": "diversificação_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_deflação aumentar?",
+    "options": [
+      "índice_de_financiamento",
+      "taxa_de_diversificação",
+      "taxa_de_volatilidade",
+      "índice_de_risco_sistêmico"
+    ],
+    "correct": "índice_de_financiamento",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_esperado aumentar?",
+    "options": [
+      "índice_de_beta",
+      "despesas_variáveis_ajustado",
+      "dividendos_anual",
+      "risco_sistêmico_ajustado"
+    ],
+    "correct": "dividendos_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se demanda_agregada aumentar?",
+    "options": [
+      "drawdown",
+      "índice_de_renda_fixa",
+      "risco_de_crédito_esperado",
+      "risco_sistêmico_esperado"
+    ],
+    "correct": "risco_de_crédito_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se juros_do_crédito_esperado aumentar?",
+    "options": [
+      "ações_esperado",
+      "orçamento_ajustado",
+      "taxa_de_juros",
+      "índice_de_risco_de_crédito"
+    ],
+    "correct": "orçamento_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_ajustado aumentar?",
+    "options": [
+      "deflação_anual",
+      "PIB",
+      "taxa_de_risco_sistêmico",
+      "portfólio_ajustado"
+    ],
+    "correct": "taxa_de_risco_sistêmico",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_diversificação aumentar?",
+    "options": [
+      "índice_de_despesas_fixas",
+      "taxa_de_recessão",
+      "juros_anual",
+      "portfólio_ajustado"
+    ],
+    "correct": "taxa_de_recessão",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_diversificação aumentar?",
+    "options": [
+      "portfólio_ajustado",
+      "renda_mensal",
+      "taxa_de_mercado_acionário",
+      "diversificação_anual"
+    ],
+    "correct": "portfólio_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se recessão_esperado aumentar?",
+    "options": [
+      "PIB_ajustado",
+      "índice_de_poupança",
+      "taxa_de_portfólio",
+      "dividendos_anual"
+    ],
+    "correct": "dividendos_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se fundos_imobiliários aumentar?",
+    "options": [
+      "renda_mensal",
+      "inflação_ajustado",
+      "índice_de_ETF",
+      "índice_de_despesas_fixas"
+    ],
+    "correct": "índice_de_despesas_fixas",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se poupança_ajustado aumentar?",
+    "options": [
+      "portfólio_anual",
+      "fundos_imobiliários_anual",
+      "ETF",
+      "taxa_de_mercado_acionário"
+    ],
+    "correct": "ETF",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se crescimento_econômico_esperado aumentar?",
+    "options": [
+      "portfólio",
+      "ações_anual",
+      "demanda_agregada_anual",
+      "taxa_de_recessão"
+    ],
+    "correct": "taxa_de_recessão",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se recessão_esperado aumentar?",
+    "options": [
+      "taxa_de_juros_anual",
+      "índice_de_ações",
+      "ETF_esperado",
+      "poupança_esperado"
+    ],
+    "correct": "poupança_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_financiamento aumentar?",
+    "options": [
+      "despesas_variáveis_anual",
+      "diversificação_ajustado",
+      "risco_de_crédito_ajustado",
+      "ações_anual"
+    ],
+    "correct": "despesas_variáveis_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica aumentar?",
+    "options": [
+      "poupança_anual",
+      "taxa_de_ações",
+      "taxa_de_risco_de_mercado",
+      "investimento_pessoal_esperado"
+    ],
+    "correct": "taxa_de_ações",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se volatilidade_esperado aumentar?",
+    "options": [
+      "inflação_esperado",
+      "taxa_de_drawdown",
+      "ações_esperado",
+      "investimento_pessoal_ajustado"
+    ],
+    "correct": "inflação_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se fundos_imobiliários_ajustado aumentar?",
+    "options": [
+      "ETF_ajustado",
+      "taxa_de_juros_anual",
+      "score_de_crédito_anual",
+      "mercado_acionário_anual"
+    ],
+    "correct": "score_de_crédito_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_ETF aumentar?",
+    "options": [
+      "índice_de_ETF",
+      "expansão_econômica",
+      "taxa_de_diversificação",
+      "crescimento_econômico_ajustado"
+    ],
+    "correct": "índice_de_ETF",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se diversificação_anual aumentar?",
+    "options": [
+      "beta_esperado",
+      "índice_de_despesas_fixas",
+      "PIB_ajustado",
+      "crescimento_econômico_ajustado"
+    ],
+    "correct": "PIB_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_PIB aumentar?",
+    "options": [
+      "deflação",
+      "demanda_agregada",
+      "empréstimo_ajustado",
+      "taxa_de_ações"
+    ],
+    "correct": "deflação",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se empréstimo aumentar?",
+    "options": [
+      "dividendos_anual",
+      "taxa_de_risco_sistêmico",
+      "índice_de_deflação",
+      "crescimento_econômico_esperado"
+    ],
+    "correct": "dividendos_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se despesas_fixas_ajustado aumentar?",
+    "options": [
+      "risco_de_mercado_anual",
+      "demanda_agregada",
+      "risco_de_mercado",
+      "empréstimo_anual"
+    ],
+    "correct": "risco_de_mercado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_anual aumentar?",
+    "options": [
+      "expansão_econômica",
+      "taxa_de_juros_esperado",
+      "taxa_de_juros",
+      "taxa_de_deflação"
+    ],
+    "correct": "taxa_de_juros",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_dividendos aumentar?",
+    "options": [
+      "índice_de_inflação",
+      "taxa_de_demanda_agregada",
+      "taxa_de_diversificação",
+      "índice_de_portfólio"
+    ],
+    "correct": "índice_de_portfólio",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_inflação aumentar?",
+    "options": [
+      "taxa_de_risco_de_crédito",
+      "índice_de_taxa_de_juros",
+      "valuation",
+      "valuation_anual"
+    ],
+    "correct": "valuation_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_juros aumentar?",
+    "options": [
+      "empréstimo_anual",
+      "índice_de_fundos_imobiliários",
+      "despesas_fixas_anual",
+      "beta"
+    ],
+    "correct": "despesas_fixas_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se ações_anual aumentar?",
+    "options": [
+      "taxa_de_expansão_econômica",
+      "taxa_de_PIB",
+      "índice_de_política_monetária",
+      "empréstimo_ajustado"
+    ],
+    "correct": "índice_de_política_monetária",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_risco_de_crédito aumentar?",
+    "options": [
+      "índice_de_ETF",
+      "ETF_anual",
+      "risco_sistêmico_esperado",
+      "inflação_ajustado"
+    ],
+    "correct": "ETF_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se juros_ajustado aumentar?",
+    "options": [
+      "mercado_acionário_anual",
+      "volatilidade_ajustado",
+      "PIB_esperado",
+      "índice_de_dividendos"
+    ],
+    "correct": "PIB_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica_esperado aumentar?",
+    "options": [
+      "crescimento_econômico_esperado",
+      "juros_do_crédito_esperado",
+      "risco_de_mercado_ajustado",
+      "juros_do_crédito"
+    ],
+    "correct": "juros_do_crédito_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_fundos_imobiliários aumentar?",
+    "options": [
+      "risco_de_mercado_anual",
+      "PIB_anual",
+      "índice_de_crescimento_econômico",
+      "taxa_de_juros_esperado"
+    ],
+    "correct": "índice_de_crescimento_econômico",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se ETF_esperado aumentar?",
+    "options": [
+      "mercado_acionário_ajustado",
+      "beta_ajustado",
+      "inadimplência_esperado",
+      "beta"
+    ],
+    "correct": "inadimplência_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito_anual aumentar?",
+    "options": [
+      "risco_sistêmico",
+      "índice_de_PIB",
+      "taxa_de_ações",
+      "taxa_de_poupança"
+    ],
+    "correct": "índice_de_PIB",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_ações aumentar?",
+    "options": [
+      "taxa_de_política_monetária",
+      "PIB_esperado",
+      "mercado_acionário_anual",
+      "beta_ajustado"
+    ],
+    "correct": "taxa_de_política_monetária",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se inadimplência_esperado aumentar?",
+    "options": [
+      "dividendos_anual",
+      "diversificação_esperado",
+      "índice_de_risco_sistêmico",
+      "ETF_ajustado"
+    ],
+    "correct": "diversificação_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_demanda_agregada aumentar?",
+    "options": [
+      "fundos_imobiliários_ajustado",
+      "índice_de_score_de_crédito",
+      "renda_mensal",
+      "financiamento_esperado"
+    ],
+    "correct": "fundos_imobiliários_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_despesas_variáveis aumentar?",
+    "options": [
+      "renda_mensal_esperado",
+      "política_monetária_anual",
+      "inflação_esperado",
+      "ações"
+    ],
+    "correct": "política_monetária_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_sistêmico_ajustado aumentar?",
+    "options": [
+      "taxa_de_portfólio",
+      "crescimento_econômico_esperado",
+      "risco_sistêmico",
+      "ETF_ajustado"
+    ],
+    "correct": "risco_sistêmico",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_deflação aumentar?",
+    "options": [
+      "financiamento_anual",
+      "score_de_crédito_ajustado",
+      "PIB_anual",
+      "juros_anual"
+    ],
+    "correct": "score_de_crédito_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_poupança aumentar?",
+    "options": [
+      "deflação_esperado",
+      "deflação_anual",
+      "índice_de_demanda_agregada",
+      "renda_mensal_ajustado"
+    ],
+    "correct": "índice_de_demanda_agregada",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se despesas_variáveis_anual aumentar?",
+    "options": [
+      "renda_fixa_ajustado",
+      "ações",
+      "demanda_agregada",
+      "poupança"
+    ],
+    "correct": "demanda_agregada",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_juros_anual aumentar?",
+    "options": [
+      "taxa_de_dividendos",
+      "taxa_de_risco_de_mercado",
+      "risco_de_mercado_anual",
+      "índice_de_drawdown"
+    ],
+    "correct": "taxa_de_dividendos",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se financiamento_anual aumentar?",
+    "options": [
+      "despesas_fixas_ajustado",
+      "dividendos",
+      "índice_de_inflação",
+      "drawdown_anual"
+    ],
+    "correct": "dividendos",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_PIB aumentar?",
+    "options": [
+      "taxa_de_risco_de_mercado",
+      "despesas_fixas_ajustado",
+      "renda_mensal_anual",
+      "diversificação"
+    ],
+    "correct": "taxa_de_risco_de_mercado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se valuation_esperado aumentar?",
+    "options": [
+      "renda_mensal_esperado",
+      "índice_de_juros",
+      "dividendos_ajustado",
+      "índice_de_score_de_crédito"
+    ],
+    "correct": "renda_mensal_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se diversificação_ajustado aumentar?",
+    "options": [
+      "dividendos_esperado",
+      "poupança_anual",
+      "índice_de_deflação",
+      "despesas_variáveis_ajustado"
+    ],
+    "correct": "poupança_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_esperado aumentar?",
+    "options": [
+      "renda_fixa_anual",
+      "drawdown_esperado",
+      "taxa_de_crescimento_econômico",
+      "empréstimo_ajustado"
+    ],
+    "correct": "taxa_de_crescimento_econômico",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se juros_esperado aumentar?",
+    "options": [
+      "inflação_ajustado",
+      "índice_de_inadimplência",
+      "índice_de_fundos_imobiliários",
+      "financiamento_anual"
+    ],
+    "correct": "inflação_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_taxa_de_juros aumentar?",
+    "options": [
+      "despesas_variáveis_ajustado",
+      "drawdown_esperado",
+      "risco_de_crédito",
+      "drawdown_ajustado"
+    ],
+    "correct": "drawdown_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_mercado_ajustado aumentar?",
+    "options": [
+      "índice_de_PIB",
+      "taxa_de_despesas_variáveis",
+      "portfólio_esperado",
+      "renda_mensal"
+    ],
+    "correct": "renda_mensal",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_volatilidade aumentar?",
+    "options": [
+      "índice_de_PIB",
+      "taxa_de_orçamento",
+      "score_de_crédito_ajustado",
+      "fundos_imobiliários_ajustado"
+    ],
+    "correct": "fundos_imobiliários_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se despesas_fixas aumentar?",
+    "options": [
+      "ações_anual",
+      "inadimplência",
+      "PIB_anual",
+      "despesas_variáveis_ajustado"
+    ],
+    "correct": "ações_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_mercado aumentar?",
+    "options": [
+      "taxa_de_juros_anual",
+      "portfólio_ajustado",
+      "diversificação",
+      "taxa_de_juros_do_crédito"
+    ],
+    "correct": "taxa_de_juros_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_mercado_ajustado aumentar?",
+    "options": [
+      "risco_de_crédito_anual",
+      "fundos_imobiliários_ajustado",
+      "deflação",
+      "índice_de_ETF"
+    ],
+    "correct": "deflação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica_ajustado aumentar?",
+    "options": [
+      "ETF",
+      "renda_fixa_anual",
+      "beta_anual",
+      "beta_ajustado"
+    ],
+    "correct": "beta_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se renda_mensal_esperado aumentar?",
+    "options": [
+      "dividendos_esperado",
+      "poupança_ajustado",
+      "índice_de_deflação",
+      "taxa_de_despesas_variáveis"
+    ],
+    "correct": "índice_de_deflação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito aumentar?",
+    "options": [
+      "ETF_ajustado",
+      "renda_fixa_esperado",
+      "volatilidade_ajustado",
+      "drawdown_esperado"
+    ],
+    "correct": "renda_fixa_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_esperado aumentar?",
+    "options": [
+      "taxa_de_juros_anual",
+      "inadimplência_esperado",
+      "PIB_ajustado",
+      "orçamento_ajustado"
+    ],
+    "correct": "orçamento_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se renda_mensal_ajustado aumentar?",
+    "options": [
+      "renda_fixa_esperado",
+      "índice_de_ETF",
+      "volatilidade",
+      "beta"
+    ],
+    "correct": "renda_fixa_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_inadimplência aumentar?",
+    "options": [
+      "valuation_anual",
+      "inflação_ajustado",
+      "recessão_esperado",
+      "taxa_de_drawdown"
+    ],
+    "correct": "recessão_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se risco_de_crédito aumentar?",
+    "options": [
+      "renda_fixa_anual",
+      "ETF_esperado",
+      "índice_de_score_de_crédito",
+      "recessão_anual"
+    ],
+    "correct": "renda_fixa_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se financiamento aumentar?",
+    "options": [
+      "índice_de_dividendos",
+      "portfólio_ajustado",
+      "taxa_de_crescimento_econômico",
+      "índice_de_drawdown"
+    ],
+    "correct": "índice_de_dividendos",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa_anual aumentar?",
+    "options": [
+      "dividendos_anual",
+      "ETF_anual",
+      "drawdown_esperado",
+      "taxa_de_empréstimo"
+    ],
+    "correct": "drawdown_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se portfólio_esperado aumentar?",
+    "options": [
+      "renda_mensal_esperado",
+      "orçamento_ajustado",
+      "índice_de_expansão_econômica",
+      "poupança_anual"
+    ],
+    "correct": "orçamento_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_anual aumentar?",
+    "options": [
+      "expansão_econômica",
+      "risco_sistêmico",
+      "ETF",
+      "poupança_esperado"
+    ],
+    "correct": "expansão_econômica",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_score_de_crédito aumentar?",
+    "options": [
+      "score_de_crédito_anual",
+      "poupança_anual",
+      "despesas_fixas_ajustado",
+      "poupança_esperado"
+    ],
+    "correct": "despesas_fixas_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_ajustado aumentar?",
+    "options": [
+      "taxa_de_juros_esperado",
+      "taxa_de_despesas_variáveis",
+      "inflação_ajustado",
+      "renda_fixa"
+    ],
+    "correct": "taxa_de_juros_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se ações_esperado aumentar?",
+    "options": [
+      "despesas_variáveis_anual",
+      "valuation",
+      "diversificação_ajustado",
+      "renda_fixa_esperado"
+    ],
+    "correct": "diversificação_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_investimento_pessoal aumentar?",
+    "options": [
+      "política_monetária",
+      "juros_do_crédito_esperado",
+      "índice_de_taxa_de_juros",
+      "taxa_de_investimento_pessoal"
+    ],
+    "correct": "índice_de_taxa_de_juros",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se despesas_variáveis_esperado aumentar?",
+    "options": [
+      "dividendos",
+      "demanda_agregada",
+      "renda_fixa_esperado",
+      "ações_anual"
+    ],
+    "correct": "renda_fixa_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se volatilidade_esperado aumentar?",
+    "options": [
+      "taxa_de_PIB",
+      "risco_de_crédito_anual",
+      "índice_de_taxa_de_juros",
+      "taxa_de_despesas_variáveis"
+    ],
+    "correct": "índice_de_taxa_de_juros",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_fundos_imobiliários aumentar?",
+    "options": [
+      "ações_esperado",
+      "poupança_anual",
+      "índice_de_política_monetária",
+      "taxa_de_juros"
+    ],
+    "correct": "índice_de_política_monetária",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se crescimento_econômico aumentar?",
+    "options": [
+      "financiamento_anual",
+      "taxa_de_empréstimo",
+      "taxa_de_juros",
+      "índice_de_financiamento"
+    ],
+    "correct": "financiamento_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se juros_do_crédito_esperado aumentar?",
+    "options": [
+      "score_de_crédito_esperado",
+      "taxa_de_portfólio",
+      "taxa_de_beta",
+      "financiamento_esperado"
+    ],
+    "correct": "taxa_de_beta",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se poupança_esperado aumentar?",
+    "options": [
+      "taxa_de_crescimento_econômico",
+      "deflação",
+      "índice_de_poupança",
+      "risco_de_crédito"
+    ],
+    "correct": "deflação",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_dividendos aumentar?",
+    "options": [
+      "índice_de_PIB",
+      "investimento_pessoal",
+      "poupança",
+      "taxa_de_ações"
+    ],
+    "correct": "taxa_de_ações",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_diversificação aumentar?",
+    "options": [
+      "índice_de_deflação",
+      "risco_de_crédito_anual",
+      "taxa_de_expansão_econômica",
+      "juros_do_crédito_esperado"
+    ],
+    "correct": "índice_de_deflação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_juros aumentar?",
+    "options": [
+      "diversificação_anual",
+      "índice_de_score_de_crédito",
+      "beta_anual",
+      "risco_de_mercado_anual"
+    ],
+    "correct": "beta_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_despesas_variáveis aumentar?",
+    "options": [
+      "ações_anual",
+      "despesas_variáveis_anual",
+      "orçamento",
+      "índice_de_deflação"
+    ],
+    "correct": "índice_de_deflação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_poupança aumentar?",
+    "options": [
+      "taxa_de_recessão",
+      "índice_de_empréstimo",
+      "PIB_ajustado",
+      "orçamento_anual"
+    ],
+    "correct": "índice_de_empréstimo",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_juros aumentar?",
+    "options": [
+      "demanda_agregada",
+      "inadimplência_anual",
+      "despesas_fixas_ajustado",
+      "índice_de_juros_do_crédito"
+    ],
+    "correct": "despesas_fixas_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se orçamento_esperado aumentar?",
+    "options": [
+      "taxa_de_despesas_variáveis",
+      "taxa_de_juros",
+      "inadimplência_esperado",
+      "renda_mensal_ajustado"
+    ],
+    "correct": "taxa_de_juros",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_risco_sistêmico aumentar?",
+    "options": [
+      "taxa_de_orçamento",
+      "taxa_de_juros_do_crédito",
+      "risco_de_crédito",
+      "risco_de_mercado"
+    ],
+    "correct": "taxa_de_juros_do_crédito",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_despesas_variáveis aumentar?",
+    "options": [
+      "taxa_de_diversificação",
+      "PIB_esperado",
+      "índice_de_drawdown",
+      "índice_de_renda_mensal"
+    ],
+    "correct": "taxa_de_diversificação",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_inadimplência aumentar?",
+    "options": [
+      "PIB",
+      "despesas_fixas_ajustado",
+      "taxa_de_juros_do_crédito",
+      "dividendos_anual"
+    ],
+    "correct": "taxa_de_juros_do_crédito",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se portfólio_anual aumentar?",
+    "options": [
+      "índice_de_deflação",
+      "renda_mensal_esperado",
+      "score_de_crédito",
+      "valuation_ajustado"
+    ],
+    "correct": "score_de_crédito",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se despesas_variáveis_esperado aumentar?",
+    "options": [
+      "fundos_imobiliários_ajustado",
+      "inadimplência_ajustado",
+      "orçamento",
+      "taxa_de_score_de_crédito"
+    ],
+    "correct": "inadimplência_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se portfólio aumentar?",
+    "options": [
+      "taxa_de_investimento_pessoal",
+      "orçamento_ajustado",
+      "investimento_pessoal_ajustado",
+      "taxa_de_taxa_de_juros"
+    ],
+    "correct": "taxa_de_investimento_pessoal",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_beta aumentar?",
+    "options": [
+      "renda_fixa_ajustado",
+      "mercado_acionário_esperado",
+      "poupança_ajustado",
+      "juros_do_crédito_ajustado"
+    ],
+    "correct": "renda_fixa_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_juros aumentar?",
+    "options": [
+      "taxa_de_despesas_fixas",
+      "volatilidade_esperado",
+      "juros_do_crédito",
+      "deflação"
+    ],
+    "correct": "deflação",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_diversificação aumentar?",
+    "options": [
+      "taxa_de_ações",
+      "poupança_anual",
+      "taxa_de_beta",
+      "score_de_crédito_ajustado"
+    ],
+    "correct": "score_de_crédito_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_financiamento aumentar?",
+    "options": [
+      "taxa_de_crescimento_econômico",
+      "expansão_econômica",
+      "índice_de_orçamento",
+      "risco_de_crédito"
+    ],
+    "correct": "índice_de_orçamento",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se despesas_fixas aumentar?",
+    "options": [
+      "renda_mensal",
+      "índice_de_política_monetária",
+      "portfólio_ajustado",
+      "orçamento"
+    ],
+    "correct": "renda_mensal",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se inflação_ajustado aumentar?",
+    "options": [
+      "inadimplência_esperado",
+      "beta_anual",
+      "volatilidade",
+      "empréstimo_anual"
+    ],
+    "correct": "empréstimo_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica aumentar?",
+    "options": [
+      "risco_de_crédito",
+      "índice_de_score_de_crédito",
+      "volatilidade_ajustado",
+      "fundos_imobiliários_anual"
+    ],
+    "correct": "índice_de_score_de_crédito",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se crescimento_econômico_ajustado aumentar?",
+    "options": [
+      "ETF_esperado",
+      "demanda_agregada_anual",
+      "inadimplência",
+      "taxa_de_expansão_econômica"
+    ],
+    "correct": "demanda_agregada_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_diversificação aumentar?",
+    "options": [
+      "renda_fixa_esperado",
+      "inadimplência_anual",
+      "taxa_de_ações",
+      "ETF_esperado"
+    ],
+    "correct": "renda_fixa_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_taxa_de_juros aumentar?",
+    "options": [
+      "juros_do_crédito_ajustado",
+      "índice_de_empréstimo",
+      "taxa_de_renda_fixa",
+      "renda_mensal_ajustado"
+    ],
+    "correct": "índice_de_empréstimo",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_despesas_variáveis aumentar?",
+    "options": [
+      "risco_de_crédito_esperado",
+      "renda_fixa_esperado",
+      "fundos_imobiliários_ajustado",
+      "risco_de_crédito"
+    ],
+    "correct": "risco_de_crédito_esperado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se crescimento_econômico_ajustado aumentar?",
+    "options": [
+      "renda_mensal_esperado",
+      "índice_de_renda_fixa",
+      "risco_de_crédito_anual",
+      "taxa_de_recessão"
+    ],
+    "correct": "risco_de_crédito_anual",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se dividendos_esperado aumentar?",
+    "options": [
+      "volatilidade_ajustado",
+      "dividendos",
+      "expansão_econômica",
+      "índice_de_poupança"
+    ],
+    "correct": "expansão_econômica",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se deflação aumentar?",
+    "options": [
+      "índice_de_ETF",
+      "juros_do_crédito_esperado",
+      "índice_de_taxa_de_juros",
+      "índice_de_recessão"
+    ],
+    "correct": "índice_de_ETF",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se PIB aumentar?",
+    "options": [
+      "poupança_ajustado",
+      "risco_de_crédito_anual",
+      "poupança_anual",
+      "volatilidade"
+    ],
+    "correct": "poupança_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se poupança aumentar?",
+    "options": [
+      "inflação",
+      "risco_de_mercado_anual",
+      "score_de_crédito",
+      "fundos_imobiliários_anual"
+    ],
+    "correct": "inflação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_beta aumentar?",
+    "options": [
+      "deflação",
+      "orçamento_esperado",
+      "política_monetária",
+      "orçamento"
+    ],
+    "correct": "orçamento_esperado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_beta aumentar?",
+    "options": [
+      "recessão_anual",
+      "drawdown_anual",
+      "investimento_pessoal_ajustado",
+      "score_de_crédito_anual"
+    ],
+    "correct": "recessão_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_despesas_variáveis aumentar?",
+    "options": [
+      "beta_anual",
+      "demanda_agregada",
+      "juros_do_crédito_ajustado",
+      "mercado_acionário_anual"
+    ],
+    "correct": "demanda_agregada",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se drawdown_anual aumentar?",
+    "options": [
+      "inadimplência_ajustado",
+      "risco_sistêmico",
+      "ETF_ajustado",
+      "beta_anual"
+    ],
+    "correct": "ETF_ajustado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_inadimplência aumentar?",
+    "options": [
+      "despesas",
+      "mercado_acionário",
+      "risco_sistêmico_anual",
+      "taxa_de_diversificação"
+    ],
+    "correct": "taxa_de_diversificação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa aumentar?",
+    "options": [
+      "despesas_variáveis_anual",
+      "índice_de_inadimplência",
+      "inadimplência_esperado",
+      "risco_sistêmico"
+    ],
+    "correct": "índice_de_inadimplência",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa_anual aumentar?",
+    "options": [
+      "score_de_crédito_anual",
+      "taxa_de_deflação",
+      "ETF_ajustado",
+      "índice_de_beta"
+    ],
+    "correct": "score_de_crédito_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se demanda_agregada_ajustado aumentar?",
+    "options": [
+      "risco_de_crédito_esperado",
+      "empréstimo_esperado",
+      "índice_de_drawdown",
+      "ETF_esperado"
+    ],
+    "correct": "risco_de_crédito_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se score_de_crédito_ajustado aumentar?",
+    "options": [
+      "investimento_pessoal_ajustado",
+      "financiamento_anual",
+      "dividendos_esperado",
+      "índice_de_financiamento"
+    ],
+    "correct": "investimento_pessoal_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa aumentar?",
+    "options": [
+      "drawdown",
+      "poupança",
+      "juros_ajustado",
+      "risco_sistêmico_esperado"
+    ],
+    "correct": "poupança",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_despesas_fixas aumentar?",
+    "options": [
+      "deflação",
+      "empréstimo_ajustado",
+      "renda_fixa_esperado",
+      "fundos_imobiliários_anual"
+    ],
+    "correct": "renda_fixa_esperado",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se mercado_acionário_ajustado aumentar?",
+    "options": [
+      "volatilidade",
+      "taxa_de_crescimento_econômico",
+      "renda_fixa_anual",
+      "diversificação"
+    ],
+    "correct": "diversificação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se demanda_agregada aumentar?",
+    "options": [
+      "índice_de_fundos_imobiliários",
+      "despesas_fixas_ajustado",
+      "índice_de_ETF",
+      "renda_fixa_esperado"
+    ],
+    "correct": "índice_de_fundos_imobiliários",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se empréstimo_ajustado aumentar?",
+    "options": [
+      "drawdown_esperado",
+      "score_de_crédito",
+      "taxa_de_juros",
+      "taxa_de_crescimento_econômico"
+    ],
+    "correct": "taxa_de_juros",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_inadimplência aumentar?",
+    "options": [
+      "orçamento_esperado",
+      "fundos_imobiliários",
+      "taxa_de_fundos_imobiliários",
+      "investimento_pessoal"
+    ],
+    "correct": "investimento_pessoal",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se renda_fixa aumentar?",
+    "options": [
+      "renda_fixa_esperado",
+      "financiamento_anual",
+      "índice_de_recessão",
+      "índice_de_juros"
+    ],
+    "correct": "índice_de_juros",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_taxa_de_juros aumentar?",
+    "options": [
+      "índice_de_ações",
+      "ETF_anual",
+      "taxa_de_poupança",
+      "taxa_de_empréstimo"
+    ],
+    "correct": "taxa_de_poupança",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se drawdown aumentar?",
+    "options": [
+      "deflação",
+      "inflação_ajustado",
+      "fundos_imobiliários_esperado",
+      "deflação_ajustado"
+    ],
+    "correct": "deflação_ajustado",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_inadimplência aumentar?",
+    "options": [
+      "taxa_de_diversificação",
+      "inflação_ajustado",
+      "taxa_de_valuation",
+      "índice_de_mercado_acionário"
+    ],
+    "correct": "taxa_de_diversificação",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_deflação aumentar?",
+    "options": [
+      "juros_do_crédito_esperado",
+      "demanda_agregada_ajustado",
+      "taxa_de_ações",
+      "renda_mensal_anual"
+    ],
+    "correct": "renda_mensal_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_poupança aumentar?",
+    "options": [
+      "beta_anual",
+      "índice_de_risco_de_crédito",
+      "valuation_anual",
+      "empréstimo_ajustado"
+    ],
+    "correct": "índice_de_risco_de_crédito",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_score_de_crédito aumentar?",
+    "options": [
+      "expansão_econômica",
+      "volatilidade_anual",
+      "índice_de_renda_mensal",
+      "taxa_de_mercado_acionário"
+    ],
+    "correct": "volatilidade_anual",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se taxa_de_investimento_pessoal aumentar?",
+    "options": [
+      "deflação_ajustado",
+      "taxa_de_poupança",
+      "taxa_de_juros",
+      "taxa_de_deflação"
+    ],
+    "correct": "taxa_de_deflação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se demanda_agregada_esperado aumentar?",
+    "options": [
+      "despesas_fixas",
+      "diversificação_anual",
+      "inadimplência_anual",
+      "inadimplência_esperado"
+    ],
+    "correct": "diversificação_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se valuation_esperado aumentar?",
+    "options": [
+      "índice_de_deflação",
+      "ETF_ajustado",
+      "inflação_ajustado",
+      "PIB"
+    ],
+    "correct": "inflação_ajustado",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se expansão_econômica aumentar?",
+    "options": [
+      "taxa_de_juros",
+      "deflação",
+      "índice_de_beta",
+      "mercado_acionário_esperado"
+    ],
+    "correct": "índice_de_beta",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se investimento_pessoal aumentar?",
+    "options": [
+      "despesas_variáveis_anual",
+      "índice_de_mercado_acionário",
+      "investimento_pessoal_ajustado",
+      "fundos_imobiliários_ajustado"
+    ],
+    "correct": "índice_de_mercado_acionário",
+    "difficulty": "iniciante"
+  },
+  {
+    "question": "O que pode acontecer se fundos_imobiliários_ajustado aumentar?",
+    "options": [
+      "taxa_de_investimento_pessoal",
+      "investimento_pessoal_esperado",
+      "crescimento_econômico",
+      "despesas_fixas_ajustado"
+    ],
+    "correct": "taxa_de_investimento_pessoal",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se ações aumentar?",
+    "options": [
+      "empréstimo_ajustado",
+      "diversificação_anual",
+      "juros_esperado",
+      "demanda_agregada"
+    ],
+    "correct": "diversificação_anual",
+    "difficulty": "avancado"
+  },
+  {
+    "question": "O que pode acontecer se índice_de_despesas_fixas aumentar?",
+    "options": [
+      "risco_de_mercado",
+      "deflação",
+      "inadimplência_esperado",
+      "expansão_econômica"
+    ],
+    "correct": "deflação",
+    "difficulty": "intermediario"
+  },
+  {
+    "question": "O que pode acontecer se fundos_imobiliários_ajustado aumentar?",
+    "options": [
+      "taxa_de_juros_anual",
+      "beta_anual",
+      "índice_de_expansão_econômica",
+      "dividendos"
+    ],
+    "correct": "índice_de_expansão_econômica",
+    "difficulty": "avancado"
+  }
+]
