@@ -8,12 +8,16 @@ class UserProfile:
     def adapt_text(self, text):
 
         if self.level == "iniciante":
+            text = f"Vamos simplificar: {text}"
 
-            return f"Explicação simples: {text}"
+        elif self.level == "avancado":
+            text = f"Análise técnica: {text}"
 
-        if self.level == "avancado":
+        if self.age_group == "teen":
+            text = f"Imagina assim: {text}"
 
-            return f"Explicação técnica: {text}"
+        elif self.age_group == "elderly":
+            text = f"Vou explicar com calma: {text}"
 
         return text
 

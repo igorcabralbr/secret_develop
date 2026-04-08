@@ -31,3 +31,13 @@ class FinanceEngine:
             return None
 
         return max(categories, key=categories.get)
+        
+    def summary(self):
+
+        total = self.total_spending()
+        by_cat = self.spending_by_category()
+
+        return {
+            "total": total,
+            "categories": by_cat
+        }

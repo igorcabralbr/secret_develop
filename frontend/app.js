@@ -1,211 +1,177 @@
-const API = "http://127.0.0.1:8000";
+const API_URL = "http://localhost:8000";
 
-let accessibility = false;
-let xp = parseInt(localStorage.getItem("xp")) || 0;
+// -------------------------
+// ELEMENTOS DOM
+// -------------------------
 
-window.onload = () => {
-  loadHistory();
-  updateXP();
-};
+const input = document.getElementById("input");
+const responseBox = document.getElementById("response");
 
-// XP
-function gainXP(amount) {
-  xp += amount;
-  localStorage.setItem("xp", xp);
-  updateXP();
+const ageSelect = document.getElementById("age");
+const levelSelect = document.getElementById("level");
+const accessibilitySelect = document.getElementById("accessibility");
+
+
+// -------------------------
+// UTIL
+// -------------------------
+
+function setLoading(state) {
+    if (state) {
+        responseBox.innerText = "Pensando...";
+    }
 }
 
-function updateXP() {
-  document.getElementById("xp-display").innerText = `XP: ${xp}`;
+function showResponse(text) {
+    responseBox.innerText = text;
 }
 
-// CHAT
-function addMessage(text, type) {
-  const msg = document.createElement("div");
-  msg.className = `message ${type}`;
-  msg.innerText = text;
-  document.getElementById("messages").appendChild(msg);
-  scrollDown();
-}
 
-function typeMessage(text, type) {
-  const msg = document.createElement("div");
-  msg.className = `message ${type}`;
-  document.getElementById("messages").appendChild(msg);
-
-  let i = 0;
-  const interval = setInterval(() => {
-    msg.innerText += text[i];
-    i++;
-    if (i >= text.length) clearInterval(interval);
-  }, 10);
-
-  scrollDown();
-}
-
-function adaptText(text) {
-  if (!accessibility) return text;
-  return text.replace(/,/g, "\n").replace(/\./g, ".\n\n").toUpperCase();
-}
-
-function speak(text) {
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = "pt-BR";
-  speechSynthesis.speak(u);
-}
+// -------------------------
+// ASK
+// -------------------------
 
 async function sendQuestion() {
 
-  const input = document.getElementById("question");
-  const question = input.value;
-  if (!question) return;
+    const question = input.value.trim();
 
-  addMessage(question, "user");
-  saveMessage(question, "user");
+    if (!question) {
+        showResponse("Digite uma pergunta.");
+        return;
+    }
 
-  input.value = "";
+    try {
 
-  const thinking = document.createElement("div");
-  thinking.className = "message bot";
-  thinking.innerText = "Pensando...";
-  document.getElementById("messages").appendChild(thinking);
+        setLoading(true);
 
-  const res = await fetch(`${API}/ask`, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({
-      question,
-      user_profile: {
-        age_group: document.getElementById("age").value,
-        level: document.getElementById("level").value
-      }
-    })
-  });
+        const res = await fetch(`${API_URL}/ask`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ question })
+        });
 
-  const data = await res.json();
+        const data = await res.json();
 
-  thinking.remove();
+        showResponse(data.response);
 
-  let text = adaptText(data.answer);
+    } catch (error) {
 
-  typeMessage(text, "bot");
-  saveMessage(text, "bot");
-  speak(text);
+        console.error(error);
+        showResponse("Erro ao conectar com o servidor.");
 
-  if (data.paths) {
-    let reasoning = "🧠 Como pensei:\n\n";
-    data.paths.forEach(p => {
-      p.path.forEach(step => {
-        reasoning += `${step[0]} → ${step[1]} → ${step[2]}\n`;
-      });
-    });
-    typeMessage(reasoning, "bot");
-  }
+    }
 }
 
+
+// -------------------------
 // QUIZ
+// -------------------------
+
 async function getQuiz() {
-  const res = await fetch(`${API}/quiz`);
-  const data = await res.json();
-  renderQuiz(data);
+
+    try {
+
+        setLoading(true);
+
+        const res = await fetch(`${API_URL}/quiz`);
+        const data = await res.json();
+
+        renderQuiz(data);
+
+    } catch (error) {
+
+        console.error(error);
+        showResponse("Erro ao carregar quiz.");
+
+    }
 }
 
-function renderQuiz(data) {
-  const container = document.createElement("div");
-  container.className = "message bot";
 
-  const q = document.createElement("p");
-  q.innerText = `🎯 ${data.question}`;
-  container.appendChild(q);
+// -------------------------
+// RENDER QUIZ
+// -------------------------
 
-  data.options.forEach(opt => {
-    const btn = document.createElement("button");
-    btn.innerText = opt;
+function renderQuiz(quiz) {
 
-    btn.onclick = () => {
-      if (opt === data.correct) {
-        btn.style.background = "#22c55e";
-        gainXP(10);
-      } else {
-        btn.style.background = "#ef4444";
-      }
+    const container = document.getElementById("quiz");
+
+    container.innerHTML = "";
+
+    const question = document.createElement("p");
+    question.innerText = quiz.question;
+
+    container.appendChild(question);
+
+    quiz.options.forEach(option => {
+
+        const btn = document.createElement("button");
+
+        btn.innerText = option;
+
+        btn.onclick = () => checkAnswer(option, quiz.correct);
+
+        container.appendChild(btn);
+    });
+}
+
+
+// -------------------------
+// CHECK ANSWER
+// -------------------------
+
+function checkAnswer(selected, correct) {
+
+    if (selected === correct) {
+        showResponse("✅ Resposta correta!");
+    } else {
+        showResponse(`❌ Errado! Resposta correta: ${correct}`);
+    }
+}
+
+
+// -------------------------
+// CONFIG USER
+// -------------------------
+
+async function updateUserConfig() {
+
+    const config = {
+        age_group: ageSelect.value,
+        level: levelSelect.value,
+        accessibility: accessibilitySelect.value
     };
 
-    container.appendChild(btn);
-  });
+    try {
 
-  document.getElementById("messages").appendChild(container);
-  scrollDown();
+        const res = await fetch(`${API_URL}/user/config`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(config)
+        });
+
+        const data = await res.json();
+
+        showResponse("Configuração atualizada!");
+
+    } catch (error) {
+
+        console.error(error);
+        showResponse("Erro ao atualizar usuário.");
+
+    }
 }
 
-// DASHBOARD
-async function showDashboard() {
 
-  document.getElementById("chat-view").classList.add("hidden");
-  document.getElementById("dashboard-view").classList.remove("hidden");
+// -------------------------
+// ENTER PARA ENVIAR
+// -------------------------
 
-  const res = await fetch(`${API}/finance/analyze`, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({
-      transactions: [
-        {category: "lazer", amount: 300},
-        {category: "alimentacao", amount: 600}
-      ]
-    })
-  });
-
-  const data = await res.json();
-
-  renderChart(data);
-
-  typeMessage("📊 Insights carregados!", "bot");
-}
-
-// MENTOR
-async function runMentor() {
-
-  const res = await fetch(`${API}/mentor/analyze`, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({
-      income: 5000,
-      expenses: [
-        {category: "lazer", amount: 300},
-        {category: "moradia", amount: 1500}
-      ]
-    })
-  });
-
-  const r = await res.json();
-
-  typeMessage(`
-💰 Economia: ${r.monthly_savings}
-📅 Ano: ${r.yearly_projection}
-🚀 Futuro: ${r.future_5_years}
-`, "bot");
-}
-
-// UI
-function toggleSidebar() {
-  document.getElementById("sidebar").classList.toggle("collapsed");
-}
-
-function toggleMode() {
-  document.body.classList.toggle("light");
-}
-
-function toggleAccessibility() {
-  accessibility = !accessibility;
-  typeMessage(accessibility ? "♿ Acessibilidade ON" : "♿ Acessibilidade OFF", "bot");
-}
-
-// VOICE
-function startVoice() {
-  const r = new webkitSpeechRecognition();
-  r.lang = "pt-BR";
-  r.onresult = e => {
-    document.getElementById("question").value = e.results[0][0].transcript;
-  };
-  r.start();
-}
+input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        sendQuestion();
+    }
+});

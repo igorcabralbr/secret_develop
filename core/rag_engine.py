@@ -4,17 +4,19 @@ class RAGEngine:
 
         self.graph = graph
 
-    def explain_concept(self, concept_id):
+    def explain_concept(self, concept_text):
 
-        definition = self.graph.get_definition(concept_id)
+        concept_text = concept_text.lower()
 
-        module = self.graph.get_module(concept_id)
+        for node in self.graph.graph.nodes:
 
-        return {
-            "concept": concept_id,
-            "module": module,
-            "definition": definition
-        }
+            if concept_text in node:
+                return {
+                    "concept": node,
+                    "definition": self.graph.get_definition(node)
+                }
+
+        return {"definition": "Conceito não encontrado"}
 
     def related_concepts(self, concept_id):
 
