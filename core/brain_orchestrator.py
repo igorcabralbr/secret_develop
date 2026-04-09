@@ -26,20 +26,27 @@ class BrainOrchestrator:
     # =========================
     def process_query(self, query: str, user_id: str = None):
 
-        # 👤 USER CONTEXT (NOVO)
+        # 👤 USER CONTEXT (NORMALIZADO)
         user_context = self.user_engine.get_context(user_id) if user_id else None
         user_profile = self.user_engine.get_llm_profile(user_id) if user_id else None
 
-        # 🧭 INTENT DETECTION
+        # 🧭 INTENT
         intent = self._detect_intent(query)
 
         # 🔀 ROUTING
         raw_response = self._route(query, intent, user_context)
 
-        # ♿ ACCESSIBILITY
+        # =========================
+        # 🔧 AJUSTE LEVE AQUI (IMPORTANTE)
+        # =========================
+
+        # garante estrutura consistente para acessibilidade
+        normalized_response = self._normalize_response(raw_response)
+
+        # ♿ ACCESSIBILITY (AGORA CORRETO)
         final_response = self.accessibility_engine.adapt(
-            content=raw_response,
-            user_profile=user_context
+            content=normalized_response,
+            user_profile=user_context  # agora sempre consistente
         )
 
         return {
@@ -48,7 +55,22 @@ class BrainOrchestrator:
         }
 
     # =========================
-    # ROUTER
+    # NORMALIZADOR (NOVO - LEVE)
+    # =========================
+    def _normalize_response(self, response):
+
+        # se já é dict estruturado, mantém
+        if isinstance(response, dict):
+            return response
+
+        # fallback seguro para strings
+        return {
+            "content": response,
+            "type": "raw"
+        }
+
+    # =========================
+    # ROUTER (MANTIDO)
     # =========================
     def _route(self, query: str, intent: str, user_context: dict):
 
@@ -67,7 +89,7 @@ class BrainOrchestrator:
         return self._handle_general(query, user_context)
 
     # =========================
-    # HANDLERS
+    # HANDLERS (SEM REMOVER NADA)
     # =========================
 
     def _handle_concept(self, query: str):
@@ -92,7 +114,7 @@ class BrainOrchestrator:
         return self.quiz_engine.generate(query, user_context=user_context)
 
     # =========================
-    # 🔥 EXPLANATION (LLM INTEGRADO)
+    # 🔥 EXPLANATION (LLM OK)
     # =========================
     def _handle_explanation(self, query: str, user_context: dict):
 
@@ -106,7 +128,6 @@ class BrainOrchestrator:
 
         llm_context = self.reasoning_engine.prepare_for_llm(reasoning)
 
-        # 🤖 LLM AGORA ENTRA AQUI (CORE)
         explanation = self.llm_engine.explain_from_reasoning(
             query=query,
             reasoning_data=llm_context,
@@ -120,7 +141,7 @@ class BrainOrchestrator:
         }
 
     # =========================
-    # GENERAL (RAG + LLM)
+    # GENERAL
     # =========================
     def _handle_general(self, query: str, user_context: dict):
 
@@ -146,7 +167,7 @@ class BrainOrchestrator:
         }
 
     # =========================
-    # INTENT DETECTION
+    # INTENT DETECTION (MANTIDO)
     # =========================
     def _detect_intent(self, query: str) -> str:
         q = query.lower()
