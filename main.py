@@ -1,165 +1,133 @@
-# =========================================
-# IMPORTS EXISTENTES (mantidos)
-# =========================================
+# main.py
 
-from core.graph_engine import FinancialGraph
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+# =========================
+# IMPORTS DOS ENGINES
+# =========================
+from core.graph_engine import GraphEngine
 from core.reasoning_engine import ReasoningEngine
 from core.rag_engine import RAGEngine
 from core.quiz_engine import QuizEngine
 from core.finance_engine import FinanceEngine
-from core.user_engine import UserProfile
-from accessibility.accessibility_engine import AccessibilityEngine
-from core.decision_engine import DecisionEngine
-
-# 🔥 NOVO IMPORT (CRÍTICO)
-from routes.dependencies import decision_engine as shared_engine
+from core.user_engine import UserEngine
+from core.accessibility_engine import AccessibilityEngine
+from core.llm_engine import LLMEngine
+from core.brain_orchestrator import BrainOrchestrator
 
 
-# =========================================
-# NOVO: FASTAPI
-# =========================================
-
-from fastapi import FastAPI
-from routes.ask import router as ask_router
-from routes.quiz import router as quiz_router
-from routes.finance import router as finance_router
-from routes.user import router as user_router
-from routes.explain import router as explain_router
-
-
-# =========================================
-# 1️⃣ FINANCIAL BRAIN (mantido)
-# =========================================
-
-graph = FinancialGraph(
-    "data/concepts.json",
-    "data/relations.json"
-)
-
-reasoner = ReasoningEngine(graph)
-rag = RAGEngine(graph)
-
-quiz = QuizEngine(
-    "data/relations.json",
-    "data/concepts.json"
-)
-
-
-# =========================================
-# 2️⃣ DADOS DO USUÁRIO (mantido)
-# =========================================
-
-transactions = [
-    {"category": "alimentacao", "amount": 800},
-    {"category": "lazer", "amount": 350},
-    {"category": "transporte", "amount": 200},
-    {"category": "assinaturas", "amount": 100}
-]
-
-finance = FinanceEngine(transactions)
-
-
-# =========================================
-# 3️⃣ PERFIL DO USUÁRIO (mantido)
-# =========================================
-
-user = UserProfile(
-    age_group="adult",
-    level="iniciante"
-)
-
-
-# =========================================
-# 4️⃣ ACESSIBILIDADE (mantido)
-# =========================================
-
-accessibility = AccessibilityEngine(
-    mode="simple"
-)
-
-
-# =========================================
-# 5️⃣ DECISION ENGINE (AJUSTADO)
-# =========================================
-
-# ⚠️ ANTES você criava outro engine aqui
-# AGORA usamos o compartilhado
-
-engine = shared_engine  # 🔥 AGORA EXISTE APENAS UM CÉREBRO
-
-
-# =========================================
-# 6️⃣ CLI (mantido)
-# =========================================
-
-def run_cli():
-
-    print("\n🧠 Financial Brain iniciado!")
-    print("Digite sua pergunta ou 'sair' para encerrar.\n")
-
-    while True:
-
-        question = input("Você: ")
-
-        if question.lower() in ["sair", "exit", "quit"]:
-            print("Encerrando Financial Brain...")
-            break
-
-        response = engine.handle(question)
-
-        print("\nBrain:", response)
-        print("\n" + "-"*50 + "\n")
-
-
-# =========================================
-# 7️⃣ TESTES (mantido)
-# =========================================
-
-def run_examples():
-
-    examples = [
-
-        "o que é inflacao",
-        "se inflacao aumentar o que acontece",
-        "me mostre meus gastos",
-        "quero um quiz"
-    ]
-
-    for q in examples:
-
-        print(f"\nPergunta: {q}")
-        print("Resposta:")
-        print(engine.handle(q))
-        print("\n" + "="*60)
-
-
-# =========================================
-# 8️⃣ FASTAPI APP (mantido)
-# =========================================
-
+# =========================
+# APP
+# =========================
 app = FastAPI(title="Financial Brain API")
 
-app.include_router(ask_router)
-app.include_router(quiz_router)
-app.include_router(finance_router)
-app.include_router(user_router)
-app.include_router(explain_router)
+
+# =========================
+# REQUEST MODEL
+# =========================
+class AskRequest(BaseModel):
+    query: str
+    user_id: str | None = None
 
 
-# =========================================
-# 9️⃣ ENTRYPOINT (mantido)
-# =========================================
+# =========================
+# INIT ENGINES (mantido + evoluído)
+# =========================
 
-if __name__ == "__main__":
+# 🔹 Base de conhecimento
+graph_engine = GraphEngine(
+    concepts_path="data/concepts.json",
+    relations_path="data/relations.json"
+)
 
-    mode = "cli"  # "cli", "test", "api"
+# 🔹 RAG
+rag_engine = RAGEngine(graph_engine=graph_engine)
 
-    if mode == "cli":
-        run_cli()
+# 🔹 Reasoning (agora usa graph)
+reasoning_engine = ReasoningEngine(graph_engine=graph_engine)
 
-    elif mode == "test":
-        run_examples()
+# 🔹 Outros módulos
+quiz_engine = QuizEngine(graph_engine=graph_engine)
+finance_engine = FinanceEngine()
+user_engine = UserEngine()
+accessibility_engine = AccessibilityEngine()
 
-    elif mode == "api":
-        import uvicorn
-        uvicorn.run(app, host="0.0.0.0", port=8000)
+# 🔹 LLM (NOVO)
+llm_engine = LLMEngine(
+    provider="openai",  # ou "mock" pra testar sem API
+    model="gpt-4o-mini"
+)
+
+# =========================
+# ORCHESTRATOR (NOVO CORE)
+# =========================
+brain = BrainOrchestrator(
+    graph_engine=graph_engine,
+    reasoning_engine=reasoning_engine,
+    rag_engine=rag_engine,
+    quiz_engine=quiz_engine,
+    finance_engine=finance_engine,
+    user_engine=user_engine,
+    accessibility_engine=accessibility_engine,
+    llm_engine=llm_engine,  # 🔥 integração LLM
+)
+
+
+# =========================
+# HEALTH CHECK
+# =========================
+@app.get("/")
+def root():
+    return {"status": "Financial Brain running"}
+
+
+# =========================
+# ENDPOINT PRINCIPAL
+# =========================
+@app.post("/ask")
+def ask(request: AskRequest):
+    """
+    Endpoint principal do sistema cognitivo
+    """
+
+    result = brain.process_query(
+        query=request.query,
+        user_id=request.user_id
+    )
+
+    return result
+
+
+# =========================
+# ENDPOINT OPCIONAL (DEBUG)
+# =========================
+@app.post("/debug/reasoning")
+def debug_reasoning(request: AskRequest):
+    """
+    Retorna o raciocínio estruturado (sem LLM)
+    """
+
+    context = rag_engine.retrieve(request.query)
+
+    reasoning = reasoning_engine.process(
+        query=request.query,
+        context=context,
+        user_profile=None
+    )
+
+    return reasoning
+
+
+# =========================
+# ENDPOINT OPCIONAL (LLM DIRETO)
+# =========================
+@app.post("/debug/llm")
+def debug_llm(request: AskRequest):
+    """
+    Teste direto do LLM (sem orquestrador)
+    """
+
+    response = llm_engine.generate(prompt=request.query)
+
+    return {"response": response}

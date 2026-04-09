@@ -1,136 +1,173 @@
-class FinancialBrain:
+# core/brain_orchestrator.py
 
+class BrainOrchestrator:
     def __init__(
         self,
-        graph,
-        reasoner,
-        rag,
-        quiz,
-        finance,
-        user,
-        accessibility
+        graph_engine,
+        reasoning_engine,
+        rag_engine,
+        quiz_engine,
+        finance_engine,
+        user_engine,
+        accessibility_engine,
     ):
-        self.graph = graph
-        self.reasoner = reasoner
-        self.rag = rag
-        self.quiz = quiz
-        self.finance = finance
-        self.user = user
-        self.accessibility = accessibility
+        self.graph_engine = graph_engine
+        self.reasoning_engine = reasoning_engine
+        self.rag_engine = rag_engine
+        self.quiz_engine = quiz_engine
+        self.finance_engine = finance_engine
+        self.user_engine = user_engine
+        self.accessibility_engine = accessibility_engine
 
-    # -------------------------
-    # INTERPRETAÇÃO DE INTENÇÃO
-    # -------------------------
+    # =========================
+    # 🧠 ENTRY POINT (mantido)
+    # =========================
+    def process_query(self, query: str, user_id: str = None):
+        """
+        Método principal (mantido, mas evoluído internamente)
+        """
 
-    def detect_intent(self, question):
+        # 🔹 1. Buscar usuário
+        user = self._get_user(user_id)
 
-        q = question.lower()
+        # 🔹 2. Detectar intenção
+        intent = self._detect_intent(query)
 
-        if any(k in q for k in ["gasto", "despesa", "dinheiro"]):
-            return "finance"
+        # 🔹 3. Roteamento inteligente
+        raw_response = self._route_by_intent(query, intent, user)
 
-        if any(k in q for k in ["o que é", "definição", "conceito"]):
-            return "education"
+        # 🔹 4. Adaptar resposta (acessibilidade)
+        final_response = self._adapt_response(raw_response, user)
 
-        if any(k in q for k in ["quiz", "pergunta"]):
+        return {
+            "intent": intent,
+            "response": final_response
+        }
+
+    # =========================
+    # 🧭 INTENT DETECTION (NOVO)
+    # =========================
+    def _detect_intent(self, query: str) -> str:
+        query_lower = query.lower()
+
+        if any(word in query_lower for word in ["o que é", "definição", "conceito"]):
+            return "concept"
+
+        elif any(word in query_lower for word in ["calcular", "quanto rende", "simular"]):
+            return "calculation"
+
+        elif any(word in query_lower for word in ["quiz", "teste", "pergunta"]):
             return "quiz"
 
-        if any(k in q for k in ["impacto", "acontece", "se"]):
-            return "reasoning"
+        elif any(word in query_lower for word in ["explique", "por que", "como funciona"]):
+            return "explanation"
 
-        return "unknown"
+        return "general"
 
-    # -------------------------
-    # ROTEADOR PRINCIPAL
-    # -------------------------
+    # =========================
+    # 🔀 ROUTER (NOVO CORE)
+    # =========================
+    def _route_by_intent(self, query: str, intent: str, user: dict):
 
-    def handle(self, question):
+        try:
+            # 📚 Conceitos → Graph
+            if intent == "concept":
+                return self._handle_concept(query)
 
-        intent = self.detect_intent(question)
+            # 💰 Cálculo financeiro
+            elif intent == "calculation":
+                return self._handle_calculation(query, user)
 
-        if intent == "finance":
-            return self.handle_finance()
+            # 🎮 Quiz
+            elif intent == "quiz":
+                return self._handle_quiz(query, user)
 
-        if intent == "education":
-            return self.handle_education(question)
+            # 🧠 Explicação estruturada
+            elif intent == "explanation":
+                return self._handle_explanation(query, user)
 
-        if intent == "quiz":
-            return self.quiz.generate_quiz()
+            # 🌐 Fallback (RAG + reasoning)
+            else:
+                return self._handle_general(query, user)
 
-        if intent == "reasoning":
-            return self.handle_reasoning(question)
+        except Exception as e:
+            return {
+                "error": str(e),
+                "fallback": self._handle_general(query, user)
+            }
 
-        return "Não entendi sua pergunta ainda."
+    # =========================
+    # 📚 HANDLERS
+    # =========================
 
-    # -------------------------
-    # EDUCAÇÃO (RAG)
-    # -------------------------
+    def _handle_concept(self, query: str):
+        concept = self.graph_engine.find_concept(query)
+        relations = self.graph_engine.get_related(concept["id"])
 
-    def handle_education(self, question):
+        return {
+            "type": "concept",
+            "concept": concept,
+            "relations": relations
+        }
 
-        concept = question.replace("o que é", "").strip()
+    def _handle_calculation(self, query: str, user: dict):
+        result = self.finance_engine.compute(query, user_context=user)
 
-        data = self.rag.explain_concept(concept)
+        return {
+            "type": "calculation",
+            "result": result
+        }
 
-        text = data["definition"]
+    def _handle_quiz(self, query: str, user: dict):
+        quiz = self.quiz_engine.generate(query, user_profile=user)
 
-        return self._finalize(text)
+        return {
+            "type": "quiz",
+            "quiz": quiz
+        }
 
-    # -------------------------
-    # RACIOCÍNIO
-    # -------------------------
+    def _handle_explanation(self, query: str, user: dict):
+        context = self.graph_engine.search(query)
 
-    def handle_reasoning(self, question):
+        reasoning = self.reasoning_engine.process(
+            query=query,
+            context=context,
+            user_profile=user
+        )
 
-        # simplificado: pega primeira palavra relevante
-        words = question.split()
-        concept = words[-1]
+        return {
+            "type": "explanation",
+            "content": reasoning
+        }
 
-        paths = self.reasoner.find_paths(concept)
+    def _handle_general(self, query: str, user: dict):
+        context = self.rag_engine.retrieve(query)
 
-        if not paths:
-            return "Não encontrei relação suficiente."
+        reasoning = self.reasoning_engine.process(
+            query=query,
+            context=context,
+            user_profile=user
+        )
 
-        best_path = paths[0]["path"]
+        return {
+            "type": "general",
+            "content": reasoning
+        }
 
-        explanation = self._build_explanation(best_path)
+    # =========================
+    # 👤 USER HANDLING (NOVO)
+    # =========================
+    def _get_user(self, user_id: str):
+        if not user_id:
+            return {"level": "beginner", "age_group": "adult"}
 
-        return self._finalize(explanation)
+        return self.user_engine.get_user(user_id)
 
-    # -------------------------
-    # FINANÇAS PESSOAIS
-    # -------------------------
-
-    def handle_finance(self):
-
-        total = self.finance.total_spending()
-        by_cat = self.finance.spending_by_category()
-
-        text = f"Você gastou {total}. Distribuição: {by_cat}"
-
-        return self._finalize(text)
-
-    # -------------------------
-    # EXPLICAÇÃO DE CAMINHO
-    # -------------------------
-
-    def _build_explanation(self, path):
-
-        sentences = []
-
-        for source, rel, target in path:
-            sentences.append(f"{source} {rel} {target}")
-
-        return " → ".join(sentences)
-
-    # -------------------------
-    # PIPE FINAL (USER + ACCESSIBILITY)
-    # -------------------------
-
-    def _finalize(self, text):
-
-        text = self.user.adapt_text(text)
-
-        text = self.accessibility.format_text(text)
-
-        return text
+    # =========================
+    # ♿ ACCESSIBILITY (AGORA CENTRAL)
+    # =========================
+    def _adapt_response(self, response: dict, user: dict):
+        return self.accessibility_engine.adapt(
+            content=response,
+            user_profile=user
+        )

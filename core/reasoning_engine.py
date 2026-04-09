@@ -1,38 +1,77 @@
+# core/reasoning_engine.py
+
+from typing import List, Dict, Any
+
+
 class ReasoningEngine:
+    def __init__(self, graph_engine):
+        self.graph_engine = graph_engine
 
-    def __init__(self, graph):
+    # =========================
+    # PROCESS (mantido, mas evoluído)
+    # =========================
+    def process(
+        self,
+        query: str,
+        context: List[Dict],
+        user_profile: Dict = None,
+    ) -> Dict:
+        """
+        Agora retorna RACIOCÍNIO ESTRUTURADO (não texto)
+        """
 
-        self.graph = graph.graph
+        steps = self._build_reasoning_steps(context)
 
-    def find_paths(self, start, depth=4):
+        return {
+            "query": query,
+            "steps": steps,
+            "confidence": self._estimate_confidence(context),
+        }
 
-        paths = []
+    # =========================
+    # BUILD REASONING
+    # =========================
+    def _build_reasoning_steps(self, context: List[Dict]) -> List[Dict]:
+        steps = []
 
-        def dfs(node, path, current_weight, d):
+        for relation in context:
+            step = {
+                "from": relation.get("source"),
+                "to": relation.get("target"),
+                "type": relation.get("type"),
+                "effect": relation.get("effect"),
+                "strength": relation.get("weight", 0.5),
+            }
+            steps.append(step)
 
-            if d == 0:
-                return
+        return steps
 
-            for neighbor in self.graph.neighbors(node):
+    # =========================
+    # CONFIDENCE
+    # =========================
+    def _estimate_confidence(self, context: List[Dict]) -> float:
+        if not context:
+            return 0.0
 
-                edge = self.graph[node][neighbor]
+        weights = [r.get("weight", 0.5) for r in context]
+        return sum(weights) / len(weights)
 
-                relation = edge["relation"]
-                weight = edge.get("weight", 0.5)
+    # =========================
+    # NOVO: PREPARAR PARA LLM
+    # =========================
+    def prepare_for_llm(self, reasoning_output: Dict) -> Dict:
+        """
+        Converte para formato amigável ao LLM
+        """
 
-                new_path = path + [(node, relation, neighbor)]
+        steps_text = []
 
-                score = current_weight * weight
+        for step in reasoning_output["steps"]:
+            steps_text.append(
+                f"{step['from']} → {step['to']} ({step['effect']})"
+            )
 
-                paths.append({
-                    "path": new_path,
-                    "score": score
-                })
-
-                dfs(neighbor, new_path, score, d - 1)
-
-        dfs(start, [], 1.0, depth)
-
-        paths.sort(key=lambda x: x["score"], reverse=True)
-
-        return paths[:10]
+        return {
+            "steps": steps_text,
+            "confidence": reasoning_output["confidence"]
+        }
