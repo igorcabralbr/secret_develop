@@ -1,43 +1,16 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
-
-# CORE
 from core.graph_engine import FinancialGraph
 from core.reasoning_engine import ReasoningEngine
 from core.rag_engine import RAGEngine
 from core.quiz_engine import QuizEngine
 from core.finance_engine import FinanceEngine
 from core.user_engine import UserProfile
-from core.accessibility_engine import AccessibilityEngine
-from core.brain_orchestrator import FinancialBrain
+from accessibility.accessibility_engine import AccessibilityEngine
+from core.decision_engine import DecisionEngine
 
 
-# -------------------------
-# FASTAPI INIT
-# -------------------------
-
-app = FastAPI(title="Financial Brain API")
-
-
-# -------------------------
-# REQUEST MODELS
-# -------------------------
-
-class QuestionRequest(BaseModel):
-    question: str
-
-
-class UserConfig(BaseModel):
-    age_group: str = "adult"        # teen | adult | elderly
-    level: str = "iniciante"       # iniciante | intermediario | avancado
-    accessibility: str = "normal"  # normal | high_contrast | simple | neurodivergent
-
-
-# -------------------------
-# LOAD ENGINES
-# -------------------------
-
-print("🔄 Inicializando Financial Brain...")
+# ---------------------------------------
+# 1️⃣ CARREGAR FINANCIAL BRAIN
+# ---------------------------------------
 
 graph = FinancialGraph(
     "data/concepts.json",
@@ -45,100 +18,117 @@ graph = FinancialGraph(
 )
 
 reasoner = ReasoningEngine(graph)
-
 rag = RAGEngine(graph)
-
-quiz_engine = QuizEngine(
+quiz = QuizEngine(
     "data/relations.json",
     "data/concepts.json"
 )
 
-# Exemplo de dados financeiros (pode vir do usuário depois)
-finance_engine = FinanceEngine([
+
+# ---------------------------------------
+# 2️⃣ DADOS DO USUÁRIO (SIMULAÇÃO)
+# ---------------------------------------
+
+transactions = [
     {"category": "alimentacao", "amount": 800},
-    {"category": "lazer", "amount": 300},
-    {"category": "transporte", "amount": 200}
-])
+    {"category": "lazer", "amount": 350},
+    {"category": "transporte", "amount": 200},
+    {"category": "assinaturas", "amount": 100}
+]
 
-# usuário padrão (pode ser dinâmico depois)
-user_profile = UserProfile("adult", "iniciante")
+finance = FinanceEngine(transactions)
 
-accessibility = AccessibilityEngine("normal")
 
-# ORQUESTRADOR
-brain = FinancialBrain(
-    graph,
-    reasoner,
-    rag,
-    quiz_engine,
-    finance_engine,
-    user_profile,
-    accessibility
+# ---------------------------------------
+# 3️⃣ PERFIL DO USUÁRIO
+# ---------------------------------------
+
+user = UserProfile(
+    age_group="adult",        # teen | adult | elderly
+    level="iniciante"         # iniciante | intermediario | avancado
 )
 
-print("✅ Financial Brain pronto!")
+
+# ---------------------------------------
+# 4️⃣ ACESSIBILIDADE
+# ---------------------------------------
+
+accessibility = AccessibilityEngine(
+    mode="simple"  # normal | simple | high_contrast | neurodivergent
+)
 
 
-# -------------------------
-# ENDPOINTS
-# -------------------------
+# ---------------------------------------
+# 5️⃣ DECISION ENGINE (CÉREBRO CENTRAL)
+# ---------------------------------------
 
-@app.get("/health")
-def health():
-    return {"status": "ok", "message": "Financial Brain is running"}
-
-
-# -------------------------
-# ASK (principal)
-# -------------------------
-
-@app.post("/ask")
-def ask(req: QuestionRequest):
-
-    response = brain.handle(req.question)
-
-    return {
-        "question": req.question,
-        "response": response
-    }
+engine = DecisionEngine(
+    graph=graph,
+    reasoning_engine=reasoner,
+    rag_engine=rag,
+    quiz_engine=quiz,
+    finance_engine=finance,
+    user_profile=user,
+    accessibility_engine=accessibility
+)
 
 
-# -------------------------
-# QUIZ
-# -------------------------
+# ---------------------------------------
+# 6️⃣ LOOP INTERATIVO (CLI)
+# ---------------------------------------
 
-@app.get("/quiz")
-def get_quiz():
+def run_cli():
 
-    quiz = quiz_engine.generate_quiz()
+    print("\n🧠 Financial Brain iniciado!")
+    print("Digite sua pergunta ou 'sair' para encerrar.\n")
 
-    return quiz
+    while True:
+
+        question = input("Você: ")
+
+        if question.lower() in ["sair", "exit", "quit"]:
+            print("Encerrando Financial Brain...")
+            break
+
+        response = engine.handle(question)
+
+        print("\nBrain:", response)
+        print("\n" + "-"*50 + "\n")
 
 
-# -------------------------
-# USER CONFIG (dinâmico)
-# -------------------------
+# ---------------------------------------
+# 7️⃣ EXEMPLOS AUTOMÁTICOS (DEBUG)
+# ---------------------------------------
 
-@app.post("/user/config")
-def configure_user(config: UserConfig):
+def run_examples():
 
-    global user_profile, accessibility, brain
+    examples = [
 
-    user_profile = UserProfile(config.age_group, config.level)
-    accessibility = AccessibilityEngine(config.accessibility)
+        "o que é inflacao",
+        "se inflacao aumentar o que acontece",
+        "me mostre meus gastos",
+        "quero um quiz"
+    ]
 
-    # recria brain com novo contexto
-    brain = FinancialBrain(
-        graph,
-        reasoner,
-        rag,
-        quiz_engine,
-        finance_engine,
-        user_profile,
-        accessibility
-    )
+    for q in examples:
 
-    return {
-        "message": "Configuração atualizada",
-        "user": config.dict()
-    }
+        print(f"\nPergunta: {q}")
+        print("Resposta:")
+        print(engine.handle(q))
+        print("\n" + "="*60)
+
+
+# ---------------------------------------
+# 8️⃣ ENTRYPOINT
+# ---------------------------------------
+
+if __name__ == "__main__":
+
+    # escolha o modo:
+    mode = "cli"  # "cli" ou "test"
+
+    if mode == "cli":
+        run_cli()
+
+    else:
+        run_examples()
