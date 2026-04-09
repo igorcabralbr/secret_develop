@@ -1,57 +1,143 @@
+# core/graph_engine.py
+
 import json
-import networkx as nx
+from typing import List, Dict, Any
 
 
-class FinancialGraph:
+class GraphEngine:
+    def __init__(self, concepts_path: str, relations_path: str):
+        self.concepts_path = concepts_path
+        self.relations_path = relations_path
 
-    def __init__(self, concepts_file, relations_file):
+        self.concepts = self._load_json(concepts_path)
+        self.relations = self._load_json(relations_path)
 
-        self.graph = nx.DiGraph()
+        # 🔹 NOVO: índices para busca rápida
+        self._build_indexes()
 
-        self.load_concepts(concepts_file)
-        self.load_relations(relations_file)
+    # =========================
+    # LOAD
+    # =========================
+    def _load_json(self, path: str):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return []
 
-    def load_concepts(self, file):
+    # =========================
+    # INDEXAÇÃO (NOVO)
+    # =========================
+    def _build_indexes(self):
+        self.concept_by_id = {}
+        self.concept_by_name = {}
 
-        with open(file, encoding="utf-8") as f:
-            concepts = json.load(f)
+        for c in self.concepts:
+            cid = c.get("id")
+            name = c.get("name", "").lower()
 
-        for c in concepts:
+            if cid:
+                self.concept_by_id[cid] = c
 
-            self.graph.add_node(
-                c["id"],
-                name=c.get("name", ""),
-                module=c.get("module", ""),
-                definition=c.get("definition", ""),
-                difficulty=c.get("difficulty", "iniciante")
-            )
+            if name:
+                self.concept_by_name[name] = c
 
-    def load_relations(self, file):
+    # =========================
+    # FIND CONCEPT (NOVO)
+    # =========================
+    def find_concept(self, query: str) -> Dict:
+        query_lower = query.lower()
 
-        with open(file, encoding="utf-8") as f:
-            relations = json.load(f)
+        # match direto por nome
+        for name, concept in self.concept_by_name.items():
+            if name in query_lower:
+                return concept
 
-        for r in relations:
+        # fallback: busca parcial
+        for concept in self.concepts:
+            if concept.get("name", "").lower() in query_lower:
+                return concept
 
-            self.graph.add_edge(
-                r["source"],
-                r["target"],
-                relation=r["relation"],
-                weight=r.get("weight", 0.5)
-            )
+        return {}
 
-    def neighbors(self, concept):
+    # =========================
+    # GET RELATED (PADRÃO ORCHESTRATOR)
+    # =========================
+    def get_related(self, concept_id: str) -> List[Dict]:
+        related = []
 
-        return list(self.graph.neighbors(concept))
+        for rel in self.relations:
+            if rel.get("source") == concept_id:
+                related.append(rel)
 
-    def get_relation(self, source, target):
+        return related
 
-        return self.graph[source][target]
+    # =========================
+    # SEARCH (NOVO - USADO PELO RAG)
+    # =========================
+    def search(self, query: str) -> List[Dict]:
+        """
+        Retorna relações relevantes com base no texto
+        """
 
-    def get_definition(self, concept):
+        query_lower = query.lower()
+        results = []
 
-        return self.graph.nodes[concept].get("definition", "")
+        for rel in self.relations:
+            source = rel.get("source", "")
+            target = rel.get("target", "")
 
-    def get_module(self, concept):
+            if source in query_lower or target in query_lower:
+                results.append(rel)
 
-        return self.graph.nodes[concept].get("module", "")
+        return results
+
+    # =========================
+    # GET CONCEPT FULL (NOVO)
+    # =========================
+    def get_concept_full(self, concept_id: str) -> Dict:
+        concept = self.concept_by_id.get(concept_id, {})
+        relations = self.get_related(concept_id)
+
+        return {
+            "concept": concept,
+            "relations": relations
+        }
+
+    # =========================
+    # EXPAND GRAPH (NOVO)
+    # =========================
+    def expand_graph(self, concept_id: str, depth: int = 1) -> List[Dict]:
+        """
+        Expande relações em múltiplos níveis
+        """
+
+        visited = set()
+        results = []
+
+        def dfs(cid, current_depth):
+            if current_depth > depth or cid in visited:
+                return
+
+            visited.add(cid)
+
+            relations = self.get_related(cid)
+
+            for rel in relations:
+                results.append(rel)
+                dfs(rel.get("target"), current_depth + 1)
+
+        dfs(concept_id, 0)
+        return results
+
+    # =========================
+    # NORMALIZAÇÃO (NOVO)
+    # =========================
+    def normalize_relation(self, rel: Dict) -> Dict:
+        return {
+            "source": rel.get("source"),
+            "target": rel.get("target"),
+            "type": rel.get("type", "correlational"),
+            "effect": rel.get("effect", ""),
+            "weight": rel.get("weight", 0.5),
+        }

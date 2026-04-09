@@ -8,7 +8,7 @@ class ReasoningEngine:
         self.graph_engine = graph_engine
 
     # =========================
-    # PROCESS (mantido, mas evoluído)
+    # MAIN PROCESS (EVOLUÍDO)
     # =========================
     def process(
         self,
@@ -16,40 +16,51 @@ class ReasoningEngine:
         context: List[Dict],
         user_profile: Dict = None,
     ) -> Dict:
-        """
-        Agora retorna RACIOCÍNIO ESTRUTURADO (não texto)
-        """
 
-        steps = self._build_reasoning_steps(context)
+        steps = self._build_reasoning_chain(context)
 
         return {
             "query": query,
             "steps": steps,
-            "confidence": self._estimate_confidence(context),
+            "confidence": self._calculate_confidence(context),
         }
 
     # =========================
-    # BUILD REASONING
+    # BUILD LOGICAL CHAIN
     # =========================
-    def _build_reasoning_steps(self, context: List[Dict]) -> List[Dict]:
-        steps = []
+    def _build_reasoning_chain(self, context: List[Dict]) -> List[Dict]:
+        chain = []
 
-        for relation in context:
-            step = {
-                "from": relation.get("source"),
-                "to": relation.get("target"),
-                "type": relation.get("type"),
-                "effect": relation.get("effect"),
-                "strength": relation.get("weight", 0.5),
-            }
-            steps.append(step)
+        for rel in context:
+            chain.append({
+                "from": rel.get("source"),
+                "to": rel.get("target"),
+                "relation": rel.get("type"),
+                "effect": rel.get("effect"),
+                "strength": rel.get("weight", 0.5),
+                "logic": self._infer_logic(rel),
+            })
 
-        return steps
+        return chain
 
     # =========================
-    # CONFIDENCE
+    # NOVO: INFERÊNCIA LÓGICA SIMPLES
     # =========================
-    def _estimate_confidence(self, context: List[Dict]) -> float:
+    def _infer_logic(self, rel: Dict) -> str:
+        effect = rel.get("effect", "")
+
+        if "increase" in effect or "sobe" in effect:
+            return "positive_correlation"
+
+        if "decrease" in effect or "cai" in effect:
+            return "negative_correlation"
+
+        return "neutral_correlation"
+
+    # =========================
+    # CONFIDENCE SCORE
+    # =========================
+    def _calculate_confidence(self, context: List[Dict]) -> float:
         if not context:
             return 0.0
 
@@ -57,21 +68,21 @@ class ReasoningEngine:
         return sum(weights) / len(weights)
 
     # =========================
-    # NOVO: PREPARAR PARA LLM
+    # NOVO: FORMATO PARA LLM
     # =========================
-    def prepare_for_llm(self, reasoning_output: Dict) -> Dict:
+    def prepare_for_llm(self, reasoning: Dict) -> Dict:
         """
-        Converte para formato amigável ao LLM
+        Reduz estrutura para linguagem do LLM
         """
 
-        steps_text = []
+        steps = []
 
-        for step in reasoning_output["steps"]:
-            steps_text.append(
-                f"{step['from']} → {step['to']} ({step['effect']})"
+        for s in reasoning["steps"]:
+            steps.append(
+                f"{s['from']} → {s['to']} ({s['effect']})"
             )
 
         return {
-            "steps": steps_text,
-            "confidence": reasoning_output["confidence"]
+            "reasoning_steps": steps,
+            "confidence": reasoning["confidence"]
         }

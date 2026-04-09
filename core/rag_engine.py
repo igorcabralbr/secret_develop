@@ -1,25 +1,78 @@
+# core/rag_engine.py
+
+from typing import List, Dict, Any
+
+
 class RAGEngine:
+    def __init__(self, graph_engine):
+        self.graph_engine = graph_engine
 
-    def __init__(self, graph):
+    # =========================
+    # MAIN RETRIEVE (MANTIDO + EVOLUÍDO)
+    # =========================
+    def retrieve(self, query: str) -> List[Dict]:
+        """
+        Retorna contexto estruturado do grafo
+        """
 
-        self.graph = graph
+        # 🔹 usa search do graph (novo)
+        raw_relations = self.graph_engine.search(query)
 
-    def explain_concept(self, concept_text):
+        # 🔹 normaliza saída
+        return self._structure_context(raw_relations)
 
-        concept_text = concept_text.lower()
+    # =========================
+    # NOVO: ESTRUTURAR CONTEXTO
+    # =========================
+    def _structure_context(self, relations: List[Dict]) -> List[Dict]:
+        structured = []
 
-        for node in self.graph.graph.nodes:
+        for rel in relations:
+            structured.append({
+                "source": rel.get("source"),
+                "target": rel.get("target"),
+                "type": rel.get("type", "correlational"),
+                "effect": rel.get("effect", ""),
+                "weight": rel.get("weight", 0.5),
+            })
 
-            if concept_text in node:
-                return {
-                    "concept": node,
-                    "definition": self.graph.get_definition(node)
-                }
+        return structured
 
-        return {"definition": "Conceito não encontrado"}
+    # =========================
+    # NOVO: CONTEXTO EXPANDIDO
+    # =========================
+    def retrieve_expanded(self, query: str, depth: int = 1) -> List[Dict]:
+        """
+        Usa expansão do grafo (multi-hop reasoning base)
+        """
 
-    def related_concepts(self, concept_id):
+        concept = self.graph_engine.find_concept(query)
 
-        neighbors = self.graph.neighbors(concept_id)
+        if not concept:
+            return self.retrieve(query)
 
-        return neighbors[:10]
+        concept_id = concept.get("id")
+
+        expanded = self.graph_engine.expand_graph(
+            concept_id=concept_id,
+            depth=depth
+        )
+
+        return self._structure_context(expanded)
+
+    # =========================
+    # NOVO: CONTEXTO PARA LLM
+    # =========================
+    def to_llm_context(self, relations: List[Dict]) -> str:
+        """
+        Converte estrutura para leitura do LLM
+        """
+
+        lines = []
+
+        for r in relations:
+            lines.append(
+                f"{r['source']} → {r['target']} | {r['type']} | effect: {r['effect']} | weight: {r['weight']}"
+            )
+
+        return "\n".join(lines)
