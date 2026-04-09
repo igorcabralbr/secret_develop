@@ -48,7 +48,7 @@ rag_engine = RAGEngine(graph_engine=graph_engine)
 reasoning_engine = ReasoningEngine(graph_engine=graph_engine)
 
 # 🔹 Outros módulos
-quiz_engine = QuizEngine(graph_engine=graph_engine)
+quiz_engine = QuizEngine(graph_engine=graph_engine, llm_engine)
 finance_engine = FinanceEngine()
 user_engine = UserEngine()
 accessibility_engine = AccessibilityEngine()
