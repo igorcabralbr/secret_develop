@@ -11,6 +11,9 @@ from core.user_engine import UserProfile
 from accessibility.accessibility_engine import AccessibilityEngine
 from core.decision_engine import DecisionEngine
 
+# 🔥 NOVO IMPORT (CRÍTICO)
+from routes.dependencies import decision_engine as shared_engine
+
 
 # =========================================
 # NOVO: FASTAPI
@@ -76,18 +79,13 @@ accessibility = AccessibilityEngine(
 
 
 # =========================================
-# 5️⃣ DECISION ENGINE (NOVO)
+# 5️⃣ DECISION ENGINE (AJUSTADO)
 # =========================================
 
-engine = DecisionEngine(
-    graph=graph,
-    reasoning_engine=reasoner,
-    rag_engine=rag,
-    quiz_engine=quiz,
-    finance_engine=finance,
-    user_profile=user,
-    accessibility_engine=accessibility
-)
+# ⚠️ ANTES você criava outro engine aqui
+# AGORA usamos o compartilhado
+
+engine = shared_engine  # 🔥 AGORA EXISTE APENAS UM CÉREBRO
 
 
 # =========================================
@@ -136,12 +134,11 @@ def run_examples():
 
 
 # =========================================
-# 8️⃣ FASTAPI APP (NOVO)
+# 8️⃣ FASTAPI APP (mantido)
 # =========================================
 
 app = FastAPI(title="Financial Brain API")
 
-# 🔌 registrando rotas
 app.include_router(ask_router)
 app.include_router(quiz_router)
 app.include_router(finance_router)
@@ -150,12 +147,12 @@ app.include_router(explain_router)
 
 
 # =========================================
-# 9️⃣ ENTRYPOINT (ATUALIZADO)
+# 9️⃣ ENTRYPOINT (mantido)
 # =========================================
 
 if __name__ == "__main__":
 
-    mode = "cli"  # opções: "cli", "test", "api"
+    mode = "cli"  # "cli", "test", "api"
 
     if mode == "cli":
         run_cli()

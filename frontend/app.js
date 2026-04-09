@@ -1,50 +1,35 @@
-const API_URL = "http://localhost:8000";
+// ==========================================
+// CONFIG
+// ==========================================
 
-// -------------------------
-// ELEMENTOS DOM
-// -------------------------
+const API_BASE = "http://localhost:8000";
 
-const input = document.getElementById("input");
-const responseBox = document.getElementById("response");
+// ==========================================
+// UTIL: NORMALIZAR RESPOSTA (🔥 NOVO)
+// ==========================================
 
-const ageSelect = document.getElementById("age");
-const levelSelect = document.getElementById("level");
-const accessibilitySelect = document.getElementById("accessibility");
-
-
-// -------------------------
-// UTIL
-// -------------------------
-
-function setLoading(state) {
-    if (state) {
-        responseBox.innerText = "Pensando...";
-    }
+function getResponseData(data) {
+    return data.response || data.answer || "Resposta não encontrada.";
 }
 
-function showResponse(text) {
-    responseBox.innerText = text;
-}
-
-
-// -------------------------
-// ASK
-// -------------------------
+// ==========================================
+// ENVIO DE PERGUNTA
+// ==========================================
 
 async function sendQuestion() {
 
-    const question = input.value.trim();
+    const input = document.getElementById("user-input");
+    const output = document.getElementById("chat-output");
 
-    if (!question) {
-        showResponse("Digite uma pergunta.");
-        return;
-    }
+    const question = input.value;
+
+    if (!question) return;
+
+    appendMessage("Você", question);
 
     try {
 
-        setLoading(true);
-
-        const res = await fetch(`${API_URL}/ask`, {
+        const res = await fetch(`${API_BASE}/ask`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -54,124 +39,152 @@ async function sendQuestion() {
 
         const data = await res.json();
 
-        showResponse(data.response);
+        const responseText = getResponseData(data);
 
-    } catch (error) {
+        appendMessage("Brain", responseText);
 
-        console.error(error);
-        showResponse("Erro ao conectar com o servidor.");
+    } catch (err) {
 
+        appendMessage("Erro", "Erro ao conectar com o servidor.");
+        console.error(err);
     }
+
+    input.value = "";
 }
 
-
-// -------------------------
+// ==========================================
 // QUIZ
-// -------------------------
+// ==========================================
 
-async function getQuiz() {
+async function loadQuiz() {
 
     try {
 
-        setLoading(true);
-
-        const res = await fetch(`${API_URL}/quiz`);
+        const res = await fetch(`${API_BASE}/quiz`);
         const data = await res.json();
 
-        renderQuiz(data);
+        const quizText = getResponseData(data.quiz || data);
 
-    } catch (error) {
+        appendMessage("Quiz", quizText);
 
-        console.error(error);
-        showResponse("Erro ao carregar quiz.");
+    } catch (err) {
 
+        appendMessage("Erro", "Erro ao carregar quiz.");
+        console.error(err);
     }
 }
 
+// ==========================================
+// FINANCE
+// ==========================================
 
-// -------------------------
-// RENDER QUIZ
-// -------------------------
-
-function renderQuiz(quiz) {
-
-    const container = document.getElementById("quiz");
-
-    container.innerHTML = "";
-
-    const question = document.createElement("p");
-    question.innerText = quiz.question;
-
-    container.appendChild(question);
-
-    quiz.options.forEach(option => {
-
-        const btn = document.createElement("button");
-
-        btn.innerText = option;
-
-        btn.onclick = () => checkAnswer(option, quiz.correct);
-
-        container.appendChild(btn);
-    });
-}
-
-
-// -------------------------
-// CHECK ANSWER
-// -------------------------
-
-function checkAnswer(selected, correct) {
-
-    if (selected === correct) {
-        showResponse("✅ Resposta correta!");
-    } else {
-        showResponse(`❌ Errado! Resposta correta: ${correct}`);
-    }
-}
-
-
-// -------------------------
-// CONFIG USER
-// -------------------------
-
-async function updateUserConfig() {
-
-    const config = {
-        age_group: ageSelect.value,
-        level: levelSelect.value,
-        accessibility: accessibilitySelect.value
-    };
+async function loadFinance() {
 
     try {
 
-        const res = await fetch(`${API_URL}/user/config`, {
+        const res = await fetch(`${API_BASE}/finance`);
+        const data = await res.json();
+
+        const financeText = getResponseData(data.analysis || data);
+
+        appendMessage("Finance", financeText);
+
+    } catch (err) {
+
+        appendMessage("Erro", "Erro ao carregar dados financeiros.");
+        console.error(err);
+    }
+}
+
+// ==========================================
+// EXPLAIN
+// ==========================================
+
+async function explainConcept(concept) {
+
+    try {
+
+        const res = await fetch(`${API_BASE}/explain/${concept}`);
+        const data = await res.json();
+
+        const text = getResponseData(data.explanation || data);
+
+        appendMessage("Explicação", text);
+
+    } catch (err) {
+
+        appendMessage("Erro", "Erro ao explicar conceito.");
+        console.error(err);
+    }
+}
+
+// ==========================================
+// USER PROFILE
+// ==========================================
+
+async function updateUserProfile(age_group, level) {
+
+    try {
+
+        const res = await fetch(`${API_BASE}/user`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(config)
+            body: JSON.stringify({ age_group, level })
         });
 
         const data = await res.json();
 
-        showResponse("Configuração atualizada!");
+        appendMessage("Sistema", "Perfil atualizado com sucesso.");
 
-    } catch (error) {
+    } catch (err) {
 
-        console.error(error);
-        showResponse("Erro ao atualizar usuário.");
-
+        appendMessage("Erro", "Erro ao atualizar perfil.");
+        console.error(err);
     }
 }
 
+// ==========================================
+// UI HELPERS
+// ==========================================
 
-// -------------------------
-// ENTER PARA ENVIAR
-// -------------------------
+function appendMessage(sender, message) {
 
-input.addEventListener("keypress", function (e) {
+    const output = document.getElementById("chat-output");
+
+    const div = document.createElement("div");
+    div.classList.add("message");
+
+    div.innerHTML = `<strong>${sender}:</strong> ${message}`;
+
+    output.appendChild(div);
+
+    output.scrollTop = output.scrollHeight;
+}
+
+// ==========================================
+// EVENT LISTENERS (mantido)
+// ==========================================
+
+document.getElementById("send-btn").addEventListener("click", sendQuestion);
+
+document.getElementById("user-input").addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
         sendQuestion();
     }
 });
+
+// ==========================================
+// BOTÕES EXTRAS (se existirem)
+// ==========================================
+
+const quizBtn = document.getElementById("quiz-btn");
+if (quizBtn) {
+    quizBtn.addEventListener("click", loadQuiz);
+}
+
+const financeBtn = document.getElementById("finance-btn");
+if (financeBtn) {
+    financeBtn.addEventListener("click", loadFinance);
+}
