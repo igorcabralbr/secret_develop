@@ -1,29 +1,138 @@
+# core/accessibility_engine.py
+
+from typing import Dict, Any
+
+
 class AccessibilityEngine:
+    def __init__(self):
+        pass
 
-    def __init__(self, mode="normal"):
+    # =========================
+    # MAIN ADAPT (EVOLUÍDO)
+    # =========================
+    def adapt(self, content: Any, user_profile: Dict = None) -> Dict:
+        """
+        Adapta resposta para o perfil do usuário
+        """
 
-        self.mode = mode
+        if not user_profile:
+            return {
+                "content": content,
+                "format": "default"
+            }
 
-    def format_text(self, text):
+        level = user_profile.get("level", "beginner")
+        age_group = user_profile.get("age_group", "adult")
+        learning_style = user_profile.get("learning_style", "visual")
 
-        if self.mode == "high_contrast":
+        adapted_content = self._adapt_content(content, level, age_group, learning_style)
 
-            return text.upper()
+        return {
+            "content": adapted_content,
+            "metadata": {
+                "level": level,
+                "age_group": age_group,
+                "learning_style": learning_style
+            }
+        }
 
-        if self.mode == "simple":
+    # =========================
+    # CORE ADAPTATION LOGIC
+    # =========================
+    def _adapt_content(self, content: Any, level: str, age_group: str, learning_style: str):
 
-            sentences = text.split(".")
+        # 🔹 se conteúdo vier estruturado (LLM + reasoning)
+        if isinstance(content, dict):
+            content = content.get("content") or content.get("result") or content
 
-            short = sentences[:2]
+        text = str(content)
 
-            return ".".join(short)
+        # =========================
+        # BEGINNER MODE
+        # =========================
+        if level == "beginner":
+            return self._simplify_text(text, age_group)
 
-        if self.mode == "neurodivergent":
+        # =========================
+        # INTERMEDIATE MODE
+        # =========================
+        if level == "intermediate":
+            return self._balanced_text(text)
 
-            return text.replace(",", "\n")
+        # =========================
+        # ADVANCED MODE
+        # =========================
+        if level == "advanced":
+            return self._technical_text(text)
 
         return text
 
-    def libras_placeholder(self):
+    # =========================
+    # SIMPLIFICATION
+    # =========================
+    def _simplify_text(self, text: str, age_group: str):
 
-        return "Integração com API de avatar em Libras aqui."
+        simplified = f"""
+Explicação simples:
+
+{text}
+
+Resumo: foque no conceito principal.
+"""
+
+        if age_group == "teen":
+            simplified += "\n💡 Pense nisso como algo do dia a dia."
+
+        return simplified
+
+    # =========================
+    # BALANCED MODE
+    # =========================
+    def _balanced_text(self, text: str):
+        return f"""
+Explicação:
+
+{text}
+
+Se quiser aprofundar, posso detalhar mais.
+"""
+
+    # =========================
+    # ADVANCED MODE
+    # =========================
+    def _technical_text(self, text: str):
+        return f"""
+Análise técnica:
+
+{text}
+
+Inclui relações estruturais do sistema financeiro.
+"""
+
+    # =========================
+    # NOVO: LLM PRE-FORMATTER
+    # =========================
+    def format_for_llm(self, content: Any, user_profile: Dict) -> Dict:
+        """
+        Prepara contexto antes do LLM (caso usado upstream)
+        """
+
+        return {
+            "content": content,
+            "level": user_profile.get("level"),
+            "style": user_profile.get("learning_style"),
+            "tone": self._get_tone(user_profile)
+        }
+
+    # =========================
+    # NOVO: TONE CONTROL
+    # =========================
+    def _get_tone(self, user_profile: Dict) -> str:
+        level = user_profile.get("level", "beginner")
+
+        if level == "beginner":
+            return "didactic"
+        elif level == "intermediate":
+            return "explanatory"
+        else:
+            return "technical"

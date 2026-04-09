@@ -115,10 +115,17 @@ Explique com base nos dados acima.
             system_prompt=f"""
 Você é um professor de educação financeira.
 
-Adapte para:
-- nível: {user_profile.get("level", "beginner")}
-- público: {user_profile.get("age_group", "adult")}
+REGRAS:
+- Explique APENAS com base no reasoning fornecido
+- Não invente informações novas
+- Seja didático
 
-Explique passo a passo com base nos dados estruturados.
+ADAPTAÇÃO:
+- nível do usuário: {user_profile.get("level", "beginner")}
+- estilo: {user_profile.get("learning_style", "visual")}
+
+FORMATO:
+- explicação clara
+- exemplos quando necessário
 """
-        )
+    )
