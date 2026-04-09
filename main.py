@@ -1,3 +1,7 @@
+# =========================================
+# IMPORTS EXISTENTES (mantidos)
+# =========================================
+
 from core.graph_engine import FinancialGraph
 from core.reasoning_engine import ReasoningEngine
 from core.rag_engine import RAGEngine
@@ -8,9 +12,21 @@ from accessibility.accessibility_engine import AccessibilityEngine
 from core.decision_engine import DecisionEngine
 
 
-# ---------------------------------------
-# 1️⃣ CARREGAR FINANCIAL BRAIN
-# ---------------------------------------
+# =========================================
+# NOVO: FASTAPI
+# =========================================
+
+from fastapi import FastAPI
+from routes.ask import router as ask_router
+from routes.quiz import router as quiz_router
+from routes.finance import router as finance_router
+from routes.user import router as user_router
+from routes.explain import router as explain_router
+
+
+# =========================================
+# 1️⃣ FINANCIAL BRAIN (mantido)
+# =========================================
 
 graph = FinancialGraph(
     "data/concepts.json",
@@ -19,15 +35,16 @@ graph = FinancialGraph(
 
 reasoner = ReasoningEngine(graph)
 rag = RAGEngine(graph)
+
 quiz = QuizEngine(
     "data/relations.json",
     "data/concepts.json"
 )
 
 
-# ---------------------------------------
-# 2️⃣ DADOS DO USUÁRIO (SIMULAÇÃO)
-# ---------------------------------------
+# =========================================
+# 2️⃣ DADOS DO USUÁRIO (mantido)
+# =========================================
 
 transactions = [
     {"category": "alimentacao", "amount": 800},
@@ -39,28 +56,28 @@ transactions = [
 finance = FinanceEngine(transactions)
 
 
-# ---------------------------------------
-# 3️⃣ PERFIL DO USUÁRIO
-# ---------------------------------------
+# =========================================
+# 3️⃣ PERFIL DO USUÁRIO (mantido)
+# =========================================
 
 user = UserProfile(
-    age_group="adult",        # teen | adult | elderly
-    level="iniciante"         # iniciante | intermediario | avancado
+    age_group="adult",
+    level="iniciante"
 )
 
 
-# ---------------------------------------
-# 4️⃣ ACESSIBILIDADE
-# ---------------------------------------
+# =========================================
+# 4️⃣ ACESSIBILIDADE (mantido)
+# =========================================
 
 accessibility = AccessibilityEngine(
-    mode="simple"  # normal | simple | high_contrast | neurodivergent
+    mode="simple"
 )
 
 
-# ---------------------------------------
-# 5️⃣ DECISION ENGINE (CÉREBRO CENTRAL)
-# ---------------------------------------
+# =========================================
+# 5️⃣ DECISION ENGINE (NOVO)
+# =========================================
 
 engine = DecisionEngine(
     graph=graph,
@@ -73,9 +90,9 @@ engine = DecisionEngine(
 )
 
 
-# ---------------------------------------
-# 6️⃣ LOOP INTERATIVO (CLI)
-# ---------------------------------------
+# =========================================
+# 6️⃣ CLI (mantido)
+# =========================================
 
 def run_cli():
 
@@ -96,9 +113,9 @@ def run_cli():
         print("\n" + "-"*50 + "\n")
 
 
-# ---------------------------------------
-# 7️⃣ EXEMPLOS AUTOMÁTICOS (DEBUG)
-# ---------------------------------------
+# =========================================
+# 7️⃣ TESTES (mantido)
+# =========================================
 
 def run_examples():
 
@@ -118,17 +135,34 @@ def run_examples():
         print("\n" + "="*60)
 
 
-# ---------------------------------------
-# 8️⃣ ENTRYPOINT
-# ---------------------------------------
+# =========================================
+# 8️⃣ FASTAPI APP (NOVO)
+# =========================================
+
+app = FastAPI(title="Financial Brain API")
+
+# 🔌 registrando rotas
+app.include_router(ask_router)
+app.include_router(quiz_router)
+app.include_router(finance_router)
+app.include_router(user_router)
+app.include_router(explain_router)
+
+
+# =========================================
+# 9️⃣ ENTRYPOINT (ATUALIZADO)
+# =========================================
 
 if __name__ == "__main__":
 
-    # escolha o modo:
-    mode = "cli"  # "cli" ou "test"
+    mode = "cli"  # opções: "cli", "test", "api"
 
     if mode == "cli":
         run_cli()
 
-    else:
+    elif mode == "test":
         run_examples()
+
+    elif mode == "api":
+        import uvicorn
+        uvicorn.run(app, host="0.0.0.0", port=8000)

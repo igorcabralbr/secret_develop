@@ -1,26 +1,14 @@
 from fastapi import APIRouter
-from pydantic import BaseModel
-
-from core.finance_engine import FinanceEngine
+from routes.dependencies import decision_engine
 
 router = APIRouter()
 
 
-class FinanceRequest(BaseModel):
-    transactions: list
+@router.get("/finance")
+def get_finance():
 
-
-@router.post("/finance/analyze")
-def analyze(req: FinanceRequest):
-
-    engine = FinanceEngine(req.transactions)
-
-    total = engine.total_spending()
-    categories = engine.spending_by_category()
-    top = engine.highest_category()
+    response = decision_engine.handle("me mostre meus gastos")
 
     return {
-        "total": total,
-        "categories": categories,
-        "top_category": top
+        "analysis": response
     }
