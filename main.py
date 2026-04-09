@@ -3,6 +3,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+print("START") #J
 # =========================
 # IMPORTS DOS ENGINES
 # =========================
@@ -15,6 +16,8 @@ from core.user_engine import UserEngine
 from core.accessibility_engine import AccessibilityEngine
 from core.llm_engine import LLMEngine
 from core.brain_orchestrator import BrainOrchestrator
+
+
 
 
 # =========================
@@ -47,17 +50,19 @@ rag_engine = RAGEngine(graph_engine=graph_engine)
 # 🔹 Reasoning (agora usa graph)
 reasoning_engine = ReasoningEngine(graph_engine=graph_engine)
 
-# 🔹 Outros módulos
-quiz_engine = QuizEngine(graph_engine=graph_engine, llm_engine)
-finance_engine = FinanceEngine()
-user_engine = UserEngine()
-accessibility_engine = AccessibilityEngine()
-
 # 🔹 LLM (NOVO)
 llm_engine = LLMEngine(
     provider="openai",  # ou "mock" pra testar sem API
     model="gpt-4o-mini"
 )
+
+# 🔹 Outros módulos
+#quiz_engine = QuizEngine(graph_engine=graph_engine, llm_engine)
+quiz_engine = QuizEngine(graph_engine, llm_engine)
+finance_engine = FinanceEngine()
+user_engine = UserEngine()
+accessibility_engine = AccessibilityEngine()
+
 
 # =========================
 # ORCHESTRATOR (NOVO CORE)
@@ -72,6 +77,7 @@ brain = BrainOrchestrator(
     accessibility_engine=accessibility_engine,
     llm_engine=llm_engine,  # 🔥 integração LLM
 )
+
 
 
 # =========================
