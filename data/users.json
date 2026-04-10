@@ -11,5 +11,18 @@
       "use_examples": true,
       "use_analogies": true
     }
+  },
+  "default_user": {
+    "user_id": "default_user",
+    "level": "beginner",
+    "age_group": "adult",
+    "learning_style": "visual",
+    "financial_experience": "low",
+    "interaction_count": 0,
+    "preferences": {
+      "explanation_depth": "medium",
+      "use_examples": true,
+      "use_analogies": true
+    }
   }
 }

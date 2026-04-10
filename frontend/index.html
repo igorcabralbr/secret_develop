@@ -1,87 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Financial Brain</title>
+    <meta charset="UTF-8">
+    <title>Secret Develop - AI Brain</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Mantém seu style.css -->
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
+    <!-- Fonte opcional (melhora estética sem quebrar nada) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            padding: 16px;
+            background: #020617;
+            border-bottom: 1px solid #1e293b;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        #chat-container {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .message {
+            max-width: 70%;
+            padding: 12px 14px;
+            border-radius: 14px;
+            line-height: 1.4;
+            white-space: pre-wrap;
+        }
+
+        .user {
+            align-self: flex-end;
+            background: #2563eb;
+        }
+
+        .bot {
+            align-self: flex-start;
+            background: #1e293b;
+        }
+
+        .loading {
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        .input-area {
+            display: flex;
+            padding: 16px;
+            border-top: 1px solid #1e293b;
+            background: #020617;
+            gap: 10px;
+        }
+
+        #user-input {
+            flex: 1;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background: #1e293b;
+            color: white;
+        }
+
+        #send-btn {
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #send-btn:hover {
+            background: #1d4ed8;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="app-container">
 
-<div class="bg-animation"></div>
+        <!-- HEADER -->
+        <div class="header">
+            🧠 Secret Develop - Financial Brain
+        </div>
 
-<div class="app">
+        <!-- CHAT -->
+        <div id="chat-container">
+            <!-- mensagens aparecem aqui -->
+        </div>
 
-  <aside class="sidebar" id="sidebar">
+        <!-- INPUT -->
+        <div class="input-area">
+            <input 
+                id="user-input" 
+                type="text" 
+                placeholder="Ask something about finance..."
+                autocomplete="off"
+            />
+            <button id="send-btn">Send</button>
+        </div>
 
-    <div class="logo">🧠 Financial Brain</div>
-
-    <div class="card">
-      <label>Perfil</label>
-
-      <select id="age">
-        <option value="teen">Teen</option>
-        <option value="adult">Adulto</option>
-        <option value="elderly">Idoso</option>
-      </select>
-
-      <select id="level">
-        <option value="iniciante">Iniciante</option>
-        <option value="intermediario">Intermediário</option>
-        <option value="avancado">Avançado</option>
-      </select>
-
-      <p id="xp-display">XP: 0</p>
     </div>
 
-    <div class="card">
-      <button onclick="getQuiz()">🎯 Quiz</button>
-      <button onclick="showDashboard()">📊 Dashboard</button>
-      <button onclick="runMentor()">🧠 Mentor</button>
-    </div>
-
-    <div class="card">
-      <button onclick="toggleMode()">🌙 Tema</button>
-      <button onclick="toggleAccessibility()">♿ Acessibilidade</button>
-    </div>
-
-    <button class="collapse-btn" onclick="toggleSidebar()">☰</button>
-
-  </aside>
-
-  <main class="main">
-
-    <header class="header">
-      <h2>Financial Assistant</h2>
-    </header>
-
-    <section id="chat-view" class="chat">
-
-      <div id="messages" class="messages"></div>
-
-      <div class="input-area">
-        <input id="question" placeholder="Digite sua dúvida financeira...">
-        <button onclick="sendQuestion()">Enviar</button>
-        <button onclick="startVoice()">🎤</button>
-      </div>
-
-    </section>
-
-    <section id="dashboard-view" class="hidden">
-      <canvas id="chart"></canvas>
-    </section>
-
-  </main>
-
-</div>
-
-<script src="utils.js"></script>
-<script src="chart.js"></script>
-<script src="app.js"></script>
-
+    <!-- SCRIPT -->
+    <script src="app.js"></script>
 </body>
 </html>

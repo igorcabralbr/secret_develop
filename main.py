@@ -2,6 +2,8 @@
 
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
+from typing import Optional
 
 print("START") #J
 # =========================
@@ -25,13 +27,21 @@ from core.brain_orchestrator import BrainOrchestrator
 # =========================
 app = FastAPI(title="Financial Brain API")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # libera tudo (ok pro bootcamp)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 # =========================
 # REQUEST MODEL
 # =========================
 class AskRequest(BaseModel):
-    query: str
-    user_id: str | None = None
+    question: str
+    user_id: Optional[str] = "default_user"
 
 
 # =========================
@@ -96,7 +106,7 @@ def ask(request: AskRequest):
     """
 
     result = brain.process_query(
-        query=request.query,
+        query=request.question,
         user_id=request.user_id
     )
 

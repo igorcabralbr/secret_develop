@@ -1,190 +1,131 @@
-// ==========================================
-// CONFIG
-// ==========================================
+const API_URL = "http://127.0.0.1:8000/ask"; // ajuste se necessário
 
-const API_BASE = "http://localhost:8000";
+// elementos do DOM (mantém seus IDs originais se já existirem)
+const chatContainer = document.getElementById("chat-container");
+const inputField = document.getElementById("user-input");
+const sendButton = document.getElementById("send-btn");
 
-// ==========================================
-// UTIL: NORMALIZAR RESPOSTA (🔥 NOVO)
-// ==========================================
+// ==============================
+// formata mensagem 
+// ==============================
+function formatMessage(text) {
+    if (!text) return "";
 
-function getResponseData(data) {
-    return data.response || data.answer || "Resposta não encontrada.";
+    return text
+        // remove espaços extras à esquerda
+        .replace(/\n\s+/g, "\n")
+        
+        // transforma quebras de linha em <br>
+        .replace(/\n/g, "<br>")
+        
+        // destaque títulos simples
+        .replace(/💡 (.*?)<br>/g, "<strong>💡 $1</strong><br><br>")
+        .replace(/Resumo:/g, "<strong>Resumo:</strong>")
+        .replace(/Exemplo:/g, "<strong>Exemplo:</strong>")
+        .replace(/Em termos simples:/g, "<strong>Em termos simples:</strong>");
 }
 
-// ==========================================
-// ENVIO DE PERGUNTA
-// ==========================================
+// ==============================
+// 🧠 UTIL: cria mensagem visual
+// ==============================
+function createMessage(text, sender = "bot") {
+    const message = document.createElement("div");
+    message.classList.add("message", sender);
 
-async function sendQuestion() {
+    // 🔥 GARANTE QUE SEMPRE É STRING
+    if (typeof text === "object") {
+        message.textContent = JSON.stringify(text, null, 2);
+    } else {
+//        message.textContent = text;
+		message.innerHTML = formatMessage(text);
+    }
 
-    const input = document.getElementById("user-input");
-    const output = document.getElementById("chat-output");
+    chatContainer.appendChild(message);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
 
-    const question = input.value;
+// ==============================
+// ⏳ LOADING MESSAGE
+// ==============================
+function createLoadingMessage() {
+    const message = document.createElement("div");
+    message.classList.add("message", "bot", "loading");
+    message.innerText = "Thinking...";
+    chatContainer.appendChild(message);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+    return message;
+}
 
-    if (!question) return;
+// ==============================
+// 🔄 PARSE FLEXÍVEL DA RESPOSTA
+// ==============================
 
-    appendMessage("Você", question);
+function extractResponse(data) {
+    if (!data) return "No response from server.";
+
+    // string direta
+    if (typeof data === "string") return data;
+
+    // 🧠 NOVO: seu formato real
+    if (data.response && data.response.content) {
+        return data.response.content;
+    }
+
+    // fallback comum
+    if (typeof data.answer === "string") return data.answer;
+    if (typeof data.response === "string") return data.response;
+    if (typeof data.message === "string") return data.message;
+
+    // fallback final
+    return JSON.stringify(data, null, 2);
+}
+
+
+// ==============================
+// 🚀 ENVIO PARA BACKEND
+// ==============================
+async function sendMessage() {
+    const userText = inputField.value.trim();
+
+    if (!userText) return;
+
+    createMessage(userText, "user");
+    inputField.value = "";
+
+    const loadingMessage = createLoadingMessage();
 
     try {
-
-        const res = await fetch(`${API_BASE}/ask`, {
+        const response = await fetch(API_URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ question })
+            body: JSON.stringify({
+                question: userText
+            })
         });
 
-        const data = await res.json();
+        const data = await response.json();
 
-        const responseText = getResponseData(data);
+        loadingMessage.remove();
 
-        appendMessage("Brain", responseText);
+        const botText = extractResponse(data);
+        createMessage(botText, "bot");
 
-    } catch (err) {
-
-        appendMessage("Erro", "Erro ao conectar com o servidor.");
-        console.error(err);
-    }
-
-    input.value = "";
-}
-
-// ==========================================
-// QUIZ
-// ==========================================
-
-async function loadQuiz() {
-
-    try {
-
-        const res = await fetch(`${API_BASE}/quiz`);
-        const data = await res.json();
-
-        const quizText = getResponseData(data.quiz || data);
-
-        appendMessage("Quiz", quizText);
-
-    } catch (err) {
-
-        appendMessage("Erro", "Erro ao carregar quiz.");
-        console.error(err);
+    } catch (error) {
+        loadingMessage.remove();
+        createMessage("Erro ao conectar com o backend.", "bot");
+        console.error(error);
     }
 }
 
-// ==========================================
-// FINANCE
-// ==========================================
+// ==============================
+// 🎯 EVENTOS
+// ==============================
+sendButton.addEventListener("click", sendMessage);
 
-async function loadFinance() {
-
-    try {
-
-        const res = await fetch(`${API_BASE}/finance`);
-        const data = await res.json();
-
-        const financeText = getResponseData(data.analysis || data);
-
-        appendMessage("Finance", financeText);
-
-    } catch (err) {
-
-        appendMessage("Erro", "Erro ao carregar dados financeiros.");
-        console.error(err);
-    }
-}
-
-// ==========================================
-// EXPLAIN
-// ==========================================
-
-async function explainConcept(concept) {
-
-    try {
-
-        const res = await fetch(`${API_BASE}/explain/${concept}`);
-        const data = await res.json();
-
-        const text = getResponseData(data.explanation || data);
-
-        appendMessage("Explicação", text);
-
-    } catch (err) {
-
-        appendMessage("Erro", "Erro ao explicar conceito.");
-        console.error(err);
-    }
-}
-
-// ==========================================
-// USER PROFILE
-// ==========================================
-
-async function updateUserProfile(age_group, level) {
-
-    try {
-
-        const res = await fetch(`${API_BASE}/user`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ age_group, level })
-        });
-
-        const data = await res.json();
-
-        appendMessage("Sistema", "Perfil atualizado com sucesso.");
-
-    } catch (err) {
-
-        appendMessage("Erro", "Erro ao atualizar perfil.");
-        console.error(err);
-    }
-}
-
-// ==========================================
-// UI HELPERS
-// ==========================================
-
-function appendMessage(sender, message) {
-
-    const output = document.getElementById("chat-output");
-
-    const div = document.createElement("div");
-    div.classList.add("message");
-
-    div.innerHTML = `<strong>${sender}:</strong> ${message}`;
-
-    output.appendChild(div);
-
-    output.scrollTop = output.scrollHeight;
-}
-
-// ==========================================
-// EVENT LISTENERS (mantido)
-// ==========================================
-
-document.getElementById("send-btn").addEventListener("click", sendQuestion);
-
-document.getElementById("user-input").addEventListener("keypress", function(e) {
+inputField.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
-        sendQuestion();
+        sendMessage();
     }
 });
-
-// ==========================================
-// BOTÕES EXTRAS (se existirem)
-// ==========================================
-
-const quizBtn = document.getElementById("quiz-btn");
-if (quizBtn) {
-    quizBtn.addEventListener("click", loadQuiz);
-}
-
-const financeBtn = document.getElementById("finance-btn");
-if (financeBtn) {
-    financeBtn.addEventListener("click", loadFinance);
-}

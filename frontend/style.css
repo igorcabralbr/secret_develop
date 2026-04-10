@@ -127,6 +127,7 @@ body {
 
 .bot {
   background: rgba(255,255,255,0.05);
+  line-height: 1.6;
 }
 
 /* INPUT */
