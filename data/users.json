@@ -1,0 +1,15 @@
+{
+  "test": {
+    "user_id": "test",
+    "level": "beginner",
+    "age_group": "adult",
+    "learning_style": "visual",
+    "financial_experience": "low",
+    "interaction_count": 0,
+    "preferences": {
+      "explanation_depth": "medium",
+      "use_examples": true,
+      "use_analogies": true
+    }
+  }
+}

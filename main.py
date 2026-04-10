@@ -137,3 +137,17 @@ def debug_llm(request: AskRequest):
     response = llm_engine.generate(prompt=request.query)
 
     return {"response": response}
+
+
+if __name__ == "__main__":
+    print("START")
+
+    while True:
+        query = input("Digite sua pergunta: ")
+
+        if query.lower() in ["exit", "sair"]:
+            break
+
+        result = brain.process_query(query, user_id="test")
+
+        print(result)
