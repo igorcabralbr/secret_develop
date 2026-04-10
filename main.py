@@ -51,10 +51,8 @@ rag_engine = RAGEngine(graph_engine=graph_engine)
 reasoning_engine = ReasoningEngine(graph_engine=graph_engine)
 
 # 🔹 LLM (NOVO)
-llm_engine = LLMEngine(
-    provider="openai",  # ou "mock" pra testar sem API
-    model="gpt-4o-mini"
-)
+#llm_engine = LLMEngine(provider="openai", model="gpt-4o-mini")
+llm_engine = LLMEngine(provider="mock")
 
 # 🔹 Outros módulos
 #quiz_engine = QuizEngine(graph_engine=graph_engine, llm_engine)

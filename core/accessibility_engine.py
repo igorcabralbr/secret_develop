@@ -1,7 +1,7 @@
 # core/accessibility_engine.py
 
 from typing import Dict, Any
-
+import textwrap
 
 class AccessibilityEngine:
     def __init__(self):
@@ -10,31 +10,95 @@ class AccessibilityEngine:
     # =========================
     # MAIN ADAPT (EVOLUÍDO)
     # =========================
-    def adapt(self, content: Any, user_profile: Dict = None) -> Dict:
-        """
-        Adapta resposta para o perfil do usuário
-        """
+#    def adapt(self, content: Any, user_profile: Dict = None) -> Dict:
+#        """
+#        Adapta resposta para o perfil do usuário
+#        """
+#
+#        if not user_profile:
+#            return {
+#                "content": content,
+#                "format": "default"
+#            }
 
-        if not user_profile:
+#        level = user_profile.get("level", "beginner")
+#        age_group = user_profile.get("age_group", "adult")
+#        learning_style = user_profile.get("learning_style", "visual")
+
+#        adapted_content = self._adapt_content(content, level, age_group, learning_style)
+
+#        return {
+#            "content": adapted_content,
+#            "metadata": {
+#                "level": level,
+#                "age_group": age_group,
+#                "learning_style": learning_style
+#            }
+#        }
+
+    def adapt(self, content, user_profile=None):
+    
+        try:
+            # =========================
+            # DEFAULT PROFILE
+            # =========================
+            user_profile = user_profile or {}
+
+            # =========================
+            # 🔥 NOVO: PRIORIDADE PARA CONTENT LIMPO
+            # =========================
+            if isinstance(content, dict):
+
+                # 👉 se já veio resposta do LLM
+                if "content" in content:
+                    clean_content = str(content["content"]).strip()
+
+                # 👉 fallback (estrutura antiga)
+                elif "concept" in content:
+                    concept = content.get("concept", {})
+                    clean_content = concept.get("definition", "Não foi possível explicar.")
+
+                else:   
+                    clean_content = str(content)
+
+            else:
+                clean_content = str(content)
+
+            # =========================
+            # 🔥 NOVO: LIMPEZA DE TEXTO
+            # =========================
+#            clean_content = clean_content.strip()
+            clean_content = textwrap.dedent(clean_content).strip()
+            # remove duplicação de espaços
+            while "\n\n\n" in clean_content:
+                clean_content = clean_content.replace("\n\n\n", "\n\n")
+
+            # =========================
+            # 🔥 NOVO: FORMATAÇÃO INTELIGENTE
+            # =========================
+            final_text = f"""💡 Explicação simples:
+
+    {clean_content}
+    """
+
             return {
-                "content": content,
-                "format": "default"
+                "content": final_text,
+                "metadata": {
+                    "level": user_profile.get("level", "beginner"),
+                    "age_group": user_profile.get("age_group", "adult"),
+                    "learning_style": user_profile.get("learning_style", "visual"),
+                }
             }
 
-        level = user_profile.get("level", "beginner")
-        age_group = user_profile.get("age_group", "adult")
-        learning_style = user_profile.get("learning_style", "visual")
+        except Exception:
 
-        adapted_content = self._adapt_content(content, level, age_group, learning_style)
-
-        return {
-            "content": adapted_content,
-            "metadata": {
-                "level": level,
-                "age_group": age_group,
-                "learning_style": learning_style
+            # 🔥 fallback total (nunca quebra)
+            return {
+                "content": str(content),
+                "metadata": user_profile or {}
             }
-        }
+
+
 
     # =========================
     # CORE ADAPTATION LOGIC

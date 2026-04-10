@@ -102,6 +102,26 @@ class BrainOrchestrator:
     # =========================
     # CONCEPT
     # =========================
+#    def _handle_concept(self, query: str):
+#
+#        try:
+#            concept = self.graph_engine.find_concept(query)
+#        except Exception:
+#            concept = {}
+#
+#        concept_id = concept.get("id") if concept else None
+#
+#        try:
+#            relations = self.graph_engine.get_related(concept_id) if concept_id else []
+#        except Exception:
+#            relations = []
+#
+#        return {
+#            "type": "concept",
+#            "concept": concept,
+#            "relations": relations
+#        }
+
     def _handle_concept(self, query: str):
 
         try:
@@ -116,10 +136,31 @@ class BrainOrchestrator:
         except Exception:
             relations = []
 
+        # 🔥 NOVO: limitar relações (evita poluição)
+        relations_limited = relations[:3] if relations else []
+
+        # 🔥 NOVO: montar contexto para LLM
+        llm_context = {
+            "concept": concept,
+            "relations": relations_limited
+        }
+
+        # 🔥 NOVO: geração com LLM (mock ou real)
+        try:
+            explanation = self.llm_engine.generate(
+                prompt=query,
+                context=llm_context,
+                system_prompt="Explique de forma simples, didática e clara."
+            ) if self.llm_engine else str(concept)
+        except Exception:
+            explanation = str(concept)
+
+        # 🔥 IMPORTANTE: mantém compatibilidade + adiciona resposta bonita
         return {
             "type": "concept",
             "concept": concept,
-            "relations": relations
+            "relations": relations,
+            "content": explanation  # 👈 NOVO (isso resolve seu problema)
         }
 
     # =========================
